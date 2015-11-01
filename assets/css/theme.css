@@ -1,0 +1,31 @@
+body {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.theme-sczerwinski-navbar {
+	background-image: none;
+	background-color: #752935;
+}
+
+.theme-sczerwinski-navbar .navbar-brand {
+	color: #ffffff;
+}
+
+.theme-sczerwinski-dropdown .dropdown-menu {
+	position: static;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.theme-sczerwinski-jumbotron {
+	background-image: none;
+	background-color: #ffffff;
+	font-size: 100%;
+}
+
+.theme-sczerwinski-page .theme-sczerwinski-jumbotron {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
