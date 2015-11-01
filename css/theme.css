@@ -1,0 +1,19 @@
+body {
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.theme-sczerwinski-dropdown .dropdown-menu {
+	position: static;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.theme-sczerwinski-page > p > .btn {
+	margin: 5px 0;
+}
+
+.theme-sczerwinski-page .navbar .container {
+	width: auto;
+}
+
