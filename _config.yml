@@ -6,3 +6,13 @@ email: slawomir@czerwinski.info.pl
 # Social media:
 twitter: s_czerwinski
 linkedIn: sczerwinski
+
+# Blog:
+paginate: 2
+paginate_path: "/posts/:num/"
+
+# Syntax coloring:
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]

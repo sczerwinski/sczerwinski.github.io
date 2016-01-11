@@ -16,6 +16,19 @@ body {
 	background-color: #752935;
 }
 
+.theme-sczerwinski-navbar .navbar-toggle {
+    border-color: #ffffff;
+}
+
+.theme-sczerwinski-navbar .navbar-toggle:focus,
+.theme-sczerwinski-navbar .navbar-toggle:hover {
+    background-color: #752935;
+}
+
+.theme-sczerwinski-navbar .navbar-brand {
+	color: #ffffff;
+}
+
 .theme-sczerwinski-navbar .navbar-nav>li>a:link,
 .theme-sczerwinski-navbar .navbar-nav>li>a:active,
 .theme-sczerwinski-navbar .navbar-nav>li>a:visited {
@@ -43,3 +56,48 @@ body {
 	padding-left: 20px;
 }
 
+.theme-sczerwinski-page .subtitle-xs {
+	padding: 20px;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+	color: #752935;
+}
+
+a:hover {
+	color: #bd4256;
+	text-decoration: none;
+}
+
+.post-date {
+	color: #a0a0a0;
+	padding-bottom: 10px;
+}
+
+.post-abstract {
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background-color: #752935;
+    border-color: #752935;
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    color: #752935;
+}
+
+.pagination>li>a:hover,
+.pagination>li>span:hover {
+    color: #bd4256;
+}
