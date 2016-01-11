@@ -3,12 +3,26 @@ body {
 	padding-bottom: 30px;
 }
 
+.theme-sczerwinski-ribbon {
+	border: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9000;
+}
+
 .theme-sczerwinski-navbar {
 	background-image: none;
 	background-color: #752935;
 }
 
-.theme-sczerwinski-navbar .navbar-brand {
+.theme-sczerwinski-navbar .navbar-nav>li>a:link,
+.theme-sczerwinski-navbar .navbar-nav>li>a:active,
+.theme-sczerwinski-navbar .navbar-nav>li>a:visited {
+	color: #ebc6cc;
+}
+
+.theme-sczerwinski-navbar .navbar-nav>li>a:hover {
 	color: #ffffff;
 }
 
