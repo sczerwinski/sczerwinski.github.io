@@ -3,8 +3,12 @@ title: Sławomir Czerwiński
 subtitle: To create beautiful software that people like to use,<br/>by writing beautiful code that programmers like to read
 linkTitle: Home
 layout: default
-abstract: Personal web site and blog
+abstract: To create beautiful software that people like to use, by writing beautiful code that programmers like to read
 keywords: software,developer,programming,java,android
 ---
 
-<p>Site under construction&hellip;</p>
+{% for item in site.data.news limit:5 %}
+	<h2>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
+	<div class="post-date">{{ item.date | date: '%B %d, %Y' }}</div>
+	<div class="post-abstract">{{ item.content }}</div>
+{% endfor %}
