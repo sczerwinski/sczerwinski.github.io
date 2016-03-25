@@ -1,5 +1,6 @@
 ---
 title: 3 Major Mistakes Commonly Made By Equalizer Users
+mobileTitle: 3 Major Mistakes…
 layout: post
 abstract: How not to spoil the sound when using audio equalizers (JAVEO blog)
 keywords: android,equalizer,music,neutralizer,sound
