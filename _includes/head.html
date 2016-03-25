@@ -1,17 +1,30 @@
 <head>
 
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="revisit-after" content="7 DAYS" />
+	<meta name="robots" content="All" />
+
+	<meta name="author" content="{{ site.title }}" />
+	{% if page.redirect %}<meta http-equiv="refresh" content="1; url={{ page.redirect }}" />{% endif %}
+	{% if page.abstract %}<meta name="description" content="{{ page.abstract }}" />{% endif %}
+	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}" />{% endif %}
+
+	<meta name="theme-color" content="#752935" />
+	<meta name="msapplication-navbutton-color" content="#752935" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="#752935" />
 
 	<title>{% if page.linkTitle %}{{ site.title }} :: {{ page.linkTitle }}{% elsif page.title %}{{ site.title }} :: {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-	<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css">
+	<link rel="icon" sizes="128x128" href="/assets/img/icon.png">
 
-	<link rel="stylesheet" href="/assets/css/pygments-light.css">
+	<link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" />
 
-	<link rel="stylesheet" href="/assets/css/theme.css">
+	<link rel="stylesheet" href="/assets/css/pygments-light.css" />
+
+	<link rel="stylesheet" href="/assets/css/theme.css" />
 
 	<!-- Begin Cookie Consent plugin by Silktide - http://silktide.com/cookieconsent -->
 	<script type="text/javascript">
