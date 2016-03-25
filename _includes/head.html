@@ -6,16 +6,16 @@
 	<meta name="revisit-after" content="7 DAYS" />
 	<meta name="robots" content="All" />
 
-	<meta name="author" content="{{ site.title }}" />
+	<meta name="author" itemprop="author" content="{{ site.title }}" />
 	{% if page.redirect %}<meta http-equiv="refresh" content="1; url={{ page.redirect }}" />{% endif %}
-	{% if page.abstract %}<meta name="description" content="{{ page.abstract }}" />{% endif %}
-	{% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}" />{% endif %}
+	{% if page.abstract %}<meta name="description" itemprop="description" content="{{ page.abstract }}" />{% endif %}
+	{% if page.keywords %}<meta name="keywords" itemprop="keywords" content="{{ page.keywords }}" />{% endif %}
 
 	<meta name="theme-color" content="#752935" />
 	<meta name="msapplication-navbutton-color" content="#752935" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="#752935" />
 
-	<title>{% if page.linkTitle %}{{ site.title }} :: {{ page.linkTitle }}{% elsif page.title %}{{ site.title }} :: {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+	<title itemprop="name">{% if page.linkTitle %}{{ site.title }} :: {{ page.linkTitle }}{% elsif page.title %}{{ site.title }} :: {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
 	<link rel="icon" sizes="128x128" href="/assets/img/icon.png">
 

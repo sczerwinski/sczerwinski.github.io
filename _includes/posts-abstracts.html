@@ -1,6 +1,8 @@
 
 {% for post in paginator.posts %}
-	<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<div class="post-date">{{ post.date | date: '%B %d, %Y' }}</div>
-	<div class="post-abstract">{{ post.abstract }}</div>
+	<div itemprop="blogPost">
+		<h2><a href="{{ post.url }}" itemprop="name">{{ post.title }}</a></h2>
+		<div class="post-date"><time datetime="{{ post.date }}">{{ post.date | date: '%B %d, %Y' }}</time></div>
+		<div class="post-abstract" itemprop="description">{{ post.abstract }}</div>
+	</div>
 {% endfor %}
