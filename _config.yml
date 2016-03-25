@@ -1,3 +1,6 @@
+# Plugins:
+gems: [jekyll-paginate]
+
 # Basic information:
 title: Sławomir Czerwiński
 url: http://czerwinski.info.pl/
@@ -13,6 +16,6 @@ paginate_path: "/posts/:num/"
 
 # Syntax coloring:
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
