@@ -101,3 +101,7 @@ a:hover {
 .pagination>li>span:hover {
     color: #bd4256;
 }
+
+.MathJax_Display {
+  text-align: left !important;
+}
