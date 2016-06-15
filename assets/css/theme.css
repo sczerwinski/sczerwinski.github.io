@@ -88,13 +88,13 @@ a:hover {
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
-    background-color: #752935;
-    border-color: #752935;
+	background-color: #752935;
+	border-color: #752935;
 }
 
 .pagination>li>a,
 .pagination>li>span {
-    color: #752935;
+	color: #752935;
 }
 
 .pagination>li>a:hover,
@@ -103,5 +103,6 @@ a:hover {
 }
 
 .MathJax_Display {
-  text-align: left !important;
+	text-align: left !important;
+	margin-left: 4em !important;
 }

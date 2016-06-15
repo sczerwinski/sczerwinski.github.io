@@ -4,24 +4,67 @@ title: Functional Square Matrix in Kotlin
 mobileTitle: Functional Square Matrix…
 layout: post
 abstract: How to create a simple functional square matrix in Kotlin programming language
-keywords: kotlin,functional,programming,matrix,affine,transformations
+keywords: kotlin,functional,programming,matrix,affine,transformations,3d,opengl
 ---
 
-Working with OpenGL and 3D graphics requires [affine transformations](https://en.wikipedia.org/wiki/Affine_transformation) and transformation matrix.
+## A little theory: Affine transformations
 
-So called _normal matrix_ used to transform normals:
+Working with OpenGL and 3D graphics would be impossible without
+[affine transformations](https://en.wikipedia.org/wiki/Affine_transformation),
+which in general can be represented as:
+
+$$\vec{y} = \boldsymbol{A} \vec{x} + \vec{a}$$
+
+where $$\vec{a}$$ is a translation vector, and $$\boldsymbol{A}$$ is a matrix representation
+of a [linear map](https://en.wikipedia.org/wiki/Linear_map).
+
+The same transformation can also be represented by a single multiplication
+of an augmented matrix (also called an _affine transformation matrix_) and an augmented vector:
+
+$$
+\begin{bmatrix}\vec{y}\\1\end{bmatrix} = \left[\begin{array}{ccc|c}
+  & \boldsymbol{A} & & \vec{a} \\
+  0 & … & 0 & 1
+\end{array}\right] \begin{bmatrix}\vec{x}\\1\end{bmatrix}
+$$
+
+So in 3D space, an augmented matrix is a 4×4 matrix, while an augmented vector consists of 4 coordinates: $$(x, y, z, 1)$$.
+
+Using this representation, we can compose affine transformations by simply multiplying augmented matrices: 
+
+$$
+\begin{bmatrix}\vec{y}\\1\end{bmatrix} = \left[\begin{array}{ccc|c}
+  & \boldsymbol{A} & & \vec{a} \\
+  0 & … & 0 & 1
+\end{array}\right] \left[\begin{array}{ccc|c}
+  & \boldsymbol{B} & & \vec{b} \\
+  0 & … & 0 & 1
+\end{array}\right] \begin{bmatrix}\vec{x}\\1\end{bmatrix}
+$$
+
+## The problem: Normal matrix
+
+While matrix multiplication is a relatively simple operation, computing a so called _normal matrix_ can be quite challenging.
+
+If a 3D model is transformed using an augmented matrix $$\boldsymbol{A}$$,
+[normals](https://en.wikipedia.org/wiki/Normal_(geometry)) should be transformed using a normal matrix $$\boldsymbol{N}$$:
+
 $$\boldsymbol{N} = \big(\boldsymbol{A}^{-1}\big)^\mathrm{T} = \big(\boldsymbol{A}^\mathrm{T}\big)^{-1}$$
 
-Could be done in vertex shader, but it would use too much GPU. It would be calculated for each vertex.
+This calculation could be done in a vertex shader:
 
 ```glsl
 mat4 normalMatrix = transpose(inverse(modelViewMatrix));
 ```
 
-It is enough to calculate normal matrix for each frame only once.
+However, this would mean that the GPU should perform the same operation for each vertex.
+It is better to calculate normal matrix once per each frame using CPU instead.
 
-There is an ugly code on
-[GrepCode](http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/4.0.1_r1/android/opengl/Matrix.java#Matrix.invertM%28float%5B%5D%2Cint%2Cfloat%5B%5D%2Cint%29).
+
+**Draft:**
+
+Unfortunately, [typical algorithm](http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/4.0.1_r1/android/opengl/Matrix.java#Matrix.invertM%28float%5B%5D%2Cint%2Cfloat%5B%5D%2Cint%29)
+is ugly.
 
 ## Functional square matrix
 
@@ -123,3 +166,5 @@ val adj: SquareMatrix by lazy { comatrix.transpose() }
 ```kotlin
 fun inverse(): SquareMatrix = SquareMatrix(size) { row, col -> adj[row, col] / det }
 ```
+
+Full implementation of `SquareMatrix` can be downloaded from [GitHub Gist](https://gist.github.com/sczerwinski/3d98549ebb8c48f7b4b38e898e30fb30).
