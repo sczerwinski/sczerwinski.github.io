@@ -1,4 +1,5 @@
 ---
+disqusid: functional-square-matrix-in-kotlin
 title: Functional Square Matrix in Kotlin
 mobileTitle: Functional Square Matrix…
 layout: post
