@@ -4,7 +4,7 @@ title: Functional Square Matrix in Kotlin
 mobileTitle: Functional Square Matrix…
 layout: post
 abstract: How to create a simple functional square matrix in Kotlin programming language
-keywords: kotlin,functional,programming,matrix,affine,transformations,3d,opengl
+keywords: kotlin,functional,programming,matrix,affine,transformations,inverse,inversion,adjugate,cofactor,comatrix,determinant,traspose,transposition,3d,opengl
 ---
 
 ## A little theory: Affine transformations
@@ -47,7 +47,7 @@ $$
 While matrix multiplication is a relatively simple operation, computing a so called _normal matrix_ can be quite challenging.
 
 If a 3D model is transformed using an augmented matrix $$\boldsymbol{A}$$,
-[normals](https://en.wikipedia.org/wiki/Normal_(geometry)) should be transformed using a normal matrix $$\boldsymbol{N}$$:
+the [normals](https://en.wikipedia.org/wiki/Normal_(geometry)) should be transformed using a normal matrix $$\boldsymbol{N}$$:
 
 $$\boldsymbol{N} = \big(\boldsymbol{A}^{-1}\big)^\mathrm{T} = \big(\boldsymbol{A}^\mathrm{T}\big)^{-1}$$
 
@@ -58,17 +58,19 @@ mat4 normalMatrix = transpose(inverse(modelViewMatrix));
 ```
 
 However, this would mean that the GPU should perform the same operation for each vertex.
-It is better to calculate normal matrix once per each frame using CPU instead.
+It is better to calculate normal matrix only once per each frame with the CPU instead.
 
-
-**Draft:**
-
-Unfortunately, [typical algorithm](http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/4.0.1_r1/android/opengl/Matrix.java#Matrix.invertM%28float%5B%5D%2Cint%2Cfloat%5B%5D%2Cint%29)
-is ugly.
+Unfortunately, a typical implementation of
+[matrix inversion](http://grepcode.com/file/repository.grepcode.com/java/ext/com.google.android/android/4.0.1_r1/android/opengl/Matrix.java#Matrix.invertM%28float%5B%5D%2Cint%2Cfloat%5B%5D%2Cint%29)
+is long and hard to understand.
 
 ## Functional square matrix
 
-Let's create a class which represents a square matrix of a specific `size` with `elements`:
+A nice and clear algorithm for matrix inversion is recursive.
+Since multiple matrices will be created in the course of the calculation, it is better to avoid copying matrix entries every time.
+So I have decided to use a functional approach to the problem.
+
+Let's create a class representing a square matrix of a specific size, the elements of which are defined by a function `(Int, Int) -> Float`:
 
 ```kotlin
 class SquareMatrix(val size:Int, private val elements: (Int, Int) -> Float) {
@@ -80,7 +82,7 @@ class SquareMatrix(val size:Int, private val elements: (Int, Int) -> Float) {
 }
 ```
 
-Example: identity matrix
+The `elements` function returns a matrix element at the specific row and column, e.g. identity matrix of a requested size can be defined like this:
 
 ```kotlin
 fun identity(size: Int) = SquareMatrix(size) { row, col ->
@@ -88,32 +90,55 @@ fun identity(size: Int) = SquareMatrix(size) { row, col ->
 }
 ```
 
-## Transpose
+Now, let's try to define some operations on the matrix.
 
-https://en.wikipedia.org/wiki/Transpose
+### Matrix transposition
 
-This one's easy:
+The [transpose](https://en.wikipedia.org/wiki/Transpose) of a matrix can be created by simply switching indices of the rows and the columns:
+
+$$\left[\boldsymbol{A}^\mathrm{T}\right]_{i,j} = \left[\boldsymbol{A}\right]_{j,i}$$
+
+So the method can be defined as follows:
 
 ```kotlin
 fun transpose(): SquareMatrix = SquareMatrix(size) { row, col -> this[col, row] }
 ```
 
-## Inverse
-
-Inverse:
-$$\boldsymbol{A}^{-1} = \dfrac{1}{\mathrm{det}(\boldsymbol{A})} \mathrm{adj}(\boldsymbol{A})$$
+Note that the transpose does not copy entries of the original matrix, but rather refers to them.
 
 ### Determinant
 
-First, let's calculate the determinant.
+Before starting any further calculations, we will need the [determinant](https://en.wikipedia.org/wiki/Determinant)
+of the matrix.
 
-For a 1×1 matrix:
+Let's start with the simplest case of a (rather degenerated) 1×1 matrix.
+It seems impossible to infer from the definition (determinant is defined for 2×2 and larger matrices),
+but let's look at some properties of the determinant.
+For _n_×_n_ matrices:
 
-$$\mathrm{det}(\boldsymbol{A}) = \boldsymbol{A}_{1,1}$$
+$$\mathrm{det}(\boldsymbol{I}_n) = 1$$
 
-For bigger matrix:
+$$\mathrm{det}(c\boldsymbol{A}) = c^n \mathrm{det}(\boldsymbol{A})$$
 
-$$\mathrm{det}(\boldsymbol{A}) = \sum_{j=1}^n a_{i,j} C_{i,j}$$
+On the other hand, for any 1×1 matrix $$\boldsymbol{A}$$:
+
+$$\boldsymbol{A} = a_{1,1} \boldsymbol{I}_1$$
+
+Therefore:
+
+$$
+\mathrm{det}(\boldsymbol{A}) =
+\mathrm{det}(a_{1,1} \boldsymbol{I}_1) =
+\left(a_{1,1}\right)^1 \mathrm{det}(\boldsymbol{I}_1) =
+a_{1,1} \cdot 1 =
+a_{1,1}$$
+
+For a _n_×_n_ matrix, determinant can be defined as a sum of all elements in the first row
+of the matrix multiplied by respective cofactors:
+
+$$\mathrm{det}(\boldsymbol{A}) = \sum_{j=1}^n a_{1,j} C_{1,j}$$
+
+So the determinant can be defined like this:
 
 ```kotlin
 val det: Float by lazy {
@@ -122,10 +147,12 @@ val det: Float by lazy {
 }
 ```
 
+Lazily initialized value is used instead of a function,
+to prevent the same determinant from being calculated multiple times.
+
 ### Cofactors and comatrix
 
-Cofactor is:
-$$C_{i,j} = (-1)^{i+j} M_{i,j}$$
+A comatrix is just a matrix of _cofactors_:
 
 ```kotlin
 private val comatrix: SquareMatrix by lazy {
@@ -133,14 +160,20 @@ private val comatrix: SquareMatrix by lazy {
 }
 ```
 
+A cofactor is a _first minor_ of the matrix multiplied by $$(-1)^{i+j}$$,
+where $$i$$ and $$j$$ are indices of matrix row and column:
+
+$$C_{i,j} = (-1)^{i+j} M_{i,j}$$
+
 ```kotlin
 private fun cofactor(row: Int, col: Int): Float =
 		minor(row, col) * if ((row + col) % 2 == 0) 1f else -1f
 ```
 
-### Minor
+### First minor
 
-Minor $$M_{i,j}$$ is a determinant of a submatrix created by removing _i_-th row and _j_-th column from the original matrix.
+A first minor $$M_{i,j}$$ is a determinant of a submatrix created by removing
+_i_-th row and _j_-th column from the original matrix.
 
 ```kotlin
 private fun minor(row: Int, col: Int): Float = sub(row, col).det
@@ -152,19 +185,36 @@ private fun sub(delRow: Int, delCol: Int) = SquareMatrix(size - 1) { row, col ->
 }
 ```
 
+Obviously, recalculation of indices of the row and the column could be extracted into a separate method.
+However, to avoid excessive complication of the code, I decided to leave it the way it is.
+
+As you may notice, the algorithm for calculation of determinant used in `SquareMatrix` is recursive.
+But since in 3D graphics only 4×4 matrices are used, nested method calls will not cause stack overflow.
+
 ### Adjugate matrix
 
-Finally, adjugate matrix:
+Having implemented the determinant, we can now calculate the [adjugate matrix](https://en.wikipedia.org/wiki/Adjugate_matrix),
+which is simply a transpose of the comatrix:
+
 $$\mathrm{adj}(\boldsymbol{A}) = \boldsymbol{C}^\mathrm{T}$$
 
 ```kotlin
 val adj: SquareMatrix by lazy { comatrix.transpose() }
 ```
 
-### Putting everything together
+### Matrix inversion
+
+And finally, we can put together matrix inversion:
+
+$$\boldsymbol{A}^{-1} = \dfrac{1}{\mathrm{det}(\boldsymbol{A})} \mathrm{adj}(\boldsymbol{A})$$
 
 ```kotlin
 fun inverse(): SquareMatrix = SquareMatrix(size) { row, col -> adj[row, col] / det }
 ```
 
-Full implementation of `SquareMatrix` can be downloaded from [GitHub Gist](https://gist.github.com/sczerwinski/3d98549ebb8c48f7b4b38e898e30fb30).
+---
+
+Full implementation of `SquareMatrix` can be downloaded at
+[GitHub Gist](https://gist.github.com/sczerwinski/3d98549ebb8c48f7b4b38e898e30fb30).
+
+---
