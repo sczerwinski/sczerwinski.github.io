@@ -69,7 +69,7 @@ Since multiple matrices are used in the course of this calculation,
 it is better to avoid copying the entries every time a new matrix is created.
 Thus I have decided to use a functional approach to the problem.
 
-Let's start with creating a class representing a square matrix of a specific size _n_×_n_,
+Let’s start with creating a class representing a square matrix of a specific size _n_×_n_,
 the elements of which are defined by a function:
 
 $$f: \{1, 2 \ldots n\}^2 \to \Bbb{R}$$
@@ -96,10 +96,10 @@ fun identity(size: Int) = SquareMatrix(size) { row, col ->
 ```
 
 As you may have noticed, both `row` and `col` are required to fit into range of 0 to _n_−1.
-That's because, by convention, in computer programming indices start with 0.
+That’s because, by convention, in computer programming indices start with 0.
 It is not a problem though, as this shift does not influence any of our calculations.
 
-Now, let's try to define some operations on the matrix.
+Now, let’s try to define some operations on the matrix.
 
 ### Matrix transposition
 
@@ -121,9 +121,9 @@ Note that the transpose does not copy entries from the original matrix, but rath
 Before we can go any further, we need to calculate the
 [determinant](https://en.wikipedia.org/wiki/Determinant) of the matrix.
 
-Let's start with the simplest case of a (rather degenerated) 1×1 matrix.
+Let’s start with the simplest case of a (rather degenerated) 1×1 matrix.
 Wikipedia does not describe, how to perform the calculation in this case,
-but we may try to infer the formula from determinant's properties.
+but we may try to infer the formula from determinant’s properties.
 
 For _n_×_n_ matrices, the following statements are always true:
 
@@ -164,7 +164,7 @@ to prevent the same determinant from being calculated multiple times.
 
 ### Cofactors and comatrix
 
-To calculate the determinant, we've used a _comatrix_ or, in other words, a matrix of _cofactors_:
+To calculate the determinant, we’ve used a _comatrix_ or, in other words, a matrix of _cofactors_:
 
 ```kotlin
 private val comatrix: SquareMatrix by lazy {
@@ -228,7 +228,7 @@ fun inverse(): SquareMatrix = SquareMatrix(size) { row, col -> adj[row, col] / d
 
 ## Usage
 
-The matrix inversion algorithm is ready. Now, let's try to use it.
+The matrix inversion algorithm is ready. Now, let’s try to use it.
 
 As an example, we will use a [diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix),
 which should give some predictable results:
@@ -250,7 +250,7 @@ $$
 \end{bmatrix}
 $$
 
-Now, let's create an inverse of this matrix:
+Now, let’s create an inverse of this matrix:
 
 ```kotlin
 val inv = diag.inverse()
@@ -267,7 +267,7 @@ $$
 \end{bmatrix}
 $$
 
-Let's verify that by calling:
+Let’s verify that by calling:
 
 ```kotlin
 println(inv[2, 2])
