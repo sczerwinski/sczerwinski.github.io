@@ -1,4 +1,5 @@
 ---
+disqusid: 3-major-mistakes-commonly-made-by-equalizer-users
 title: 3 Major Mistakes Commonly Made By Equalizer Users
 mobileTitle: 3 Major Mistakes…
 layout: post

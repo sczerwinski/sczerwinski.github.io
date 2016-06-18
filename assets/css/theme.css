@@ -3,6 +3,14 @@ body {
 	padding-bottom: 30px;
 }
 
+@media (max-width: 480px) {
+	body { font-size: 10pt; }
+	.navbar-brand { font-size: 11pt; }
+}
+
+@media (min-width: 768px) { body { font-size: 12pt; } }
+@media (min-width: 1200px) { body { font-size: 14pt; } }
+
 .theme-sczerwinski-ribbon {
 	border: 0;
 	position: fixed;
@@ -62,16 +70,23 @@ body {
 	font-size: 16px;
 }
 
+h2 { font-size: 220%; }
+h3 { font-size: 180%; }
+h4 { font-size: 140%; }
+h5 { font-size: 110%; }
+
+p { margin: 0 0 10pt }
+
 a,
 a:link,
 a:active,
 a:visited {
-	color: #752935;
+	color: #802d3a;
 }
 
 a:hover {
 	color: #bd4256;
-	text-decoration: none;
+	text-decoration: underline;
 }
 
 .post-date {
@@ -88,16 +103,29 @@ a:hover {
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
-    background-color: #752935;
-    border-color: #752935;
+	background-color: #752935;
+	border-color: #752935;
 }
 
 .pagination>li>a,
 .pagination>li>span {
-    color: #752935;
+	color: #752935;
 }
 
 .pagination>li>a:hover,
 .pagination>li>span:hover {
     color: #bd4256;
+}
+
+.MathJax_Display {
+	text-align: left !important;
+	margin-left: 4em !important;
+}
+
+@media (max-width: 480px) {
+	.MathJax_Display {
+		font-size: 8pt !important;
+		text-align: left !important;
+		margin-left: 1em !important;
+	}
 }
