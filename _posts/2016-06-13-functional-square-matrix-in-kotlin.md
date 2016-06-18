@@ -145,7 +145,7 @@ a_{1,1} \cdot 1 =
 a_{1,1}
 $$
 
-For any bigger _n_×_n_ matrix, the determinant can be defined as
+For any larger _n_×_n_ matrix, the determinant can be defined as
 a sum of all elements in the first row multiplied by respective cofactors:
 
 $$\mathrm{det}(\boldsymbol{A}) = \sum_{j=1}^n a_{1,j} C_{1,j}$$
@@ -226,9 +226,62 @@ $$\boldsymbol{A}^{-1} = \dfrac{1}{\mathrm{det}(\boldsymbol{A})} \mathrm{adj}(\bo
 fun inverse(): SquareMatrix = SquareMatrix(size) { row, col -> adj[row, col] / det }
 ```
 
+## Usage
+
+The matrix inversion algorithm is ready. Now, let's try to use it.
+
+As an example, we will use a [diagonal matrix](https://en.wikipedia.org/wiki/Diagonal_matrix),
+which should give some predictable results:
+
+```kotlin
+val diag = SquareMatrix(4) { row, col ->
+	if (row == col) (row + 1).toFloat() else 0f
+}
+```
+
+The matrix `diag` should look like this:
+
+$$
+\begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & 2 & 0 & 0 \\
+	0 & 0 & 3 & 0 \\
+	0 & 0 & 0 & 4 \\
+\end{bmatrix}
+$$
+
+Now, let's create an inverse of this matrix:
+
+```kotlin
+val inv = diag.inverse()
+```
+
+The result should be as follows:
+
+$$
+\begin{bmatrix}
+	1 & 0 & 0 & 0 \\
+	0 & \frac{1}{2} & 0 & 0 \\
+	0 & 0 & \frac{1}{3} & 0 \\
+	0 & 0 & 0 & \frac{1}{4} \\
+\end{bmatrix}
+$$
+
+Let's verify that by calling:
+
+```kotlin
+println(inv[2, 2])
+```
+
+In the console, we should receive approximately $$\frac{1}{3}$$:
+
+```
+0.33333334
+```
+
 ---
 
-Full implementation of `SquareMatrix` can be downloaded at
+Full implementation of `SquareMatrix` class can be found at
 [GitHub Gist](https://gist.github.com/sczerwinski/3d98549ebb8c48f7b4b38e898e30fb30).
 
 ---
