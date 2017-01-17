@@ -13,6 +13,12 @@
 
 			{{ content }}
 
+			<div class="post-date"><time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date | date: '%B %d, %Y' }}</time></div>
+
+			<div class="hidden" itemprop="publisher" itemscope itemtype="http://schema.org/Person">
+				<div class="hidden" itemprop="name">{{ site.title }}</div>
+			</div>
+
 			{% include disqus.html %}
 
 		</div>

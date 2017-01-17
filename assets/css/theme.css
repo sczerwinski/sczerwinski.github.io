@@ -97,6 +97,11 @@ a:hover {
 .post-abstract {
 }
 
+.hidden {
+	display:none;
+	visibility:hidden;
+}
+
 .pagination>.active>a,
 .pagination>.active>a:focus,
 .pagination>.active>a:hover,
