@@ -5,6 +5,7 @@ mobileTitle: Functional Square Matrix…
 layout: post
 abstract: How to create a simple functional square matrix in Kotlin programming language
 keywords: kotlin,functional,programming,matrix,affine,transformations,inverse,inversion,adjugate,cofactor,comatrix,determinant,traspose,transposition,3d,opengl
+tags: kotlin,maths,opengl
 ---
 
 Working with OpenGL and 3D graphics would be impossible without
