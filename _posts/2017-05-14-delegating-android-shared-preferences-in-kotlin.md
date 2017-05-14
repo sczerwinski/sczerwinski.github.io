@@ -66,10 +66,7 @@ sharedPreferences.edit()
 Don’t forget to call `apply()`. Otherwise, the value would not be saved.
 
 It looks simple and clean… so long as you only need two or three calls to `SharedPreferences`.
-But the username might be used in dozens of classes across the application.
-
-In order to keep the code clean, you could probably create a class responsible for handling
-operations on preferences in your app. But that would make another class that **you** must implement.
+But typically, that is not the case, is it?
 
 ## Anko Comes To The Rescue
 
@@ -96,15 +93,22 @@ defaultSharedPreferences.edit()
 
 ## Utilizing Kotlin Properties
 
-[getters and setters](https://kotlinlang.org/docs/reference/properties.html#getters-and-setters)
+If you do something more than once, you should extract it into a separate method, or in this case,
+two methods—`getUsername` and `setUsername`.
+
+But this is Kotlin, right? Why not declare a property with
+[a custom getter and a custom setter](https://kotlinlang.org/docs/reference/properties.html#getters-and-setters)?
+You may also make it an extension property and use it from any `Activity` in your app:
 
 ```kotlin
-var username: String
+var Context.username: String
     get() = defaultSharedPreferences.getString("USERNAME", "")
     set(value) = defaultSharedPreferences.edit()
             .putString("USERNAME", value)
             .apply()
 ```
+
+As a result, saving and restoring the username looks much simpler:
 
 ```kotlin
 usernameEditText.setText(username)
