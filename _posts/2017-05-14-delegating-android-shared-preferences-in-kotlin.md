@@ -3,7 +3,7 @@ disqusid: delegating-android-shared-preferences-in-kotlin
 title: Delegating Android SharedPreferences in Kotlin
 mobileTitle: Delegating SharedPreferences
 layout: post
-abstract: How to effectively delegate Android SharedPreferences using Kotlin delegated properties
+abstract: How I solved the problem of <code>SharedPreferences</code> boilerplate code in Android applications
 keywords: kotlin,delegation,android,sharedpreferences
 tags: kotlin,android
 ---
@@ -12,11 +12,21 @@ tags: kotlin,android
 >
 > — Gwen Stefani
 
-[SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html)
+[`SharedPreferences`](https://developer.android.com/reference/android/content/SharedPreferences.html)
+provide a relatively simple way to store key-value pairs on Android.
+The application might not only use them to save its settings, but also to keep its persistent state.
 
-[Key-Value Pairs](https://developer.android.com/training/basics/data-storage/shared-preferences.html)
+## The Problem: Boilerplate Code
 
-## The problem: Boilerplate code
+However, when the app gets more complex, using `SharedPreferences` might become really painful.
+The boilerplate code required to retrieve and later store the preference takes more lines
+than the actual operation performed on its value.
+
+As an example, consider a `LoginActivity` that only displays input for username and password.
+As a user, I want the application to remember my username so that I do not need to type it again
+the next time I want to log in. True _story_ (pun intended).
+
+
 
 ```java
 SharedPreferences sharedPreferences =
@@ -32,16 +42,16 @@ SharedPreferences sharedPreferences =
 
 ```java
 usernameEditText.setText(
-        sharedPreferences.getString("USER_NAME", ""));
+        sharedPreferences.getString("USERNAME", ""));
 ```
 
 ```java
 sharedPreferences.edit()
-        .putString("USER_NAME", usernameEditText.getText().toString())
+        .putString("USERNAME", usernameEditText.getText().toString())
         .apply();
 ```
 
-## Kotlin + Anko – how it is better
+## Anko Comes To The Rescue
 
 ```kotlin
 import org.jetbrains.anko.defaultSharedPreferences
@@ -49,22 +59,24 @@ import org.jetbrains.anko.defaultSharedPreferences
 
 ```kotlin
 usernameEditText.setText(
-        defaultSharedPreferences.getString("USER_NAME", ""))
+        defaultSharedPreferences.getString("USERNAME", ""))
 ```
 
 ```kotlin
 defaultSharedPreferences.edit()
-        .putString("USER_NAME", usernameEditText.text.toString())
+        .putString("USERNAME", usernameEditText.text.toString())
         .apply()
 ```
 
-## Kotlin properties
+## Utilizing Kotlin Properties
+
+[getters and setters](https://kotlinlang.org/docs/reference/properties.html#getters-and-setters)
 
 ```kotlin
 var username: String
-    get() = defaultSharedPreferences.getString("USER_NAME", "")
+    get() = defaultSharedPreferences.getString("USERNAME", "")
     set(value) = defaultSharedPreferences.edit()
-            .putString("USER_NAME", value)
+            .putString("USERNAME", value)
             .apply()
 ```
 
@@ -76,7 +88,7 @@ usernameEditText.setText(username)
 username = usernameEditText.text.toString()
 ```
 
-## Delegate
+## Delegate It
 
 [Delegated Properties](https://kotlinlang.org/docs/reference/delegated-properties.html)
 
@@ -102,10 +114,12 @@ class StringSharedPreferenceDelegate(
 ```
 
 ```kotlin
-var username: String by StringSharedPreferenceDelegate(this, "USER_NAME", "")
+var username: String by StringSharedPreferenceDelegate(this, "USERNAME", "")
 ```
 
-## Using my fancy [library](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master)
+## The Solution: External Library
+
+[library](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master)
 
 ```gradle
 dependencies {
@@ -114,13 +128,22 @@ dependencies {
 ```
 
 ```kotlin
-var username by stringSharedPreference("USER_NAME", "")
+var username by stringSharedPreference("USERNAME", "")
 ```
 
 ```kotlin
-var username by context.stringSharedPreference("USER_NAME", "")
+var username by context.stringSharedPreference("USERNAME", "")
 ```
 
-## What comes next?
+```kotlin
+fun Context.usernameSharedPreference() =
+        stringSharedPreference("USERNAME", "")
+```
+
+```kotlin
+var username by usernameSharedPreference()
+```
+
+## Next Step
 
 Complex objects
