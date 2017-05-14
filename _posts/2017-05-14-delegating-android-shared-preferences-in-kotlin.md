@@ -26,10 +26,10 @@ For example, consider a `LoginActivity` that only displays input for username an
 As a user, I want the application to remember my username so that I don’t need to type it again
 the next time I want to log in—true _story_ (pun intended).
 
-How do we do this in Java?
+How should you do this in Java?
 
-First, we need to get an instance of `SharedPreferences` object. Assuming this happens in the `Activity`,
-we can do it by calling `getSharedPreferences()`:
+First, you need to get an instance of `SharedPreferences` object. Assuming your code is in the `Activity`,
+you can do it by calling `getSharedPreferences()`:
 
 ```java
 SharedPreferences sharedPreferences =
@@ -38,15 +38,15 @@ SharedPreferences sharedPreferences =
             Context.MODE_PRIVATE);
 ```
 
-Or, if multiple multiple preferences files are not needed, we can use the default shared preferences:
+Or, if multiple preferences files are not needed, you may use the default shared preferences:
 
 ```java
 SharedPreferences sharedPreferences =
         PreferenceManager.getDefaultSharedPreferences(this);
 ```
 
-To retrieve a `String` value, we may use `getString()` method, which requires us to provide
-the name of the preference, and the default value, returned if the preference does not exist:
+To retrieve a `String` value, you may use `getString()` method, which requires the name
+of the preference, and the default value, returned if the preference does not exist:
 
 ```java
 usernameEditText.setText(
@@ -54,7 +54,7 @@ usernameEditText.setText(
 ```
 
 Storing the value, however, is not that straightforward. `SharedPreferences` object only provides
-the methods to retrieve preferences. To save the values, we need to use an `Editor`,
+the methods to retrieve preferences. To save the values, you need to use an `Editor`,
 returned by the `edit()` method:
 
 ```java
@@ -65,18 +65,23 @@ sharedPreferences.edit()
 
 Don’t forget to call `apply()`. Otherwise, the value would not be saved.
 
-It looks simple and clean… so long as we only need two or three calls to `SharedPreferences`.
+It looks simple and clean… so long as you only need two or three calls to `SharedPreferences`.
 But the username might be used in dozens of classes across the application.
 
-In order to keep the code clean, we may create a class that will handle preferences
-in our app—just a few methods.
-That’s true, but these are a few more methods that **we** need to write.
+In order to keep the code clean, you could probably create a class responsible for handling
+operations on preferences in your app. But that would make another class that **you** must implement.
 
 ## Anko Comes To The Rescue
 
-```kotlin
-import org.jetbrains.anko.defaultSharedPreferences
-```
+Kotlin language is probably the best thing that has happened to Android developers
+since first Android phones hit the market. It allowed to create powerful
+yet lightweight tools that simplify our lives.
+
+One of those tools, Anko, provides an
+[extension property](https://kotlinlang.org/docs/reference/extensions.html#extension-properties)
+for Android `Context` class—`defaultSharedPreferences`. By using that property,
+you no longer need to explicitly initialize the `SharedPreferences` object.
+Still, you need to retrieve and store the values in the same inconvenient manner:
 
 ```kotlin
 usernameEditText.setText(
