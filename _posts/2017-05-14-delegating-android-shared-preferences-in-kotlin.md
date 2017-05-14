@@ -91,7 +91,7 @@ defaultSharedPreferences.edit()
         .apply()
 ```
 
-## Utilizing Kotlin Properties
+## Utilize Kotlin Properties
 
 If you do something more than once, you should extract it into a separate method, or in this case,
 two methods—`getUsername` and `setUsername`.
@@ -108,7 +108,7 @@ var Context.username: String
             .apply()
 ```
 
-As a result, saving and restoring the username looks much simpler:
+As a result, saving and restoring the username is much simpler:
 
 ```kotlin
 usernameEditText.setText(username)
@@ -118,9 +118,21 @@ usernameEditText.setText(username)
 username = usernameEditText.text.toString()
 ```
 
+You can now get or set the username by referring to a single property.
+I cannot imagine any way of simplifying that.
+
+However, this approach still has its disadvantages.
+Take another look at the declaration of the `username` property…
+
+It doesn’t look very nice, but at least it’s all in one place, right?
+
+Okay… Now, imagine that you need 20 similar properties in your app… or 50… or 100…
+
 ## Delegate It
 
-[Delegated Properties](https://kotlinlang.org/docs/reference/delegated-properties.html)
+**TODO:**
+
+You can create a [delegated property](https://kotlinlang.org/docs/reference/delegated-properties.html):
 
 ```kotlin
 class StringSharedPreferenceDelegate(
@@ -149,7 +161,10 @@ var username: String by StringSharedPreferenceDelegate(this, "USERNAME", "")
 
 ## The Solution: External Library
 
-[library](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master)
+**TODO:**
+
+I ended up creating an external
+[library](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master).
 
 ```gradle
 dependencies {
@@ -176,4 +191,7 @@ var username by usernameSharedPreference()
 
 ## Next Step
 
-Complex objects
+**TODO:**
+
+Complex objects, eg. `data class User(val username, val password)`, `data class Settings(...)`.
+Retrieve and store everything at once.
