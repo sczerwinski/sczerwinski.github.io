@@ -26,7 +26,7 @@ For example, consider a `LoginActivity` that only displays input for username an
 As a user, I want the application to remember my username so that I don’t need to type it again
 the next time I want to log in—true _story_ (pun intended).
 
-How can we do this in Java?
+How can this be done in Java?
 
 First, we need to get an instance of `SharedPreferences` object. Assuming our code is in the `Activity`,
 we can do it by calling `getSharedPreferences()`:
@@ -38,14 +38,14 @@ SharedPreferences sharedPreferences =
             Context.MODE_PRIVATE);
 ```
 
-Or, if multiple preferences files are not needed, we may use the default shared preferences:
+Or, if multiple preferences files are not needed, we may use the default shared preferences instead:
 
 ```java
 SharedPreferences sharedPreferences =
         PreferenceManager.getDefaultSharedPreferences(this);
 ```
 
-To retrieve a `String` value, we may use `getString()` method, which requires the name
+We may then retrieve a `String` by calling the `getString()` method, which requires the name
 of the preference, and the default value, returned if the preference does not exist:
 
 ```java
@@ -54,7 +54,7 @@ usernameEditText.setText(
 ```
 
 Storing the value, however, is not that straightforward. `SharedPreferences` object only provides
-the methods to retrieve preferences. To save the values, we need to use an `Editor`,
+methods to get preferences. To save any values, we need to use an `Editor`,
 returned by the `edit()` method:
 
 ```java
@@ -63,9 +63,9 @@ sharedPreferences.edit()
         .apply();
 ```
 
-Don’t forget to call `apply()`. Otherwise, the value would not be saved.
+We shouldn’t forget to call `apply()`. Otherwise, the value would not be saved.
 
-It looks simple and clean… so long as we only need two or three calls to `SharedPreferences`.
+It looks simple and clean… as long as we only need two or three calls to `SharedPreferences`.
 But typically, that is not the case, is it?
 
 ## Anko Comes To The Rescue
@@ -76,9 +76,9 @@ yet lightweight tools that simplify our lives.
 
 One of those tools, Anko, provides an
 [extension property](https://kotlinlang.org/docs/reference/extensions.html#extension-properties)
-for Android `Context` class—`defaultSharedPreferences`. By using that property,
-we no longer need to explicitly initialize the `SharedPreferences` object.
-Still, we need to retrieve and store the values in the same inconvenient manner:
+for Android `Context` class—`defaultSharedPreferences`—that eliminates the need
+to explicitly initialize the `SharedPreferences` object.
+Nonetheless, we still need to retrieve and store the values in the same inconvenient manner:
 
 ```kotlin
 usernameEditText.setText(
@@ -93,12 +93,12 @@ defaultSharedPreferences.edit()
 
 ## Utilize Kotlin Properties
 
-If several instructions appear in the code more than once, we should extract it into a separate method,
+If several instructions appear in the code more than once, they should be extracted into a separate method,
 or in this case, two methods—`getUsername` and `setUsername`.
 
-But this is Kotlin, right? Why not declare a property with
-[a custom getter and a custom setter](https://kotlinlang.org/docs/reference/properties.html#getters-and-setters)?
-We may also make it an extension property and use it from any `Activity` in our app:
+But this is Kotlin, right? Why not declare a property with defined custom
+[getter and setter](https://kotlinlang.org/docs/reference/properties.html#getters-and-setters)?
+It can also be made an extension property that might be referenced from any `Activity` in our app:
 
 ```kotlin
 var Context.username: String
@@ -108,7 +108,7 @@ var Context.username: String
             .apply()
 ```
 
-As a result, saving and restoring the username is much simpler:
+As a result, saving and restoring the username becomes much simpler:
 
 ```kotlin
 usernameEditText.setText(username)
@@ -118,13 +118,13 @@ usernameEditText.setText(username)
 username = usernameEditText.text.toString()
 ```
 
-Wy can now get or set the username by referring to a single property.
+We can now get or set the username by referring to a single property.
 I cannot imagine any way of simplifying that.
 
-However, this approach still has its disadvantages.
-Take another look at the declaration of the `username` property…
-It doesn’t look very nice, but at least everything is in one place, right?
-Okay… Now, imagine that we need 20 similar properties in our app… or 50… or 100…
+However, this approach still has its drawbacks.
+Take another look at the declaration of the `username` property.
+It’s a bit complicated, but at least everything is in one place, right?
+Fair enough. Now, imagine that there are 10 similar properties in the app… or make it 20… or 50…
 
 ## Delegate
 
@@ -133,10 +133,10 @@ Okay… Now, imagine that we need 20 similar properties in our app… or 50… o
 >
 > — Delegated Properties, Kotlin Programming Language Reference
 
-The above quotation perfectly conveys our needs. And Kotlin offers a solution in the form of
-[delegated properties](https://kotlinlang.org/docs/reference/delegated-properties.html).
+The above quotation perfectly conveys our needs. And Kotlin offers us
+a solution—[delegated properties](https://kotlinlang.org/docs/reference/delegated-properties.html).
 
-So let’s create one:
+So let’s create a delegate that deals with values stored in `SharedPreferences`:
 
 ```kotlin
 class StringSharedPreferenceDelegate(
@@ -159,7 +159,8 @@ class StringSharedPreferenceDelegate(
 }
 ```
 
-Now, any declaration of a property might be delegated to `SharedPreferences` in a single line of code:
+Now, any declaration of a property might be delegated to an instance of `StringSharedPreferenceDelegate`
+in a single line of code:
 
 ```kotlin
 var username: String by StringSharedPreferenceDelegate(context, "USERNAME", "")
@@ -172,10 +173,11 @@ var username: String by StringSharedPreferenceDelegate(context, "USERNAME", "")
 > — Delegated Properties, Kotlin Programming Language Reference
 
 Most Android applications use `SharedPreferences`. So we should probably create an external library
-to make our solution reusable. And guess what. I’ve already done that. The project is available on
+to make the solution reusable. And guess what. I’ve already done that. The project is available on
 [GitHub](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master).
 
-To use the library, add it to your Gradle dependencies (the package is added to _jcenter_ repository):
+To use the library, simply include it in your Gradle dependencies (the package is linked to
+[_jcenter_](https://bintray.com/sczerwinski/android/delegates-shared-preferences) repository):
 
 ```gradle
 dependencies {
@@ -183,13 +185,13 @@ dependencies {
 }
 ```
 
-A property can now be defined with a single line in your `Activity` class:
+A property can then be defined in your `Activity` class:
 
 ```kotlin
 var username by stringSharedPreference("USERNAME", "")
 ```
 
-Or in any other class with a reference to the `Context`:
+Or in any other class containing a reference to the `Context`:
 
 ```kotlin
 var username by context.stringSharedPreference("USERNAME", "")
@@ -197,7 +199,7 @@ var username by context.stringSharedPreference("USERNAME", "")
 
 Though, it might be a good idea to define
 an [extension function](https://kotlinlang.org/docs/reference/extensions.html#extension-functions),
-at least for those preferences which are referenced from several different classes:
+at least for those preferences, which are referenced from multiple different classes:
 
 ```kotlin
 fun Context.usernameSharedPreference() =
@@ -210,19 +212,19 @@ var username by usernameSharedPreference()
 
 ## What’s Next?
 
-So far, the library only supports several data types:
+So far, the library only supports several basic data types:
 `Int`, `Long`, `Float`, `Double`, `Boolean`, `String` and `Set<String>`.
-In future releases, I plan to implement delegates for other common types, e.g. `Array`, `List`, `Date`,
-as well as `data` classes.
+In future releases, I plan to implement delegates for other common types,
+e.g. `Array`, `List`, `Date`, as well as `data` classes.
 
 For example, if the user selects the ‘remember password’ `CheckBox`,
-we should store both `username` and `password` in the `SharedPreferences`:
+both `username` and `password` should be stored in the `SharedPreferences`:
 
 ```kotlin
 data class User(val username: String, val password: String)
 ```
 
-And both values should be committed at the same time:
+What’s more, both values should be committed at the same time:
 
 ```kotlin
 sharedPreferences.edit()
@@ -231,4 +233,4 @@ sharedPreferences.edit()
         .apply()
 ```
 
-Hopefully, I’ll be able to describe my solution soon.
+But that’s another story.
