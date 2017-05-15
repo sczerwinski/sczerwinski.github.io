@@ -1,1 +1,4 @@
-
+- date: 2017-05-14
+  title: Delegates for SharedPreferences—Release 0.1
+  content: A set of Kotlin delegates storing values in Android SharedPreferences
+  url: https://bintray.com/sczerwinski/android/delegates-shared-preferences/0.1
