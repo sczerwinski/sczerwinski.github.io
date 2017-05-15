@@ -131,7 +131,7 @@ Okay… Now, imagine that we need 20 similar properties in our app… or 50… o
 > _There are certain common kinds of properties, that, though we can implement them manually
 > every time we need them, would be very nice to implement once and for all […]_
 >
-> — Kotlin Programming Language Reference
+> — Delegated Properties, Kotlin Programming Language Reference
 
 The above quotation perfectly conveys our needs. And Kotlin offers a solution in the form of
 [delegated properties](https://kotlinlang.org/docs/reference/delegated-properties.html).
@@ -169,12 +169,13 @@ var username: String by StringSharedPreferenceDelegate(context, "USERNAME", "")
 
 > _[…] and put into a library._
 >
-> — Kotlin Programming Language Reference
+> — Delegated Properties, Kotlin Programming Language Reference
 
-**TODO:**
+Most Android applications use `SharedPreferences`. So we should probably create an external library
+to make our solution reusable. And guess what. I’ve already done that. The project is available on
+[GitHub](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master).
 
-I ended up creating an external
-[library](https://github.com/sczerwinski/android-delegates-shared-preferences/tree/master).
+To use the library, add it to your Gradle dependencies (the package is added to _jcenter_ repository):
 
 ```gradle
 dependencies {
@@ -182,13 +183,21 @@ dependencies {
 }
 ```
 
+A property can now be defined with a single line in your `Activity` class:
+
 ```kotlin
 var username by stringSharedPreference("USERNAME", "")
 ```
 
+Or in any other class with a reference to the `Context`:
+
 ```kotlin
 var username by context.stringSharedPreference("USERNAME", "")
 ```
+
+Though, it might be a good idea to define
+an [extension function](https://kotlinlang.org/docs/reference/extensions.html#extension-functions),
+at least for those preferences which are referenced from several different classes:
 
 ```kotlin
 fun Context.usernameSharedPreference() =
@@ -201,14 +210,25 @@ var username by usernameSharedPreference()
 
 ## What’s Next?
 
-**TODO:**
+So far, the library only supports several data types:
+`Int`, `Long`, `Float`, `Double`, `Boolean`, `String` and `Set<String>`.
+In future releases, I plan to implement delegates for other common types, e.g. `Array`, `List`, `Date`,
+as well as `data` classes.
 
-Complex objects, eg.
+For example, if the user selects the ‘remember password’ `CheckBox`,
+we should store both `username` and `password` in the `SharedPreferences`:
 
 ```kotlin
 data class User(val username: String, val password: String)
-
-data class Session(val sessionId: String, val username: String, val timeout: Date)
 ```
 
-Retrieve and store everything at once.
+And both values should be committed at the same time:
+
+```kotlin
+sharedPreferences.edit()
+        .putString("USERNAME", username)
+        .putString("PASSWORD", password)
+        .apply()
+```
+
+Hopefully, I’ll be able to describe my solution soon.
