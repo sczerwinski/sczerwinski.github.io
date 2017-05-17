@@ -1,1 +1,5 @@
+- date: 2017-05-17
+  title: Delegating Android SharedPreferences in Kotlin
+  content: How to solve the problem of boilerplate code related to SharedPreferences in Android applications
+  url: /2017/05/17/delegating-android-shared-preferences-in-kotlin.html
 

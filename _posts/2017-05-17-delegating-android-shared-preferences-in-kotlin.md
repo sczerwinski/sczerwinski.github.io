@@ -194,8 +194,8 @@ or in any other class containing a reference to the `Context`:
 var username by context.stringSharedPreference("USERNAME", "")
 ```
 
-It might be a good idea to define
-an [extension function](https://kotlinlang.org/docs/reference/extensions.html#extension-functions),
+It might be a good idea to define an additional
+[extension function](https://kotlinlang.org/docs/reference/extensions.html#extension-functions),
 at least for those preferences, which are used in many different classes:
 
 ```kotlin
@@ -215,3 +215,4 @@ But in the future, I plan to implement delegates for other common types,
 e.g. `Array`, `List`, `Date`, as well as `data` classes.
 
 In the meantime, feel free to use the existing features.
+The library is still in development stage, but it has been fully tested.
