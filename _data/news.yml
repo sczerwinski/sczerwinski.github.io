@@ -1,4 +1,14 @@
 - date: 2017-05-14
-  title: Delegates for SharedPreferences—Release 0.1
+  title: Delegates for SharedPreferences—Release 0.1 (bintray.com)
   content: A set of Kotlin delegates storing values in Android SharedPreferences
   url: https://bintray.com/sczerwinski/android/delegates-shared-preferences/0.1
+
+- date: 2017-01-17
+  title: Most Common Typographical Errors in Software (javeo.eu)
+  content: All tests are green, spelling is double-checked, and you believe, there are no errors in your software? After reading this article, you may change your mind.
+  url: http://www.javeo.eu/blog/programming/2017/01/17/Most-Common-Typographical-Errors.html
+
+- date: 2016-06-19
+  title: Functional Square Matrix in Kotlin
+  content: How to create a simple functional square matrix in Kotlin programming language
+  url: /2016/06/19/functional-square-matrix-in-kotlin.html
