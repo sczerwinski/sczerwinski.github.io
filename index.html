@@ -8,7 +8,7 @@ keywords: software,developer,programming,java,android
 ---
 
 {% for item in site.data.news limit:5 %}
-	<h2>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h2>
+	<h3>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
 	<div class="post-date">{{ item.date | date: '%B %d, %Y' }}</div>
 	<div class="post-abstract">{{ item.content }}</div>
 {% endfor %}
