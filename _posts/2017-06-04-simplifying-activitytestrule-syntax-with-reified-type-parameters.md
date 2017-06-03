@@ -1,10 +1,10 @@
 ---
 disqusid: simplifying-activitytestrule-syntax-with-reified-type-parameters
-title: Simplifying ActivityTestRule syntax with reified type parameters
-mobileTitle: Reified type parameters
+title: Simplifying Android Espresso Test Rules With Reified Type Parameters
+mobileTitle: Simplifying Android Test Rules
 layout: post
-abstract: How to simplify ActivityTestRule syntax with reified type parameters in Kotlin
-keywords: kotlin,android,testing,reified,ActivityTestRule,IntentsTestRule
+abstract: How to simplify Android Espresso test rules with reified type parameters in Kotlin
+keywords: kotlin,android,espresso,testing,reified,ActivityTestRule,IntentsTestRule
 tags: kotlin,android
 ---
 
