@@ -31,9 +31,9 @@ dependencies {
 
 ## The Problems
 
-While [testing Android UI](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
-with Espresso, I define an `ActivityTestRule` or an `IntentsTestRule` (in the examples, I will use the latter).
-Sometimes, I need to start the `Activity` under test with a specific `Intent`, so the rule must be instantiated
+When [testing Android UI](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
+with Espresso, I need to define an `ActivityTestRule` or an `IntentsTestRule` (in the examples, I will use the latter).
+Often, I wish to start the `Activity` under test with a specific `Intent`, so the rule must be instantiated
 by calling a constructor with three arguments:
 
 ```kotlin
@@ -47,37 +47,37 @@ class MyTestClass {
 }
 ```
 
-The first argument is the class of the `Activity`.
-The second one regards touch mode (it is `false` by default, and I don’t need to change it).
-And the last argument tells whether the `Activity` should be launched automatically before each test method
+* The first argument is the class of the activity.
+* The second one regards initial touch mode (it is `false` by default, and usually, I don’t need to change it).
+* And the last argument tells whether the activity should be launched automatically before each test method
 (by default it is set to `true`).
 
 There are several problems with this snippet of code:
 
 1. When I see the constructor call, I don’t know the meaning of each `false` argument
-without looking at the definition of the constructor. In Kotlin, it is possible to use
+without looking at the definition of the constructor. In Kotlin, I could use
 [named arguments](https://kotlinlang.org/docs/reference/functions.html#named-arguments),
 e.g. `launchActivity = false`,
 but it is not allowed with non-Kotlin functions.
-2. I don’t need to change the default value of `initialTouchMode`.
-The second argument is only there to prevent ambiguity—constructor:
+2. I have to provide `initialTouchMode`, even though I don’t need to change its default value.
+The second argument is only there to prevent ambiguity, because a constructor:
 ```java
 // Java code:
 public ActivityTestRule(Class<T> activityClass, boolean launchActivity)
 ```
-would have the same arguments as already existing:
+would have the same arguments as the already existing one:
 ```java
 // Java code:
 public ActivityTestRule(Class<T> activityClass, boolean initialTouchMode)
 ```
-3. The `::class.java` suffix to the `Activity` class makes the code obscure.
+3. The `::class.java` after the activity class makes the code obscure.
 
-All these problems could be easily avoided in Kotlin, but Espresso is written in Java.
+All these problems could be easily avoided in Kotlin, but the Espresso library is written in Java.
 
 ## Using Kotlin Functions
 
-To solve the first and the second issue, I created a simple Kotlin function
-that assigns default values to both arguments:
+To solve the first and the second issue, I created a simple Kotlin function with
+[default argument values](https://kotlinlang.org/docs/reference/functions.html#default-arguments):
 
 ```kotlin
 fun <T : Activity> intentsTestRule(
@@ -87,7 +87,7 @@ fun <T : Activity> intentsTestRule(
     IntentsTestRule(activityClass, initialTouchMode, launchActivity)
 ```
 
-As a result, I can omit the second argument and name the third one:
+As a result, I can name the third argument and omit the second one:
 
 ```kotlin
 @RunWith(AndroidJUnit4::class)
@@ -116,7 +116,7 @@ inline fun <reified T : Activity> intentsTestRule(
     IntentsTestRule(T::class.java, initialTouchMode, launchActivity)
 ```
 
-So I can define the rule as:
+So instead of providing the argument, I can just define the type parameter:
 
 ```kotlin
 @RunWith(AndroidJUnit4::class)
@@ -128,7 +128,15 @@ class MyTestClass {
 }
 ```
 
-## Other Resources
-
 A similar function might be defined for `ActivityTestRule`s.
-Full code with examples is available [here](https://gist.github.com/sczerwinski/bcd7e38a02638c249878b78b2e9e6cd0).
+
+---
+
+Full implementation with examples is available [here](https://gist.github.com/sczerwinski/bcd7e38a02638c249878b78b2e9e6cd0).
+
+## Bibliography
+
+* [_Functions_, Kotlin Programming Language Reference](https://kotlinlang.org/docs/reference/functions.html)
+* [_Inline Functions_, Kotlin Programming Language Reference](https://kotlinlang.org/docs/reference/inline-functions.html)
+* [Espresso Documentation](https://google.github.io/android-testing-support-library/docs/espresso/index.html)
+* [_Testing UI for a Single App_, Android Developers](https://developer.android.com/training/testing/ui-testing/espresso-testing.html)
