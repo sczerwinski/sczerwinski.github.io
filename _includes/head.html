@@ -19,7 +19,11 @@
 	<meta name="twitter:site" content="@{{ site.twitter }}" />
 	<meta name="twitter:title" content="{{ page.title }}" />
 	{% if page.abstract %}<meta name="twitter:description" content="{{ page.abstract }}" />{% endif %}
-	{% if page.image %}<meta name="twitter:image" content="{{ site.url }}/assets/img/post/{{ page.image }}" />{% endif %}
+	{% if page.image %}
+		<meta name="twitter:image" content="{{ site.url }}/assets/img/post/{{ page.image }}" />
+	{% else %}
+		<meta name="twitter:image" content="{{ site.url }}/assets/img/icon.png" />
+	{% endif %}
 
 	<meta name="theme-color" content="#752935" />
 	<meta name="msapplication-navbutton-color" content="#752935" />
