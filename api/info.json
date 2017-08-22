@@ -1,0 +1,10 @@
+---
+layout: null
+sitemap:
+exclude: 'yes'
+---
+{
+  "title": "{{ site.title }}",
+  "baseUrl": "{{ site.url }}",
+  "imgPath": "/assets/img/post"
+}

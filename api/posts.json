@@ -1,0 +1,16 @@
+---
+layout: null
+sitemap:
+exclude: 'yes'
+---
+[{% for post in site.posts  %}
+  {
+    "id": "{{ post.disqusid }}",
+    "title": "{{ post.title }}",{% if post.abstract %}
+    "abstract": "{{ post.abstract }}",{% endif %}{% if post.image %}
+    "image": "{{ post.image }}",{% endif %}
+    "tags": {% assign tags = post.tags | replace: ',', '", "' %}{{ tags }},
+    "url": "{{ post.url }}",
+    "date": "{{ post.date | date: "%Y-%m-%d" }}"
+  }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+]
