@@ -1,3 +1,13 @@
+- date: 2018-04-21
+  title: Kotlin Utilities—Release 0.2 (@bintray.com)
+  content: Kotlin utility types based on Scala open source project.
+  url: https://bintray.com/sczerwinski/kotlin/kotlin-util/0.2
+
+- date: 2018-04-08
+  title: X-presso—Release 0.1 (@bintray.com)
+  content: Kotlin Extensions for Android Espresso.
+  url: https://bintray.com/sczerwinski/android/xpresso/0.1
+
 - date: 2017-06-04
   title: Simplifying Android Espresso Test Rules With Reified Type Parameters
   content: How to simplify Android Espresso test rules with reified type parameters in Kotlin
