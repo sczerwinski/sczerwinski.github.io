@@ -1,0 +1,3 @@
+- id: kotlin-util
+  name: Kotlin utilities
+  description: Kotlin utility classes based on Scala
