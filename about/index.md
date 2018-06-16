@@ -2,7 +2,7 @@
 title: About me
 layout: default
 abstract: Personal web site
-keywords: about,software,developer,programming,java,android
+keywords: about,software,developer,programming,kotlin,java,android
 ---
 
 When I was&nbsp;8, I got my first computer—Commodore&nbsp;64.
