@@ -1,3 +1,8 @@
+- date: 2018-11-30
+  title: The Case Against Double Exclamation Operator
+  content: Why Kotlin not-null assertion operator (a.k.a. double exclamation operator) should be avoided
+  url: /2018/11/30/the-case-against-double-exclamation-operator.html
+
 - date: 2018-11-02
   title: Kotlin Utilities—Release 1.1
   content: Kotlin utility types based on Scala open source project.
