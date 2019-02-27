@@ -1,3 +1,7 @@
 - id: kotlin-util
   name: Kotlin utilities
   description: Kotlin utility classes based on Scala
+
+- id: android-charts
+  name: Android Charts
+  description: Android charts
