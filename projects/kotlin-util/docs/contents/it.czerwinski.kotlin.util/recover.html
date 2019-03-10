@@ -1,0 +1,20 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>recover - Kotlin utility classes based on Scala</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">Kotlin utility classes based on Scala</a>&nbsp;/&nbsp;<a href="index.html">it.czerwinski.kotlin.util</a>&nbsp;/&nbsp;<a href="./recover.html">recover</a><br/>
+<br/>
+<h1>recover</h1>
+<a name="it.czerwinski.kotlin.util$recover(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recover.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.recover.T)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="recover.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">recover</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util$recover(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recover.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.recover.T)))/rescue">rescue</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html"><span class="identifier">Throwable</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="recover.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="recover.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Returns this <a href="-try/index.html">Try</a> if this is a <a href="-success/index.html">Success</a> or a <a href="-try/index.html">Try</a> created for the <a href="recover.html#it.czerwinski.kotlin.util$recover(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recover.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.recover.T)))/rescue">rescue</a> operation if this is a <a href="-failure/index.html">Failure</a>.</p>
+<h3>Parameters</h3>
+<p><a name="rescue"></a>
+<code>rescue</code> - Function creating a new value from the exception of a <a href="-failure/index.html">Failure</a>.</p>
+<p><strong>Return</strong><br/>
+This <a href="-try/index.html">Try</a> if this is a <a href="-success/index.html">Success</a> or a <a href="-try/index.html">Try</a> created for the <a href="recover.html#it.czerwinski.kotlin.util$recover(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recover.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.recover.T)))/rescue">rescue</a> operation if this is a <a href="-failure/index.html">Failure</a>.</p>
+</BODY>
+</HTML>

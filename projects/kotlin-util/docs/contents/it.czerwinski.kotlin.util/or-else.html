@@ -1,0 +1,28 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>orElse - Kotlin utility classes based on Scala</title>
+<link rel="stylesheet" href="../../style.css">
+</HEAD>
+<BODY>
+<a href="../index.html">Kotlin utility classes based on Scala</a>&nbsp;/&nbsp;<a href="index.html">it.czerwinski.kotlin.util</a>&nbsp;/&nbsp;<a href="./or-else.html">orElse</a><br/>
+<br/>
+<h1>orElse</h1>
+<a name="it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)))))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="or-else.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">orElse</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)))))/default">default</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="or-else.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="or-else.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Returns this <a href="-option/index.html">Option</a> if this is a <a href="-some/index.html">Some</a> or <a href="or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)))))/default">default</a> if this is <a href="-none/index.html">None</a>.</p>
+<h3>Parameters</h3>
+<p><a name="default"></a>
+<code>default</code> - Default <a href="-option/index.html">Option</a> provider.</p>
+<p><strong>Return</strong><br/>
+This <a href="-some/index.html">Some</a> or <a href="or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)))))/default">default</a>.</p>
+<a name="it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)))))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="or-else.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">orElse</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)))))/default">default</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="or-else.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="or-else.html#T"><span class="identifier">T</span></a><span class="symbol">&gt;</span></code>
+<p>Returns this <a href="-try/index.html">Try</a> if this is a <a href="-success/index.html">Success</a> or <a href="or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)))))/default">default</a> if this is a <a href="-failure/index.html">Failure</a>.</p>
+<h3>Parameters</h3>
+<p><a name="default"></a>
+<code>default</code> - Default <a href="-try/index.html">Try</a> provider.</p>
+<p><strong>Return</strong><br/>
+This <a href="-success/index.html">Success</a> or <a href="or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)))))/default">default</a>.</p>
+</BODY>
+</HTML>

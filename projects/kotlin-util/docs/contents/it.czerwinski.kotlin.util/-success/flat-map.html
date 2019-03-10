@@ -1,0 +1,21 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Success.flatMap - Kotlin utility classes based on Scala</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Kotlin utility classes based on Scala</a>&nbsp;/&nbsp;<a href="../index.html">it.czerwinski.kotlin.util</a>&nbsp;/&nbsp;<a href="index.html">Success</a>&nbsp;/&nbsp;<a href="./flat-map.html">flatMap</a><br/>
+<br/>
+<h1>flatMap</h1>
+<a name="it.czerwinski.kotlin.util.Success$flatMap(kotlin.Function1((it.czerwinski.kotlin.util.Success.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Success.flatMap.R)))))"></a>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">flatMap</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.Success$flatMap(kotlin.Function1((it.czerwinski.kotlin.util.Success.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Success.flatMap.R)))))/transform">transform</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="flat-map.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-try/index.html"><span class="identifier">Try</span></a><span class="symbol">&lt;</span><a href="flat-map.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span></code>
+<p>Overrides <a href="../-try/flat-map.html">Try.flatMap</a></p>
+<p>Maps value of a <a href="index.html">Success</a> to a new <a href="../-try/index.html">Try</a> using <a href="../-try/flat-map.html#it.czerwinski.kotlin.util.Try$flatMap(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.flatMap.R)))))/transform">transform</a> or returns the same <a href="../-try/index.html">Try</a> if this is a <a href="../-failure/index.html">Failure</a>.</p>
+<h3>Parameters</h3>
+<p><a name="transform"></a>
+<code>transform</code> - Function transforming value of a <a href="index.html">Success</a> to a <a href="../-try/index.html">Try</a>.</p>
+<p><strong>Return</strong><br/>
+<a href="../-try/index.html">Try</a> returned by <a href="../-try/flat-map.html#it.czerwinski.kotlin.util.Try$flatMap(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.flatMap.R)))))/transform">transform</a> or this object if this is a <a href="../-failure/index.html">Failure</a>.</p>
+</BODY>
+</HTML>

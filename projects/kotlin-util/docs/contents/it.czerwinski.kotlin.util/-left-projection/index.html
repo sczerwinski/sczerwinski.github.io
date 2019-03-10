@@ -1,0 +1,224 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>LeftProjection - Kotlin utility classes based on Scala</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Kotlin utility classes based on Scala</a>&nbsp;/&nbsp;<a href="../index.html">it.czerwinski.kotlin.util</a>&nbsp;/&nbsp;<a href="./index.html">LeftProjection</a><br/>
+<br/>
+<h1>LeftProjection</h1>
+<code><span class="keyword">data</span> <span class="keyword">class </span><span class="identifier">LeftProjection</span><span class="symbol">&lt;</span><span class="keyword">out</span>&nbsp;<span class="identifier">L</span><span class="symbol">, </span><span class="keyword">out</span>&nbsp;<span class="identifier">R</span><span class="symbol">&gt;</span></code>
+<h3>Constructors</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="-init-.html">&lt;init&gt;</a></p>
+</td>
+<td>
+<code><span class="identifier">LeftProjection</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$<init>(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.LeftProjection.L, it.czerwinski.kotlin.util.LeftProjection.R)))/either">either</span><span class="symbol">:</span>&nbsp;<a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">)</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Properties</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="either.html">either</a></p>
+</td>
+<td>
+<code><span class="keyword">val </span><span class="identifier">either</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span></code></td>
+</tr>
+</tbody>
+</table>
+<h3>Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="all.html">all</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">all</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$all(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Returns the result of applying the <a href="all.html#it.czerwinski.kotlin.util.LeftProjection$all(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> to the value if this is <a href="../-left/index.html">Left</a>
+or <code>true</code> if this is <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="any.html">any</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">any</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$any(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Returns the result of applying the <a href="any.html#it.czerwinski.kotlin.util.LeftProjection$any(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> to the value if this is <a href="../-left/index.html">Left</a>
+or <code>false</code> if this is <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter.html">filter</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">filter</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$filter(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Returns the same <a href="../-left/index.html">Left</a> if the <a href="filter.html#it.czerwinski.kotlin.util.LeftProjection$filter(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> is satisfied for the value. Otherwise returns <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter-is-instance.html">filterIsInstance</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">filterIsInstance</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="filter-is-instance.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Returns the same <a href="../-left/index.html">Left</a> casted to type <a href="filter-is-instance.html#T">T</a> if it is <a href="filter-is-instance.html#T">T</a>. Otherwise returns <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter-is-instance-to-option.html">filterIsInstanceToOption</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">filterIsInstanceToOption</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="filter-is-instance-to-option.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Returns <a href="../-some/index.html">Some</a> containing the same <a href="../-left/index.html">Left</a> casted to type <a href="filter-is-instance-to-option.html#T">T</a> if it is <a href="filter-is-instance-to-option.html#T">T</a>. Otherwise returns <a href="../-none/index.html">None</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter-not.html">filterNot</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">filterNot</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$filterNot(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Returns the same <a href="../-left/index.html">Left</a> if the <a href="filter-not.html#it.czerwinski.kotlin.util.LeftProjection$filterNot(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> is not satisfied for the value. Otherwise returns <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter-not-to-option.html">filterNotToOption</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">filterNotToOption</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$filterNotToOption(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Returns <a href="../-some/index.html">Some</a> containing the same <a href="../-left/index.html">Left</a> if the <a href="filter-not-to-option.html#it.czerwinski.kotlin.util.LeftProjection$filterNotToOption(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> is not satisfied for the value.
+Otherwise returns <a href="../-none/index.html">None</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="filter-to-option.html">filterToOption</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">filterToOption</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$filterToOption(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Returns <a href="../-some/index.html">Some</a> containing the same <a href="../-left/index.html">Left</a> if the <a href="filter-to-option.html#it.czerwinski.kotlin.util.LeftProjection$filterToOption(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> is satisfied for the value.
+Otherwise returns <a href="../-none/index.html">None</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="for-each.html">forEach</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">forEach</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$forEach(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Unit)))/action">action</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html"><span class="identifier">Unit</span></a></code>
+<p>Runs <a href="for-each.html#it.czerwinski.kotlin.util.LeftProjection$forEach(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Unit)))/action">action</a> if this is a <a href="../-left/index.html">Left</a>. Returns <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a> without any action if this is a <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get.html">get</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">get</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#L"><span class="identifier">L</span></a></code>
+<p>Gets value of this <a href="../-left/index.html">Left</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="get-or-null.html">getOrNull</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">getOrNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">?</span></code>
+<p>Gets value of this <a href="../-left/index.html">Left</a> or <code>null</code> if this is <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="map.html">map</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">map</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$map(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, it.czerwinski.kotlin.util.LeftProjection.map.T)))/transform">transform</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="map.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="map.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span></code>
+<p>Maps value of this <a href="../-left/index.html">Left</a> using <a href="map.html#it.czerwinski.kotlin.util.LeftProjection$map(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, it.czerwinski.kotlin.util.LeftProjection.map.T)))/transform">transform</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="none.html">none</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">none</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.LeftProjection$none(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a></code>
+<p>Returns <code>false</code> if the <a href="none.html#it.czerwinski.kotlin.util.LeftProjection$none(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate">predicate</a> is met by the value if this is <a href="../-left/index.html">Left</a> or <code>true</code> otherwise.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="to-option.html">toOption</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="identifier">toOption</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">&gt;</span></code>
+<p>Returns a <a href="../-some/index.html">Some</a> containing the <a href="../-left/index.html">Left</a> value if it exists, or a <a href="../-none/index.html">None</a> if this is a <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h3>Extension Functions</h3>
+<table>
+<tbody>
+<tr>
+<td>
+<p><a href="../filter-not-null.html">filterNotNull</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">L</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">LeftProjection</span></a><span class="symbol">&lt;</span><a href="../filter-not-null.html#L"><span class="identifier">L</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="../filter-not-null.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">filterNotNull</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="../filter-not-null.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="../filter-not-null.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Returns the same <a href="../-left/index.html">Left</a> if its value is not <code>null</code>. Otherwise returns <code>null</code>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../filter-not-null-to-option.html">filterNotNullToOption</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">L</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">LeftProjection</span></a><span class="symbol">&lt;</span><a href="../filter-not-null-to-option.html#L"><span class="identifier">L</span></a><span class="symbol">?</span><span class="symbol">,</span>&nbsp;<a href="../filter-not-null-to-option.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">filterNotNullToOption</span><span class="symbol">(</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-option/index.html"><span class="identifier">Option</span></a><span class="symbol">&lt;</span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="../filter-not-null-to-option.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="../filter-not-null-to-option.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">&gt;</span></code>
+<p>Returns <a href="../-some/index.html">Some</a> containing the same <a href="../-left/index.html">Left</a> if its value is not <code>null</code>. Otherwise returns <a href="../-none/index.html">None</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../filter-or-else.html">filterOrElse</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">L</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">LeftProjection</span></a><span class="symbol">&lt;</span><a href="../filter-or-else.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="../filter-or-else.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">filterOrElse</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate">predicate</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../filter-or-else.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html"><span class="identifier">Boolean</span></a><span class="symbol">, </span><span class="identifier" id="it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/zero">zero</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../filter-or-else.html#R"><span class="identifier">R</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="../filter-or-else.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="../filter-or-else.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">?</span></code>
+<p>Returns the same <a href="../-left/index.html">Left</a> if the <a href="../filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate">predicate</a> is satisfied for the value,
+<code>Right(zero)</code> if the <a href="../filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate">predicate</a> is not satisfied for the value,
+or the same <a href="../-right/index.html">Right</a> if this is <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../flat-map.html">flatMap</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">L</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">, </span><span class="identifier">T</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">LeftProjection</span></a><span class="symbol">&lt;</span><a href="../flat-map.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="../flat-map.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">flatMap</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.T, it.czerwinski.kotlin.util.flatMap.R)))))/transform">transform</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="../flat-map.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="../flat-map.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="../flat-map.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="../flat-map.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="../flat-map.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span></code>
+<p>Maps value of this <a href="../-left/index.html">Left</a> to a new <a href="../-either/index.html">Either</a> using <a href="../flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.T, it.czerwinski.kotlin.util.flatMap.R)))))/transform">transform</a>.</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><a href="../get-or-else.html">getOrElse</a></p>
+</td>
+<td>
+<code><span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">L</span><span class="symbol">, </span><span class="identifier">R</span><span class="symbol">&gt;</span> <a href="./index.html"><span class="identifier">LeftProjection</span></a><span class="symbol">&lt;</span><a href="../get-or-else.html#L"><span class="identifier">L</span></a><span class="symbol">,</span>&nbsp;<a href="../get-or-else.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span><span class="symbol">.</span><span class="identifier">getOrElse</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.L)))/default">default</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="../get-or-else.html#L"><span class="identifier">L</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../get-or-else.html#L"><span class="identifier">L</span></a></code>
+<p>Gets value of this <a href="../-left/index.html">Left</a> or <a href="../get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.L)))/default">default</a> value if this is <a href="../-right/index.html">Right</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</BODY>
+</HTML>

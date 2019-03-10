@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Either.fold - Kotlin utility classes based on Scala</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Kotlin utility classes based on Scala</a>&nbsp;/&nbsp;<a href="../index.html">it.czerwinski.kotlin.util</a>&nbsp;/&nbsp;<a href="index.html">Either</a>&nbsp;/&nbsp;<a href="./fold.html">fold</a><br/>
+<br/>
+<h1>fold</h1>
+<a name="it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">T</span><span class="symbol">&gt;</span> <span class="identifier">fold</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/leftTransform">leftTransform</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#L"><span class="identifier">L</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="fold.html#T"><span class="identifier">T</span></a><span class="symbol">, </span><span class="identifier" id="it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/rightTransform">rightTransform</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><a href="index.html#R"><span class="identifier">R</span></a><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="fold.html#T"><span class="identifier">T</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="fold.html#T"><span class="identifier">T</span></a></code>
+<p>Transforms <a href="../-left/index.html">Left</a> with <a href="fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/leftTransform">leftTransform</a> or <a href="../-right/index.html">Right</a> with <a href="fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/rightTransform">rightTransform</a>.</p>
+<h3>Parameters</h3>
+<p><a name="leftTransform"></a>
+<code>leftTransform</code> - Function transforming <a href="../-left/index.html">Left</a> value.</p>
+<p><a name="rightTransform"></a>
+<code>rightTransform</code> - Function transforming <a href="../-right/index.html">Right</a> value.</p>
+<p><strong>Return</strong><br/>
+Result of applying <a href="fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/leftTransform">leftTransform</a> on <a href="../-left/index.html">Left</a> or <a href="fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/rightTransform">rightTransform</a> on <a href="../-right/index.html">Right</a>.</p>
+</BODY>
+</HTML>

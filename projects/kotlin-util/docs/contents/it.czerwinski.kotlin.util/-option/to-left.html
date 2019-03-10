@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<title>Option.toLeft - Kotlin utility classes based on Scala</title>
+<link rel="stylesheet" href="../../../style.css">
+</HEAD>
+<BODY>
+<a href="../../index.html">Kotlin utility classes based on Scala</a>&nbsp;/&nbsp;<a href="../index.html">it.czerwinski.kotlin.util</a>&nbsp;/&nbsp;<a href="index.html">Option</a>&nbsp;/&nbsp;<a href="./to-left.html">toLeft</a><br/>
+<br/>
+<h1>toLeft</h1>
+<a name="it.czerwinski.kotlin.util.Option$toLeft(kotlin.Function0((it.czerwinski.kotlin.util.Option.toLeft.R)))"></a>
+<code><span class="keyword">inline</span> <span class="keyword">fun </span><span class="symbol">&lt;</span><span class="identifier">R</span><span class="symbol">&gt;</span> <span class="identifier">toLeft</span><span class="symbol">(</span><span class="identifier" id="it.czerwinski.kotlin.util.Option$toLeft(kotlin.Function0((it.czerwinski.kotlin.util.Option.toLeft.R)))/right">right</span><span class="symbol">:</span>&nbsp;<span class="symbol">(</span><span class="symbol">)</span>&nbsp;<span class="symbol">-&gt;</span>&nbsp;<a href="to-left.html#R"><span class="identifier">R</span></a><span class="symbol">)</span><span class="symbol">: </span><a href="../-either/index.html"><span class="identifier">Either</span></a><span class="symbol">&lt;</span><a href="index.html#T"><span class="identifier">T</span></a><span class="symbol">,</span>&nbsp;<a href="to-left.html#R"><span class="identifier">R</span></a><span class="symbol">&gt;</span></code>
+<p>Returns a <a href="../-right/index.html">Right</a> containing the given argument <a href="to-left.html#it.czerwinski.kotlin.util.Option$toLeft(kotlin.Function0((it.czerwinski.kotlin.util.Option.toLeft.R)))/right">right</a> if this is empty,
+or a <a href="../-left/index.html">Left</a> containing this option's value if it is defined.</p>
+<h3>Parameters</h3>
+<p><a name="right"></a>
+<code>right</code> - Producer of the fallback <a href="../-right/index.html">Right</a> value.</p>
+<p><a name="R"></a>
+<code>R</code> - The type of the <a href="../-right/index.html">Right</a> value.</p>
+<p><strong>Return</strong><br/>
+a <a href="../-right/index.html">Right</a> containing the given argument <a href="to-left.html#it.czerwinski.kotlin.util.Option$toLeft(kotlin.Function0((it.czerwinski.kotlin.util.Option.toLeft.R)))/right">right</a> if this is empty,
+or a <a href="../-left/index.html">Left</a> containing this option's value if it is defined.</p>
+</BODY>
+</HTML>
