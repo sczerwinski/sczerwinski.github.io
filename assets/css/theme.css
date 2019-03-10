@@ -1,27 +1,27 @@
 body {
-	padding-top: 70px;
-	padding-bottom: 30px;
+    padding-top: 70px;
+    padding-bottom: 30px;
 }
 
 @media (max-width: 480px) {
-	body { font-size: 10pt; }
-	.navbar-brand { font-size: 11pt; }
+    body { font-size: 10pt; }
+    .navbar-brand { font-size: 11pt; }
 }
 
 @media (min-width: 768px) { body { font-size: 12pt; } }
 @media (min-width: 1200px) { body { font-size: 14pt; } }
 
 .theme-sczerwinski-ribbon {
-	border: 0;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 9000;
+    border: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9000;
 }
 
 .theme-sczerwinski-navbar {
-	background-image: none;
-	background-color: #752935;
+    background-image: none;
+    background-color: #752935;
 }
 
 .theme-sczerwinski-navbar .navbar-toggle {
@@ -34,65 +34,65 @@ body {
 }
 
 .theme-sczerwinski-navbar .navbar-brand {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .theme-sczerwinski-navbar .navbar-nav>li>a:link,
 .theme-sczerwinski-navbar .navbar-nav>li>a:active,
 .theme-sczerwinski-navbar .navbar-nav>li>a:visited {
-	color: #ebc6cc;
+    color: #ebc6cc;
 }
 
 .theme-sczerwinski-navbar .navbar-nav>li>a:hover {
-	color: #ffffff;
+    color: #ffffff;
 }
 
 .theme-sczerwinski-dropdown .dropdown-menu {
-	position: static;
-	display: block;
-	margin-bottom: 20px;
+    position: static;
+    display: block;
+    margin-bottom: 20px;
 }
 
 .theme-sczerwinski-jumbotron {
-	background-image: none;
-	background-color: #ffffff;
-	font-size: 100%;
+    background-image: none;
+    background-color: #ffffff;
+    font-size: 100%;
 }
 
 .theme-sczerwinski-page .theme-sczerwinski-jumbotron {
-	padding-right: 20px;
-	padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .theme-sczerwinski-page .subtitle-xs {
-	padding: 20px;
-	font-weight: bold;
-	font-size: 16px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .theme-sczerwinski-default .theme-sczerwinski-jumbotron {
-	padding-right: 20px;
-	padding-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
 
 .theme-sczerwinski-default .subtitle-xs {
-	padding: 20px;
-	font-weight: bold;
-	font-size: 16px;
+    padding: 20px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .theme-sczerwinski-default>table {
-	border-collapse: separate;
-	border-spacing: 20px 30px;
+    border-collapse: separate;
+    border-spacing: 20px 30px;
 }
 
 .theme-sczerwinski-default>table>tbody>tr>td {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 .theme-sczerwinski-default>table>tbody>tr>td>code,
 .theme-sczerwinski-default>table>tbody>tr>td>a {
-	vertical-align: top;
+    vertical-align: top;
 }
 
 h2 { font-size: 220%; }
@@ -106,25 +106,25 @@ a,
 a:link,
 a:active,
 a:visited {
-	color: #802d3a;
+    color: #802d3a;
 }
 
 a:hover {
-	color: #bd4256;
-	text-decoration: underline;
+    color: #bd4256;
+    text-decoration: underline;
 }
 
 .post-date {
-	color: #a0a0a0;
-	padding-bottom: 10px;
+    color: #a0a0a0;
+    padding-bottom: 10px;
 }
 
 .post-abstract {
 }
 
 .hidden {
-	display:none;
-	visibility:hidden;
+    display:none;
+    visibility:hidden;
 }
 
 .pagination>.active>a,
@@ -133,13 +133,13 @@ a:hover {
 .pagination>.active>span,
 .pagination>.active>span:focus,
 .pagination>.active>span:hover {
-	background-color: #752935;
-	border-color: #752935;
+    background-color: #752935;
+    border-color: #752935;
 }
 
 .pagination>li>a,
 .pagination>li>span {
-	color: #752935;
+    color: #752935;
 }
 
 .pagination>li>a:hover,
@@ -148,22 +148,22 @@ a:hover {
 }
 
 .MathJax_Display {
-	text-align: left !important;
-	margin-left: 4em !important;
+    text-align: left !important;
+    margin-left: 4em !important;
 }
 
 @media (max-width: 480px) {
-	.MathJax_Display {
-		font-size: 8pt !important;
-		text-align: left !important;
-		margin-left: 1em !important;
-	}
+    .MathJax_Display {
+        font-size: 8pt !important;
+        text-align: left !important;
+        margin-left: 1em !important;
+    }
 }
 
 iframe.docs {
-	position: absolute;
-	overflow: hidden;
-	width: 100%;
-	height: 100%;
-	border: 0;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }

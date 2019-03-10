@@ -80,11 +80,11 @@ We may implement such a matrix as:
 
 ```kotlin
 class SquareMatrix(val size: Int, private val elements: (Int, Int) -> Float) {
-	operator fun get(row: Int, col: Int): Float {
-		require(row in 0..size - 1) { "Row ${row} out of bounds: 0..${size - 1}" }
-		require(col in 0..size - 1) { "Column ${col} out of bounds: 0..${size - 1}" }
-		return elements(row, col)
-	}
+    operator fun get(row: Int, col: Int): Float {
+        require(row in 0..size - 1) { "Row ${row} out of bounds: 0..${size - 1}" }
+        require(col in 0..size - 1) { "Column ${col} out of bounds: 0..${size - 1}" }
+        return elements(row, col)
+    }
 }
 ```
 
@@ -93,7 +93,7 @@ e.g. identity matrix $$\boldsymbol{I}_n$$ of a requested size can be defined as:
 
 ```kotlin
 fun identity(size: Int) = SquareMatrix(size) { row, col ->
-	if (row == col) 1f else 0f
+    if (row == col) 1f else 0f
 }
 ```
 
@@ -156,8 +156,8 @@ So, taking both cases into account, the implementation should look like this:
 
 ```kotlin
 val det: Float by lazy {
-	if (size == 1) this[0, 0]
-	else (0..size - 1).map { item -> this[0, item] * comatrix[0, item] }.sum()
+    if (size == 1) this[0, 0]
+    else (0..size - 1).map { item -> this[0, item] * comatrix[0, item] }.sum()
 }
 ```
 
@@ -170,7 +170,7 @@ To calculate the determinant, we’ve used a _comatrix_ or, in other words, a ma
 
 ```kotlin
 private val comatrix: SquareMatrix by lazy {
-	SquareMatrix(size) { row, col -> cofactor(row, col) }
+    SquareMatrix(size) { row, col -> cofactor(row, col) }
 }
 ```
 
@@ -181,7 +181,7 @@ $$C_{i,j} = (-1)^{i+j} M_{i,j}$$
 
 ```kotlin
 private fun cofactor(row: Int, col: Int): Float =
-		minor(row, col) * if ((row + col) % 2 == 0) 1f else -1f
+        minor(row, col) * if ((row + col) % 2 == 0) 1f else -1f
 ```
 
 Even though the indices have been shifted, it happened both for row and for column.
@@ -199,7 +199,7 @@ private fun minor(row: Int, col: Int): Float = sub(row, col).det
 
 ```kotlin
 private fun sub(delRow: Int, delCol: Int) = SquareMatrix(size - 1) { row, col ->
-	this[if (row < delRow) row else row + 1, if (col < delCol) col else col + 1]
+    this[if (row < delRow) row else row + 1, if (col < delCol) col else col + 1]
 }
 ```
 
@@ -237,7 +237,7 @@ which should give some predictable results:
 
 ```kotlin
 val diag = SquareMatrix(4) { row, col ->
-	if (row == col) (row + 1).toFloat() else 0f
+    if (row == col) (row + 1).toFloat() else 0f
 }
 ```
 
@@ -245,10 +245,10 @@ The matrix `diag` should look like this:
 
 $$
 \begin{bmatrix}
-	1 & 0 & 0 & 0 \\
-	0 & 2 & 0 & 0 \\
-	0 & 0 & 3 & 0 \\
-	0 & 0 & 0 & 4 \\
+    1 & 0 & 0 & 0 \\
+    0 & 2 & 0 & 0 \\
+    0 & 0 & 3 & 0 \\
+    0 & 0 & 0 & 4 \\
 \end{bmatrix}
 $$
 
@@ -262,10 +262,10 @@ The result should be as follows:
 
 $$
 \begin{bmatrix}
-	1 & 0 & 0 & 0 \\
-	0 & \frac{1}{2} & 0 & 0 \\
-	0 & 0 & \frac{1}{3} & 0 \\
-	0 & 0 & 0 & \frac{1}{4} \\
+    1 & 0 & 0 & 0 \\
+    0 & \frac{1}{2} & 0 & 0 \\
+    0 & 0 & \frac{1}{3} & 0 \\
+    0 & 0 & 0 & \frac{1}{4} \\
 \end{bmatrix}
 $$
 
