@@ -1,0 +1,14 @@
+---
+layout: null
+sitemap:
+exclude: 'yes'
+---
+[{% for news in site.data.news %}
+  {
+    "id": "{{ forloop.index }}",
+    "title": "{{ news.title }}",{% if news.content %}
+    "abstract": "{{ news.content }}",{% endif %}
+    "url": "{{ news.url }}",
+    "date": "{{ news.date | date: "%Y-%m-%d" }}"
+  }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+]
