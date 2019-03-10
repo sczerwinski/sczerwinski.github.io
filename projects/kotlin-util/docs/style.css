@@ -27,6 +27,22 @@ code, pre {
     color: #202020;
 }
 
+h1 { font-size: 150%; }
+h2 { font-size: 140%; }
+h3 { font-size: 130%; }
+h4 { font-size: 120%; }
+h5 { font-size: 110%; }
+
+body>code {
+    line-height: 120px;
+    margin-top: 120px;
+}
+
+body>code::before {
+    content: "("<hr />")";
+    display: block;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
