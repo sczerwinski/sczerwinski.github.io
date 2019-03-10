@@ -1,12 +1,12 @@
+- date: 2019-03-10
+  title: Kotlin Utilities—Release 1.2
+  content: Kotlin utility types based on Scala open source project.
+  url: /projects/kotlin-util/
+
 - date: 2018-11-30
   title: The Case Against Double Exclamation Operator
   content: Why Kotlin not-null assertion operator (a.k.a. double exclamation operator) should be avoided
   url: /2018/11/30/the-case-against-double-exclamation-operator.html
-
-- date: 2018-11-02
-  title: Kotlin Utilities—Release 1.1
-  content: Kotlin utility types based on Scala open source project.
-  url: http://czerwinski.it/projects/kotlin-util/
 
 - date: 2018-04-08
   title: X-presso—Release 0.1 (@bintray.com)
