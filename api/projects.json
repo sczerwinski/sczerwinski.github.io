@@ -1,0 +1,13 @@
+---
+layout: null
+sitemap:
+exclude: 'yes'
+---
+[{% for project in site.data.projects %}
+  {
+    "id": "{{ project.id }}",
+    "title": "{{ project.name }}",{% if project.description %}
+    "abstract": "{{ project.description }}",{% endif %}
+    "url": "/projects/{{ project.id }}",
+  }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
+]
