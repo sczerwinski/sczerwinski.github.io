@@ -9,6 +9,8 @@ keywords: oss,software,programming,kotlin,utility
 [![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)
+[![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/kotlin-util)
+![License](https://img.shields.io/github/license/sczerwinski/kotlin-util.svg)
 
 ## Supported types based on Scala
 
