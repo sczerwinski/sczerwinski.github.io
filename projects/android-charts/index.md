@@ -1,6 +1,6 @@
 ---
 title: Android Charts
-layout: default
+layout: page
 abstract: Android charts
 keywords: oss,software,programming,android,charts,graphs,kotlin
 ---

@@ -1,6 +1,6 @@
 ---
 title: About me
-layout: default
+layout: page
 abstract: Personal web site
 keywords: about,software,developer,programming,kotlin,java,android
 ---

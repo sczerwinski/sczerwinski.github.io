@@ -1,6 +1,6 @@
 ---
 title: Kotlin utilities
-layout: default
+layout: page
 abstract: Kotlin utility classes based on Scala
 keywords: oss,software,programming,kotlin,utility
 ---

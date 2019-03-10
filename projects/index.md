@@ -1,6 +1,6 @@
 ---
 title: Projects
-layout: default
+layout: page
 abstract: Open source projects
 keywords: oss,software,programming
 ---
