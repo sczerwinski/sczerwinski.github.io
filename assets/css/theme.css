@@ -167,3 +167,13 @@ iframe.docs {
     height: 100%;
     border: 0;
 }
+
+.swagger-ui small>pre.version {
+    border: none;
+    background: none;
+}
+
+.swagger-ui small>code {
+    color: green;
+    background: none;
+}
