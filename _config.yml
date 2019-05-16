@@ -11,6 +11,9 @@ github: sczerwinski
 twitter: s_czerwinski
 linkedIn: sczerwinski
 
+# Links:
+braveUrl: https://brave.com/cze677
+
 # Blog:
 paginate: 5
 paginate_path: "/posts/:num/"
