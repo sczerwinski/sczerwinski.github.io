@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: czerwinski.it
+Token: ffa83746d884c54bfd4f5608cf76902eebcd6ed8999f481384021fc112890cfa
