@@ -7,26 +7,4 @@ exclude: 'yes'
   "title": "{{ site.title }}",
   "baseUrl": "{{ site.url }}",
   "imgPath": "/assets/img/post"
-  "links": [
-    {
-      "name": "Personal Website",
-      "type": "website",
-      "url": "{{ site.url }}"
-    },
-    {
-      "name": "GitHub",
-      "type": "github",
-      "url": "https://github.com/{{ site.github }}"
-    },
-    {
-      "name": "Twitter",
-      "type": "twitter",
-      "url": "https://twitter.com/{{ site.twitter }}"
-    },
-    {
-      "name": "LinkedIn",
-      "type": "linkedin",
-      "url": "https://www.linkedin.com/in/{{ site.linkedin }}"
-    }
-  ]
 }
