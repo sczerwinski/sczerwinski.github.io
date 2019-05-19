@@ -65,7 +65,7 @@ paths:
                       example: In my new post, I describe…
                     url:
                       type: string
-                      example: /2019/03/20/random-post.html
+                      example: {{ site.url }}/2019/03/20/random-post.html
                     date:
                       type: string
                       example: '2019-03-20'
@@ -96,7 +96,7 @@ paths:
                       example: In my new post, I describe…
                     image:
                       type: string
-                      example: 2019-03-20-random-post.png
+                      example: {{ site.url }}/assets/img/post/2019-03-20-random-post.png
                     tags:
                       type: array
                       items:
@@ -104,7 +104,7 @@ paths:
                         example: tagname
                     url:
                       type: string
-                      example: /2019/03/20/random-post.html
+                      example: {{ site.url }}/2019/03/20/random-post.html
                     date:
                       type: string
                       example: '2019-03-20'
@@ -135,6 +135,6 @@ paths:
                       example: My random open-source project…
                     url:
                       type: string
-                      example: /projects/random-project.html
+                      example: {{ site.url }}/projects/random-project.html
         default:
           description: Unexpected error

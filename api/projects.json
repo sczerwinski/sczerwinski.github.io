@@ -8,6 +8,6 @@ exclude: 'yes'
     "id": "{{ project.id }}",
     "title": "{{ project.name }}",{% if project.description %}
     "abstract": "{{ project.description }}",{% endif %}
-    "url": "/projects/{{ project.id }}"
+    "url": "{{ site.url }}/projects/{{ project.id }}"
   }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
 ]

@@ -8,7 +8,7 @@ exclude: 'yes'
     "id": "{{ forloop.index }}",
     "title": "{{ news.title }}",{% if news.content %}
     "abstract": "{{ news.content }}",{% endif %}
-    "url": "{{ news.url }}",
+    "url": "{% if news.url contains '://' %}{% else %}{{ site.url }}{% endif %}{{ news.url }}",
     "date": "{{ news.date | date: "%Y-%m-%d" }}"
   }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
 ]
