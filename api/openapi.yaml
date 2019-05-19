@@ -15,29 +15,6 @@ servers:
   - url: {{ site.url }}/api
     description: {{ site.title }} – Blog API
 paths:
-  /info.json:
-    get:
-      summary: Basic information
-      description: Returns basic information about the blog.
-      responses:
-        '200':
-          description: Basic information about the blog
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  title:
-                    type: string
-                    example: {{ site.title }}
-                  baseUrl:
-                    type: string
-                    example: {{ site.url }}
-                  imgPath:
-                    type: string
-                    example: /assets/img/post
-        default:
-          description: Unexpected error
   /links.json:
     get:
       summary: External links
