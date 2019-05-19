@@ -56,18 +56,21 @@ paths:
                   properties:
                     id:
                       type: integer
+                      format: int32
                       example: 1
                     title:
                       type: string
                       example: New post published
                     abstract:
                       type: string
+                      nullable: true
                       example: In my new post, I describe…
                     url:
                       type: string
                       example: {{ site.url }}/2019/03/20/random-post.html
                     date:
                       type: string
+                      format: date
                       example: '2019-03-20'
         default:
           description: Unexpected error
@@ -93,9 +96,11 @@ paths:
                       example: Random Post
                     abstract:
                       type: string
+                      nullable: true
                       example: In my new post, I describe…
                     image:
                       type: string
+                      nullable: true
                       example: {{ site.url }}/assets/img/post/2019-03-20-random-post.png
                     tags:
                       type: array
@@ -107,6 +112,7 @@ paths:
                       example: {{ site.url }}/2019/03/20/random-post.html
                     date:
                       type: string
+                      format: date
                       example: '2019-03-20'
         default:
           description: Unexpected error
@@ -132,6 +138,7 @@ paths:
                       example: Random Project
                     abstract:
                       type: string
+                      nullable: true
                       example: My random open-source project…
                     url:
                       type: string
