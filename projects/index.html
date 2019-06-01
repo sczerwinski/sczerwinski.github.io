@@ -11,7 +11,9 @@ keywords: oss,software,programming
 
     <div class="shadow-sm card">
         <div class="card-body">
-            <h5 class="card-title">{{ project.name }}</h5>
+            <h5 class="card-title">
+                <a class="text-body" href="/projects/{{ project.id }}">{{ project.name }}</a>
+            </h5>
             <p class="card-text">{{ project.description }}</p>
             <a class="btn btn-primary" href="/projects/{{ project.id }}">Project page</a>
             <a class="btn btn-outline-primary" target="_blank" href="https://github.com/{{ project.github }}">GitHub page</a>

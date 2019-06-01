@@ -2,10 +2,14 @@
 {% for post in paginator.posts %}
     <div class="shadow-sm card my-4" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         {% if post.image %}
-        <img src="/assets/img/post/{{ post.image }}" class="card-img-top" alt="{{ post.title }}" />
+        <a class="text-body" href="{{ post.url }}">
+            <img src="/assets/img/post/{{ post.image }}" class="card-img-top" alt="{{ post.title }}" />
+        </a>
         {% endif %}
         <div class="card-body">
-            <h5 class="card-title" itemprop="name headline">{{ post.title }}</h5>
+            <h5 class="card-title" itemprop="name headline">
+                <a class="text-body" href="{{ post.url }}">{{ post.title }}</a>
+            </h5>
             <h6 class="card-subtitle text-muted mb-3"><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%d %B %Y' }}</time></h6>
             <p class="card-text" itemprop="description">{{ post.abstract }}</p>
             <a class="btn btn-primary" href="{{ post.url }}">Read more</a>
