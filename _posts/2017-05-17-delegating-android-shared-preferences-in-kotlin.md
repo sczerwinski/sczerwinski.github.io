@@ -8,9 +8,10 @@ keywords: kotlin,delegation,android,sharedpreferences
 tags: kotlin,android
 ---
 
-> [_I have learned to delegate._](https://www.brainyquote.com/quotes/quotes/g/gwenstefan468230.html)
->
-> — Gwen Stefani
+{% include blockquote.html
+quote="I have learned to delegate."
+author="Gwen Stefani"
+url="https://www.brainyquote.com/quotes/quotes/g/gwenstefan468230.html" %}
 
 ## The Problem: Boilerplate Code
 
@@ -125,10 +126,9 @@ But imagine that there are 10 similar properties in the app… or 20… or even 
 
 ## Delegate
 
-> _There are certain common kinds of properties, that, though we can implement them manually
-> every time we need them, would be very nice to implement once and for all […]_
->
-> — Delegated Properties, Kotlin Programming Language Reference
+{% include blockquote.html
+quote="There are certain common kinds of properties, that, though we can implement them manually every time we need them, would be very nice to implement once and for all […]"
+author="Delegated Properties, Kotlin Programming Language Reference" %}
 
 The above quotation perfectly conveys our case. And Kotlin offers us
 a solution—[delegated properties](https://kotlinlang.org/docs/reference/delegated-properties.html).
@@ -165,9 +165,9 @@ var username: String by StringSharedPreferenceDelegate(context, "USERNAME", "")
 
 ## Reuse
 
-> _[…] and put into a library._
->
-> — Delegated Properties, Kotlin Programming Language Reference
+{% include blockquote.html
+quote="[…] and put into a library."
+author="Delegated Properties, Kotlin Programming Language Reference" %}
 
 Probably most Android applications use `SharedPreferences` at some point.
 So I decided to implement generalized version of delegates and put them into a reusable

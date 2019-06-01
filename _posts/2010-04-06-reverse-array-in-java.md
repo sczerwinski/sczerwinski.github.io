@@ -8,7 +8,8 @@ keywords: java,array,reverse,order,risk
 tags: java
 ---
 
-// This post was first published in Polish, on my old blog. It has been reviewed, edited and translated to English.
+{% include warn.html
+content="This post was first published in Polish, on my old blog. It has been reviewed, edited and translated to English." %}
 
 ## The Backstory
 

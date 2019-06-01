@@ -1,12 +1,18 @@
 
 {% for post in paginator.posts %}
-    <div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-        <h2 itemprop="name headline"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        <div class="post-date"><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%B %d, %Y' }}</time></div>
-        <div class="post-abstract" itemprop="description">{{ post.abstract }}</div>
-        <div class="hidden" itemprop="author">{{ site.title }}</div>
-        <div class="hidden" itemprop="publisher" itemscope itemtype="http://schema.org/Person">
-            <div class="hidden" itemprop="name">{{ site.title }}</div>
+    <div class="shadow-sm card my-4" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+        {% if post.image %}
+        <img src="/assets/img/post/{{ post.image }}" class="card-img-top" alt="{{ post.title }}" />
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title" itemprop="name headline">{{ post.title }}</h5>
+            <h6 class="card-subtitle text-muted mb-3"><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%d %B %Y' }}</time></h6>
+            <p class="card-text" itemprop="description">{{ post.abstract }}</p>
+            <a class="btn btn-primary" href="{{ post.url }}">Read more</a>
+        </div>
+        <div class="d-none" itemprop="author">{{ site.title }}</div>
+        <div class="d-none" itemprop="publisher" itemscope itemtype="http://schema.org/Person">
+            <div class="d-none" itemprop="name">{{ site.title }}</div>
         </div>
     </div>
 {% endfor %}

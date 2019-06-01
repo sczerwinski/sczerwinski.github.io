@@ -1,5 +1,5 @@
 - date: 2019-03-10
-  title: Kotlin Utilities—Release 1.2
+  title: "Kotlin Utilities: Release 1.2"
   content: Kotlin utility types based on Scala open source project.
   url: /projects/kotlin-util/
 
@@ -9,7 +9,7 @@
   url: /2018/11/30/the-case-against-double-exclamation-operator.html
 
 - date: 2018-04-08
-  title: X-presso—Release 0.1 (@bintray.com)
+  title: "X-presso: Release 0.1 (@bintray.com)"
   content: Kotlin Extensions for Android Espresso.
   url: https://bintray.com/sczerwinski/android/xpresso/0.1
 
@@ -24,7 +24,7 @@
   url: /2017/05/17/delegating-android-shared-preferences-in-kotlin.html
 
 - date: 2017-05-14
-  title: Delegates for SharedPreferences—Release 0.1 (@bintray.com)
+  title: "Delegates for SharedPreferences: Release 0.1 (@bintray.com)"
   content: A set of Kotlin delegates storing values in Android SharedPreferences
   url: https://bintray.com/sczerwinski/android/delegates-shared-preferences/0.1
 

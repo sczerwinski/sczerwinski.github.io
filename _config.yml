@@ -1,6 +1,9 @@
 # Plugins:
 gems: [jekyll-paginate]
 
+plugins:
+  - jekyll-coffeescript
+
 # Basic information:
 title: Sławomir Czerwiński
 url: https://czerwinski.it
@@ -14,8 +17,13 @@ linkedIn: sczerwinski
 # Links:
 braveUrl: https://brave.com/cze677
 
+# Sass:
+sass:
+  sass_dir: _sass
+  style: compressed
+
 # Blog:
-paginate: 5
+paginate: 3
 paginate_path: "/posts/:num/"
 
 # Syntax coloring:

@@ -9,6 +9,7 @@ keywords: blog,software,developer,programming,java,android
 
     <div class="col-xs-18 col-sm-6 col-md-8">
 
+        {% include posts-paginator.html %}
         {% include posts-abstracts.html %}
         {% include posts-paginator.html %}
 
@@ -16,13 +17,11 @@ keywords: blog,software,developer,programming,java,android
 
     <div class="hidden-xs col-xs-18 col-sm-6 col-md-4">
 
-        <div class="panel panel-default">
-            <div class="panel-heading">All posts</div>
-            <div class="panel-body">
+        <div class="shadow-sm card my-4">
+            <h5 class="card-header">All posts</h5>
 
-                {% include posts-all-by-year.html %}
+            {% include posts-all-by-year.html %}
 
-            </div>
         </div>
 
     </div>

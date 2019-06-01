@@ -7,8 +7,17 @@ abstract: To create beautiful software that people like to use, by writing beaut
 keywords: software,developer,programming,java,android
 ---
 
-{% for item in site.data.news limit:5 %}
-    <h3>{% if item.url %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</h3>
-    <div class="post-date">{{ item.date | date: '%B %d, %Y' }}</div>
-    <div class="post-abstract">{{ item.content }}</div>
+<div class="card-columns">
+
+{% for item in site.data.news %}
+    <div class="shadow-sm card">
+        <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <h6 class="card-subtitle text-muted mb-3"><time datetime="{{ item.date }}" itemprop="datePublished">{{ item.date | date: '%d %B %Y' }}</time></h6>
+            <p class="card-text">{{ item.content }}</p>
+            {% if item.url %}<a class="btn btn-primary" href="{{ item.url }}">Read more</a>{% endif %}
+        </div>
+    </div>
 {% endfor %}
+
+</div>

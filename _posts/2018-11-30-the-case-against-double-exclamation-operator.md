@@ -9,9 +9,10 @@ tags: kotlin
 image: 2018-11-30-the-case-against-double-exclamation-operator.png
 ---
 
-> [_The third option is for NPE-lovers: the not-null assertion operator (`!!`)_](https://kotlinlang.org/docs/reference/null-safety.html#the--operator)
->
-> — Kotlin Reference
+{% include blockquote.html
+quote="The third option is for NPE-lovers: the not-null assertion operator (<code>!!</code>)"
+author="Kotlin reference"
+url="https://kotlinlang.org/docs/reference/null-safety.html#the--operator" %}
 
 The _not-null assertion operator_ (a.k.a. double exclamation operator)
 converts a value of nullable type to a non-null type, or throws
@@ -120,10 +121,10 @@ But what can we do if we need to enforce non-null values?
 
 ### Require non-null arguments
 
-> [_`IllegalArgumentException` – Thrown to indicate that a method has
-> been passed an illegal or inappropriate argument._](https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html)
->
-> — Java Platform Documentation
+{% include blockquote.html
+quote="<code>IllegalArgumentException</code> – Thrown to indicate that a method has been passed an illegal or inappropriate argument."
+author="Java Platform Documentation"
+url="https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalArgumentException.html" %}
 
 When we pass an argument value compatible with the type of the function
 parameter, but invalid in any different way, we will typically expect
@@ -145,12 +146,10 @@ override fun addButton(@StringRes resId: Int?) {
 
 ### Check state of the fields
 
-> [_`IllegalStateException` – Signals that a method has been invoked
-> at an illegal or inappropriate time. In other words, the Java
-> environment or Java application is not in an appropriate state
-> for the requested operation._](https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html)
->
-> — Java Platform Documentation
+{% include blockquote.html
+quote="<code>IllegalStateException</code> – Signals that a method has been invoked at an illegal or inappropriate time. In other words, the Java environment or Java application is not in an appropriate state for the requested operation."
+author="Java Platform Documentation"
+url="https://docs.oracle.com/javase/7/docs/api/java/lang/IllegalStateException.html" %}
 
 Similarly, if the state of the class is not valid for an operation,
 (i.e. any of the fields contains a value that prevents the operation
