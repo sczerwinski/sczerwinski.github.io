@@ -8,11 +8,6 @@
   content: Why Kotlin not-null assertion operator (a.k.a. double exclamation operator) should be avoided
   url: /2018/11/30/the-case-against-double-exclamation-operator.html
 
-- date: 2018-04-08
-  title: "X-presso: Release 0.1 (@bintray.com)"
-  content: Kotlin Extensions for Android Espresso.
-  url: https://bintray.com/sczerwinski/android/xpresso/0.1
-
 - date: 2017-06-04
   title: Simplifying Android Espresso Test Rules With Reified Type Parameters
   content: How to simplify Android Espresso test rules with reified type parameters in Kotlin
@@ -22,11 +17,6 @@
   title: Delegating Android SharedPreferences in Kotlin
   content: How to solve the problem of boilerplate code related to SharedPreferences in Android applications
   url: /2017/05/17/delegating-android-shared-preferences-in-kotlin.html
-
-- date: 2017-05-14
-  title: "Delegates for SharedPreferences: Release 0.1 (@bintray.com)"
-  content: A set of Kotlin delegates storing values in Android SharedPreferences
-  url: https://bintray.com/sczerwinski/android/delegates-shared-preferences/0.1
 
 - date: 2017-01-17
   title: Most Common Typographical Errors in Software (@javeo.eu)
