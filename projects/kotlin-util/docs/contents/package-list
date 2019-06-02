@@ -1,5 +1,0 @@
-$dokka.format:html
-$dokka.linkExtension:html
-$dokka.location:it.czerwinski.kotlin.util$flatten(kotlin.collections.Iterable((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.flatten.T)))))it.czerwinski.kotlin.util/kotlin.collections.-iterable/flatten.html
-it.czerwinski.kotlin.collections
-it.czerwinski.kotlin.util

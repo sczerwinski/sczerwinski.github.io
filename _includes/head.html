@@ -10,17 +10,17 @@
 {% if page.keywords %}<meta name="keywords" itemprop="keywords" content="{{ page.keywords }}" />{% endif %}
 
 {% if page.image %}
-    <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:card" content="summary_large_image" />
 {% else %}
-    <meta name="twitter:card" content="summary" />
+<meta name="twitter:card" content="summary" />
 {% endif %}
 <meta name="twitter:site" content="@{{ site.twitter }}" />
 <meta name="twitter:title" content="{{ page.title }}" />
 {% if page.abstract %}<meta name="twitter:description" content="{{ page.abstract }}" />{% endif %}
 {% if page.image %}
-    <meta name="twitter:image" content="{{ site.url }}/assets/img/post/{{ page.image }}" />
+<meta name="twitter:image" content="{{ site.url }}/assets/img/post/{{ page.image }}" />
 {% else %}
-    <meta name="twitter:image" content="{{ site.url }}/assets/img/icon.png" />
+<meta name="twitter:image" content="{{ site.url }}/assets/img/icon.png" />
 {% endif %}
 
 <meta name="theme-color" content="#1976d2" />
@@ -32,9 +32,6 @@
 <link rel="icon" sizes="128x128" href="/assets/img/icon.png">
 
 <link rel="stylesheet" href="/assets/css/pygments-light.css" />
-
 <link rel="stylesheet" href="/assets/css/theme.css" />
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-
-{% if page.jquery %}<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>{% endif %}
