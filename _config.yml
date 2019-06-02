@@ -1,5 +1,7 @@
 # Plugins:
-gems: [jekyll-paginate]
+gems:
+  - jekyll-paginate
+  - jekyll-octicons
 
 plugins:
   - jekyll-coffeescript
