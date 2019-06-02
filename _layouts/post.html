@@ -1,36 +1,20 @@
 <!doctype html>
 <html itemscope itemtype="http://schema.org/BlogPosting" lang="en">
-
-    <head>
-
-        {% include head.html %}
-
-    </head>
-
+    <head>{% include head.html %}</head>
     <body role="document">
-
         {% include navbar.html %}
-
         {% include header.html %}
-
         <div class="container my-4" role="main" itemprop="text">
-
             <div class="text-muted mb-4">
                 <time datetime="{{ page.date }}" itemprop="datePublished">{{ page.date | date: '%d %B %Y' }}</time>
             </div>
-
             <div class="d-none" itemprop="publisher" itemscope itemtype="http://schema.org/Person">
                 <div class="d-none" itemprop="name">{{ site.title }}</div>
             </div>
-
             {{ content }}
-
             {% include disqus.html %}
-
         </div>
-
         {% include footer.html %}
-
+        {% include footer-scripts.html %}
     </body>
-
 </html>
