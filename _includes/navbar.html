@@ -1,7 +1,7 @@
 <nav class="shadow navbar navbar-expand-md sticky-top navbar-dark bg-primary">
     <div class="container">
 
-        <a class="navbar-brand d-md-none" href="#">{% if page.mobileTitle %}{{ page.mobileTitle }}{% else %}{{ page.title }}{% endif %}</a>
+        <a class="navbar-brand d-md-none" href="#">{% if page.mobileTitle %}{{ page.mobileTitle }}{% else %}{{ page.title | replace: " - ", " &ndash; " }}{% endif %}</a>
 
         <button
                 class="navbar-toggler"

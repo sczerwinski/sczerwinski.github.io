@@ -1,7 +1,7 @@
 <div class="jumbotron d-none d-md-block">
     <div class="container">
         <a class="float-right" href="{{ site.braveUrl }}" target="_blank"><img src="/assets/img/brave-banner.png" /></a>
-        <h1 class="display-4" itemprop="name headline">{{ page.title }}</h1>
+        <h1 class="display-4" itemprop="name headline">{{ page.title | replace: " - ", " &ndash; " }}</h1>
         {% if page.subtitle %}<p class="lead">{{ page.subtitle }}</p>{% endif %}
     </div>
 </div>

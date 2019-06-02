@@ -15,7 +15,7 @@
 <meta name="twitter:card" content="summary" />
 {% endif %}
 <meta name="twitter:site" content="@{{ site.twitter }}" />
-<meta name="twitter:title" content="{{ page.title }}" />
+<meta name="twitter:title" content='{{ page.title | replace: " - ", " &ndash; " }}' />
 {% if page.abstract %}<meta name="twitter:description" content="{{ page.abstract }}" />{% endif %}
 {% if page.image %}
 <meta name="twitter:image" content="{{ site.url }}/assets/img/post/{{ page.image }}" />
@@ -27,7 +27,7 @@
 <meta name="msapplication-navbutton-color" content="#1976d2" />
 <meta name="apple-mobile-web-app-status-bar-style" content="#1976d2" />
 
-<title>{% if page.linkTitle %}{{ site.title }} :: {{ page.linkTitle }}{% elsif page.title %}{{ site.title }} :: {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<title>{% if page.linkTitle %}{{ site.title }} :: {{ page.linkTitle }}{% elsif page.title %}{{ site.title }} :: {{ page.title | replace: " - ", " &ndash; " }}{% else %}{{ site.title }}{% endif %}</title>
 
 <link rel="icon" sizes="128x128" href="/assets/img/icon.png">
 

@@ -7,7 +7,7 @@
 var disqus_config = function () {
     this.page.url = "https://czerwinski.it";
     this.page.identifier = "{{ page.disqusid }}";
-    this.page.title = "{{ page.title }}"
+    this.page.title = "{{ page.title | replace: " - ", " &ndash; " }}"
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE
