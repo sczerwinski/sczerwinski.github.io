@@ -5,6 +5,12 @@ abstract: Personal web site
 keywords: about,software,developer,programming,kotlin,java,android
 ---
 
+{% raw %}
+<div class="shadow-sm card text-white mx-4 my-4 float-left">
+    <img src="/assets/img/picture_400.png" class="card-img" />
+</div>
+{% endraw %}
+
 When I was&nbsp;8, I got my first computer—Commodore&nbsp;64.
 Apart from playing games, I used it to write my first programmes in BASIC and its more sophisticated version—**Simons' BASIC**.
 
