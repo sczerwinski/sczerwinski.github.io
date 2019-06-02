@@ -14,14 +14,20 @@ keywords: software,developer,programming,java,android
         <div class="card-body">
             <h5 class="card-title">
                 {% if item.url %}
-                <a class="text-body" href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                <a class="text-body" href="{{ item.url }}" {% if item.url contains '://' %}target="_blank"{% endif %}>{{ item.title }}</a>
                 {% else %}
                 {{ item.title }}
                 {% endif %}
             </h5>
             <h6 class="card-subtitle text-muted mb-3"><time datetime="{{ item.date }}" itemprop="datePublished">{{ item.date | date: '%d %B %Y' }}</time></h6>
             <p class="card-text">{{ item.content }}</p>
-            {% if item.url %}<a class="btn btn-primary" href="{{ item.url }}">Read more</a>{% endif %}
+            {% if item.url %}
+            {% if item.url contains '://' %}
+            <a class="btn btn-light" href="{{ item.url }}" target="_blank">Read more&nbsp;<i class="fas fa-external-link-alt"></i></a>
+            {% else %}
+            <a class="btn btn-primary" href="{{ item.url }}">Read more</a>
+            {% endif %}
+            {% endif %}
         </div>
     </div>
 {% endfor %}
