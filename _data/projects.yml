@@ -7,3 +7,8 @@
   name: Android Charts
   description: Android charts
   github: sczerwinski/android-charts
+
+- id: android-graphics-util
+  name: Android Graphics Utilities
+  description: Extensions for Android graphics
+  github: sczerwinski/android-graphics-util
