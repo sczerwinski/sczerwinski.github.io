@@ -6,6 +6,7 @@ keywords: oss,software,programming,android,graphics,kotlin
 ---
 
 [![Build Status](https://travis-ci.org/sczerwinski/android-graphics-util.svg?branch=develop)](https://travis-ci.org/sczerwinski/android-graphics-util)
+[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android/graphics-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/android/graphics-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski.android/graphics-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/graphics-util/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/android-graphics-util)
