@@ -19,6 +19,7 @@ $theme-colors: (
 );
 
 @import "bootstrap";
+@import 'tocbot';
 
 td {
     @extend .px-2;
@@ -140,4 +141,71 @@ div.highlight {
 }
 
 @include media-breakpoint-down(lg) {
+}
+
+/* TOC */
+
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    display: block;
+    content: " ";
+    height: 60px;
+    margin-top: -60px;
+    visibility: hidden;
+}
+
+.toc {
+    overflow-y: auto;
+    display: block;
+}
+
+.toc>ul {
+    overflow: hidden;
+    position: relative;
+}
+
+.toc-list {
+    margin: 0;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+a.toc-link {
+    color: theme-color("primary");
+    height: 100%;
+}
+
+.toc-link::before {
+  background-color: theme-color("primary");
+  content: ' ';
+  display: inline-block;
+  height: inherit;
+  left: 0;
+  margin-top: -1px;
+  position: absolute;
+  width: 2px;
+}
+
+.is-active-link::before {
+  background-color: theme-color("secondary");
+}
+
+.is-collapsible {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: all 300ms ease-in-out;
+}
+
+.is-collapsed,
+.is-collapsed:before {
+    max-height: 0px;
+}
+
+.is-position-fixed {
+    position: fixed !important;
+    top: 60px;
+}
+
+a.is-active-link {
+    font-weight: bold;
+    color: theme-color("secondary");
 }
