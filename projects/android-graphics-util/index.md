@@ -1,6 +1,6 @@
 ---
 title: Android Graphics Utilities
-layout: page
+layout: toc-page
 abstract: Extensions for Android graphics
 keywords: oss,software,programming,android,graphics,kotlin
 ---
