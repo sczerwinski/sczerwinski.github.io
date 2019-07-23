@@ -6,13 +6,31 @@ keywords: oss,software,programming,kotlin,utility
 ---
 
 [![Build Status](https://travis-ci.org/sczerwinski/kotlin-util.svg?branch=develop)](https://travis-ci.org/sczerwinski/kotlin-util)
-[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/kotlin-util)
+[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
 ![License](https://img.shields.io/github/license/sczerwinski/kotlin-util.svg)
 
-## Supported types based on Scala
+## Project Setup
+
+### Maven
+
+```xml
+<dependency>
+  <groupId>it.czerwinski</groupId>
+  <artifactId>kotlin-util</artifactId>
+  <version>1.2</version>
+</dependency>
+```
+
+### Gradle
+
+```groovy
+implementation 'it.czerwinski:kotlin-util:1.2'
+```
+
+## Supported Types
 
 ### `EmptyIterator`
 
@@ -98,21 +116,3 @@ Implementation differences:
 * `foreach` has been replaced with `forEach` – Kotlin convention
 * implemented additional functions: `filterNot`, `filterNotNull`, `filterIsInstance` – Kotlin convention
 * implemented additional function `getOrNull` in addition to `toOption` – Kotlin uses its own null-safety mechanisms
-
-## Build configuration
-
-### Maven
-
-```xml
-<dependency>
-  <groupId>it.czerwinski</groupId>
-  <artifactId>kotlin-util</artifactId>
-  <version>1.2</version>
-</dependency>
-```
-
-### Gradle
-
-```groovy
-implementation 'it.czerwinski:kotlin-util:1.2'
-```

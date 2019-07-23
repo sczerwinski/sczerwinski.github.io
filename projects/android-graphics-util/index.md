@@ -6,15 +6,13 @@ keywords: oss,software,programming,android,graphics,kotlin
 ---
 
 [![Build Status](https://travis-ci.org/sczerwinski/android-graphics-util.svg?branch=develop)](https://travis-ci.org/sczerwinski/android-graphics-util)
-[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android/graphics-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/android/graphics-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski.android/graphics-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/graphics-util/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/android-graphics-util)
+[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
 ![License](https://img.shields.io/github/license/sczerwinski/android-graphics-util.svg)
 
-# Android Graphics Utilities
-
-## Usage
+## Project Setup
 
 To use Android Graphics Utilities in the project, add the following dependency
 to your Gradle script:
@@ -22,7 +20,9 @@ to your Gradle script:
 implementation "it.czerwinski.android:graphics-util:$graphicsUtilVersion"
 ```
 
-## Constants
+## Library Features
+
+### Constants
 
 The library defines several useful constants:
 * `PI` – `Float` value closest to _&pi;_ (the Ludolphian number)
@@ -31,11 +31,11 @@ The library defines several useful constants:
 * `STRAIGHT_ANGLE` – `Float` value of the straight angle measured in degrees (180)
 * `FULL_ANGLE` – `Float` value of the full angle measured in degrees (360)
 
-## Extensions for angles
+### Extensions for angles
 
 There are several extension functions for `Float`, useful when working with angles.
 
-### Conversion between radians and degrees
+#### Conversion between radians and degrees
 
 To convert radians to degrees, use `Float.radToDeg()`, e.g.:
 ```kotlin
@@ -47,7 +47,7 @@ To convert degrees to radians, use `Float.degToRad()`, e.g.:
 val radians = STRAIGHT_ANGLE.degToRad() // PI / 2
 ```
 
-### Conversion between angle in degrees and arc length
+#### Conversion between angle in degrees and arc length
 
 To calculate the angle enclosing the arc with the specified length and radius,
 use `arcLengthToAngle()`, e.g.:
@@ -61,18 +61,18 @@ use `angleToArcLength()`, e.g.:
 val angle = 90.angleToArcLength(radius = 4f) // 2 * PI
 ```
 
-## Extensions for colours
+### Extensions for colours
 
-### Mixing colours
+#### Mixing colours
 
 To mix two colours in a specified proportion, use `mixColors()`, e.g.:
 ```kotlin
 val orange = mixColors(Color.RED, Color.YELLOW, ratio = 0.5f)
 ```
 
-## Extensions for rectangles
+### Extensions for rectangles
 
-### Setting `Rect`
+#### Setting `Rect`
 
 An instance of `Rect` can be set with the values closest to a defined `RectF`, e.g.:
 ```kotlin
@@ -89,7 +89,7 @@ rect.setCircle(cx = 10, cx = 20, radius = 1) // Rect(left = 9, top = 19, right =
 rect.setOval(cx = 10, cx = 20, rx = 3, ry = 2) // Rect(left = 7, top = 18, right = 13, bottom = 22)
 ```
 
-### Setting `RectF`
+#### Setting `RectF`
 
 Extensions facilitating definition of a rectangle enclosing a circle or an oval
 are also provided for `RectF`, e.g.:
@@ -98,9 +98,9 @@ rectF.setCircle(cx = 1f, cx = 2f, radius = 0.5f) // RectF(left = 0.5f, top = 1.5
 rectF.setOval(cx = 1f, cx = 2f, rx = 1.5f, ry = 1f) // RectF(left = -0.5f, top = 1f, right = 2.5f, bottom = 3f)
 ```
 
-## Extensions for paths
+### Extensions for paths
 
-### Defining a new path
+#### Defining a new path
 
 To easily replace an existing `Path` with a new contour,
 use `Path.set()` extension, e.g.:
@@ -113,7 +113,7 @@ path.set(close = true) {
 }
 ```
 
-### Advanced paths
+#### Advanced paths
 
 `AdvancedPath` provides several additional methods to Android `Path`s.
 
@@ -151,9 +151,9 @@ path.addRingSector(
 )
 ```
 
-## Extensions for canvas
+### Extensions for canvas
 
-### Transformations
+#### Transformations
 
 Android KTX defines [a few extensions](https://android.github.io/android-ktx/core-ktx/androidx.graphics/android.graphics.-canvas/index.html)
 for affine transformations. For example, it is possible to perform
