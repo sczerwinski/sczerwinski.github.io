@@ -6,6 +6,20 @@ title: getOrElse - Kotlin utilities
 
 # getOrElse
 
+`inline fun <L, R> `[`Either`](-either/index.html)`<`[`L`](get-or-else.html#L)`, `[`R`](get-or-else.html#R)`>.getOrElse(default: () -> `[`R`](get-or-else.html#R)`): `[`R`](get-or-else.html#R)
+
+Gets value of this [Right](-right/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.R)))/default) value if this is [Left](-left/index.html).
+
+### Parameters
+
+`default` - Default value provider.
+
+**Return**
+Value of this [Right](-right/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.R)))/default).
+
+**Since**
+1.3
+
 `inline fun <L, R> `[`LeftProjection`](-left-projection/index.html)`<`[`L`](get-or-else.html#L)`, `[`R`](get-or-else.html#R)`>.getOrElse(default: () -> `[`L`](get-or-else.html#L)`): `[`L`](get-or-else.html#L)
 
 Gets value of this [Left](-left/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.L)))/default) value if this is [Right](-right/index.html).

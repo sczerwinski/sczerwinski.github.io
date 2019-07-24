@@ -6,7 +6,8 @@ title: RightProjection - Kotlin utilities
 
 # RightProjection
 
-`data class RightProjection<out L, out R>`
+`data class ~~RightProjection~~<out L, out R>`
+**Deprecated:** Either is right-biased. All methods from `RightProjection` should be called directly on `Either`.
 
 ### Constructors
 
