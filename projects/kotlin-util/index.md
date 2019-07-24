@@ -20,14 +20,14 @@ keywords: oss,software,programming,kotlin,utility
 <dependency>
   <groupId>it.czerwinski</groupId>
   <artifactId>kotlin-util</artifactId>
-  <version>1.2</version>
+  <version>1.3</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'it.czerwinski:kotlin-util:1.2'
+implementation 'it.czerwinski:kotlin-util:1.3'
 ```
 
 ## Supported Types
@@ -56,8 +56,8 @@ java.util.Collections.singletonList(element).iterator()
 
 ### `Option`
 
-[![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.12.0/scala/Option.html)
-[![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.12.0/src/library/scala/Option.scala)
+[![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.13.0/scala/Option.html)
+[![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.13.0/src/library/scala/Option.scala)
 
 Implementation differences:
 
@@ -65,6 +65,7 @@ Implementation differences:
 * `forall` has been replaced with `all` – Kotlin convention
 * `foreach` has been replaced with `forEach` – Kotlin convention
 * `orNull` has been replaced with `getOrNull` – Kotlin convention
+* `unzip3` has been replaced with `unzip` – there is no ambiguity in Kotlin
 * implemented additional functions: `filterNotNull`, `filterIsInstance` – Kotlin convention
 
 Kotlin introduces its own null-safety mechanisms.
@@ -89,8 +90,8 @@ e.g. RxJava 2.x `Observable`.
 
 ### `Either`
 
-[![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.12.0/scala/util/Either.html)
-[![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.12.0/src/library/scala/util/Either.scala)
+[![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.13.0/scala/util/Either.html)
+[![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.13.0/src/library/scala/util/Either.scala)
 
 Implementation differences:
 
@@ -101,15 +102,18 @@ Implementation differences:
 * implemented additional functions: `filterToOption`, `filterNotToOption`, `filterNotNullToOption`, `filterIsInstanceToOption`
 * implemented additional function `getOrNull` in addition to `toOption` – Kotlin uses its own null-safety mechanisms
 
-Unlike in Scala, this implementation is not right-biased,
-i.e. it is not possible to use `Either.map {}` instead of `Either.right.map {}`.
-However, the Scala convention that “dictates that `Left` is used for failure and `Right` is used for success”
+Since version 1.3, this implementation is right-biased, therefore it is possible
+to use methods directly on `Either` instead of `RightProjection`,
+e.g. it is possible to use `Either.map {}` instead of `Either.right.map {}`.
+Use of `RightProjection` has been deprecated.
+
+Scala convention that “dictates that `Left` is used for failure and `Right` is used for success”
 (Scala Standard Library Documentation) is still a preferred way of using this class.
 
 ### `Try`
 
-[![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.12.0/scala/util/Try.html)
-[![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.12.0/src/library/scala/util/Try.scala)
+[![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.13.0/scala/util/Try.html)
+[![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.13.0/src/library/scala/util/Try.scala)
 
 Implementation differences:
 
