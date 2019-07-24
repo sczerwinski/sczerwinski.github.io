@@ -32,29 +32,9 @@ implementation 'it.czerwinski:kotlin-util:1.3'
 
 ## Supported Types
 
-### `EmptyIterator`
+### Utilities
 
-Iterator based on the result of `scala.collection.Iterator.empty`, producing no values.
-
-Kotlin defines an internal `EmptyIterator`, which can only be obtained indirectly
-from empty collections, e.g.:
-
-```kotlin
-emptyList<Nothing>().iterator()
-```
-
-### `SingletonIterator`
-
-Iterator based on the result of `scala.collection.Iterator.single[A](elem: A)`, producing a single value.
-
-An iterator for a singleton list is defined in Java, in a package-private static method
-`java.util.Collections.singletonIterator(E e)`. It can only be obtained indirectly
-from a new instance of a singleton list, e.g.:
-```kotlin
-java.util.Collections.singletonList(element).iterator()
-```
-
-### `Option`
+#### `Option`
 
 [![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.13.0/scala/Option.html)
 [![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.13.0/src/library/scala/Option.scala)
@@ -88,7 +68,7 @@ number?.let { it.toString() }.orEmpty()
 However, `Option`s might be useful whenever `null` values are not allowed,
 e.g. RxJava 2.x `Observable`.
 
-### `Either`
+#### `Either`
 
 [![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.13.0/scala/util/Either.html)
 [![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.13.0/src/library/scala/util/Either.scala)
@@ -110,7 +90,7 @@ Use of `RightProjection` has been deprecated.
 Scala convention that “dictates that `Left` is used for failure and `Right` is used for success”
 (Scala Standard Library Documentation) is still a preferred way of using this class.
 
-### `Try`
+#### `Try`
 
 [![Scala documentation](https://img.shields.io/badge/scala-docs-blue.svg)](http://www.scala-lang.org/api/2.13.0/scala/util/Try.html)
 [![Scala sources](https://img.shields.io/badge/scala-sources-blue.svg)](https://github.com/scala/scala/blob/v2.13.0/src/library/scala/util/Try.scala)
@@ -120,3 +100,27 @@ Implementation differences:
 * `foreach` has been replaced with `forEach` – Kotlin convention
 * implemented additional functions: `filterNot`, `filterNotNull`, `filterIsInstance` – Kotlin convention
 * implemented additional function `getOrNull` in addition to `toOption` – Kotlin uses its own null-safety mechanisms
+
+### Additional Iterators
+
+#### `EmptyIterator`
+
+Iterator based on the result of `scala.collection.Iterator.empty`, producing no values.
+
+Kotlin defines an internal `EmptyIterator`, which can only be obtained indirectly
+from empty collections, e.g.:
+
+```kotlin
+emptyList<Nothing>().iterator()
+```
+
+#### `SingletonIterator`
+
+Iterator based on the result of `scala.collection.Iterator.single[A](elem: A)`, producing a single value.
+
+An iterator for a singleton list is defined in Java, in a package-private static method
+`java.util.Collections.singletonIterator(E e)`. It can only be obtained indirectly
+from a new instance of a singleton list, e.g.:
+```kotlin
+java.util.Collections.singletonList(element).iterator()
+```
