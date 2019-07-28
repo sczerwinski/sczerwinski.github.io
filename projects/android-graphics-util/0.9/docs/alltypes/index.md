@@ -11,6 +11,7 @@ Graphics Utilities for Android
 | [it.czerwinski.android.graphics.BuildConfig](../it.czerwinski.android.graphics/-build-config/index.html) |  |
 | [android.graphics.Canvas](../it.czerwinski.android.graphics/android.graphics.-canvas/index.html) (extensions in package it.czerwinski.android.graphics) |  |
 | [kotlin.Float](../it.czerwinski.android.graphics/kotlin.-float/index.html) (extensions in package it.czerwinski.android.graphics) |  |
+| [android.graphics.Path](../it.czerwinski.android.graphics/android.graphics.-path/index.html) (extensions in package it.czerwinski.android.graphics) |  |
 | [android.graphics.Rect](../it.czerwinski.android.graphics/android.graphics.-rect/index.html) (extensions in package it.czerwinski.android.graphics) |  |
 | [android.graphics.RectF](../it.czerwinski.android.graphics/android.graphics.-rect-f/index.html) (extensions in package it.czerwinski.android.graphics) |  |
 

@@ -16,6 +16,7 @@ Graphics Utilities for Android.
 ### Extensions for External Classes
 
 | [android.graphics.Canvas](android.graphics.-canvas/index.html) |  |
+| [android.graphics.Path](android.graphics.-path/index.html) |  |
 | [android.graphics.Rect](android.graphics.-rect/index.html) |  |
 | [android.graphics.RectF](android.graphics.-rect-f/index.html) |  |
 | [kotlin.Float](kotlin.-float/index.html) |  |
@@ -31,5 +32,4 @@ Graphics Utilities for Android.
 ### Functions
 
 | [mixColors](mix-colors.html) | `fun mixColors(color1: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, color2: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, ratio: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)` = .5f): `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)<br>Returns an `Int` value representing a color being a result of mixing [color1](mix-colors.html#it.czerwinski.android.graphics$mixColors(kotlin.Int, kotlin.Int, kotlin.Float)/color1) and [color2](mix-colors.html#it.czerwinski.android.graphics$mixColors(kotlin.Int, kotlin.Int, kotlin.Float)/color2) with the specified [ratio](mix-colors.html#it.czerwinski.android.graphics$mixColors(kotlin.Int, kotlin.Int, kotlin.Float)/ratio). |
-| [set](set.html) | `fun <T : Path> `[`T`](set.html#T)`.set(close: `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)` = false, init: `[`T`](set.html#T)`.() -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)<br>Clear any lines and curves from this path, making it empty, and applies a new path defined in [init](set.html#it.czerwinski.android.graphics$set(it.czerwinski.android.graphics.set.T, kotlin.Boolean, kotlin.Function1((it.czerwinski.android.graphics.set.T, kotlin.Unit)))/init) function. |
 

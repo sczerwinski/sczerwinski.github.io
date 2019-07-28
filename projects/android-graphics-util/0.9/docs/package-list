@@ -4,6 +4,7 @@ $dokka.location:it.czerwinski.android.graphics$angleToArcLength(kotlin.Float, ko
 $dokka.location:it.czerwinski.android.graphics$arcLengthToAngle(kotlin.Float, kotlin.Float)it.czerwinski.android.graphics/kotlin.-float/arc-length-to-angle.html
 $dokka.location:it.czerwinski.android.graphics$degToRad(kotlin.Float)it.czerwinski.android.graphics/kotlin.-float/deg-to-rad.html
 $dokka.location:it.czerwinski.android.graphics$radToDeg(kotlin.Float)it.czerwinski.android.graphics/kotlin.-float/rad-to-deg.html
+$dokka.location:it.czerwinski.android.graphics$set(android.graphics.Path, kotlin.Boolean, kotlin.Function1((android.graphics.Path, kotlin.Unit)))it.czerwinski.android.graphics/android.graphics.-path/set.html
 $dokka.location:it.czerwinski.android.graphics$set(android.graphics.Rect, android.graphics.RectF)it.czerwinski.android.graphics/android.graphics.-rect/set.html
 $dokka.location:it.czerwinski.android.graphics$setCircle(android.graphics.Rect, kotlin.Int, kotlin.Int, kotlin.Int)it.czerwinski.android.graphics/android.graphics.-rect/set-circle.html
 $dokka.location:it.czerwinski.android.graphics$setCircle(android.graphics.RectF, kotlin.Float, kotlin.Float, kotlin.Float)it.czerwinski.android.graphics/android.graphics.-rect-f/set-circle.html
