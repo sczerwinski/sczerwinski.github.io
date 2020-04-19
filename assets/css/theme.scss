@@ -21,7 +21,7 @@ $theme-colors: (
 @import "bootstrap";
 @import 'tocbot';
 
-td {
+th, td {
     @extend .px-2;
     @extend .py-3;
 }
