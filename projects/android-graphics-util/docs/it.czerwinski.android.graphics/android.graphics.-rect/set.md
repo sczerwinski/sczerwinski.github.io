@@ -6,10 +6,14 @@ title: set - Android Graphics Utilities
 
 # set
 
-`fun Rect.set(src: RectF): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`Rect`](https://developer.android.com/reference/android/graphics/Rect.html)`.set(src: `[`RectF`](https://developer.android.com/reference/android/graphics/RectF.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
-Copies the coordinates from [src](set.html#it.czerwinski.android.graphics$set(android.graphics.Rect, android.graphics.RectF)/src) rounded to integer into this rectangle.
+Copies the coordinates from `src` rounded to integer into this rectangle.
 
 ### Parameters
 
 `src` - The rectangle whose coordinates are copied into this rectangle.
+
+**Receiver**
+The rectangle.
+

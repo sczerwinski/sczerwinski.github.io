@@ -6,7 +6,7 @@ title: setOval - Android Graphics Utilities
 
 # setOval
 
-`fun RectF.setOval(cx: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, cy: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, rx: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, ry: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`RectF`](https://developer.android.com/reference/android/graphics/RectF.html)`.setOval(cx: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, cy: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, rx: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`, ry: `[`Float`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
 Copies the coordinates from the oval defined by its center and radii.
 
@@ -19,3 +19,7 @@ Copies the coordinates from the oval defined by its center and radii.
 `rx` - The x-radius of the oval.
 
 `ry` - The y-radius of the oval.
+
+**Receiver**
+The rectangle.
+

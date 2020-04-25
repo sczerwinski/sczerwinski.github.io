@@ -10,9 +10,6 @@ title: degToRad - Android Graphics Utilities
 
 Converts angle measured in degrees to radians.
 
-**Receiver**
-Angle measured in degrees.
-
 **Return**
 Angle measured in radians.
 

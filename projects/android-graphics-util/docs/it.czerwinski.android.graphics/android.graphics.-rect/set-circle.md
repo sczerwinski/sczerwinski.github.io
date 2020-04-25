@@ -6,9 +6,9 @@ title: setCircle - Android Graphics Utilities
 
 # setCircle
 
-`fun Rect.setCircle(cx: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, cy: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, radius: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+`fun `[`Rect`](https://developer.android.com/reference/android/graphics/Rect.html)`.setCircle(cx: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, cy: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`, radius: `[`Int`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
 
-Copies the coordinates from the circle defined by its center and [radius](set-circle.html#it.czerwinski.android.graphics$setCircle(android.graphics.Rect, kotlin.Int, kotlin.Int, kotlin.Int)/radius).
+Copies the coordinates from the circle defined by its center and radius.
 
 ### Parameters
 
@@ -17,3 +17,7 @@ Copies the coordinates from the circle defined by its center and [radius](set-ci
 `cy` - The x-coordinate of the center of the circle.
 
 `radius` - The radius of the circle.
+
+**Receiver**
+The rectangle.
+

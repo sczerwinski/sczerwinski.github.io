@@ -10,9 +10,6 @@ title: radToDeg - Android Graphics Utilities
 
 Converts angle measured in radians to degrees.
 
-**Receiver**
-Angle measured in radians.
-
 **Return**
 Angle measured in degrees.
 
