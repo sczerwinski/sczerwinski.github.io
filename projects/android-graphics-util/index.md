@@ -70,6 +70,19 @@ To mix two colours in a specified proportion, use `mixColors()`, e.g.:
 val orange = mixColors(Color.RED, Color.YELLOW, ratio = 0.5f)
 ```
 
+#### HSV colour model
+
+There are a few functions simplifying conversion between colour `Int` and HSV colour model:
+```kotlin
+val color = hsvColor(hue = 30f, saturation = 0.9f, value = 0.8f)
+val hue = color.colorHue()
+val saturation = color.colorSaturation()
+val value = color.colorValue()
+```
+
+Note that `colorHue()`, `colorSaturation()` and `colorValue()` are not optimized for accessing
+more than one of the HSV colour model channels.
+
 ### Extensions for rectangles
 
 #### Setting `Rect`
