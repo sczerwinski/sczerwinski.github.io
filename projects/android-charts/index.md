@@ -32,6 +32,11 @@ content="Library under development. Backward compatibility not guaranteed before
 | **[Core – Material Design](./core-material)**           | Material Design styles for text                                                |
 | **[Pie Charts](./piechart)**                            | Pie charts, donut charts                                                       |
 | **[Pie Charts – Material Design](./piechart-material)** | Material Design styles for pie charts                                          |
+
+### Planned
+
+| Library                                                 | Description                                                                    |
+| ------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | **[Series Charts](./series)**                           | Point charts, line charts, bar charts, candlestick charts, etc.                |
 | **[XY Charts](./xy)**                                   | Point charts, line charts, bubble charts, etc. with both cartesian coordinates |
 | **[Radar Charts](./radar)**                             | Different types of radar charts                                                |
