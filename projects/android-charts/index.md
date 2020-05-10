@@ -26,10 +26,12 @@ content="Library under development. Backward compatibility not guaranteed before
 
 ## Libraries
 
-* **[Core](./core)**
-* **[Pie Charts](./piechart)**
-* **[Series Charts](./series)**
-* **[XY Charts](./xy)**
-* **[Radar Charts](./radar)**
-* **[Sunburst Charts](./sunburst)**
-* **[Venn Diagrams](./venn)**
+| Library                           | Description                                                                    |
+| --------------------------------- | ------------------------------------------------------------------------------ |
+| **[Core](./core)**                | Charts core module                                                             |
+| **[Pie Charts](./piechart)**      | Pie charts, donut charts                                                       |
+| **[Series Charts](./series)**     | Point charts, line charts, bar charts, candlestick charts, etc.                |
+| **[XY Charts](./xy)**             | Point charts, line charts, bubble charts, etc. with both cartesian coordinates |
+| **[Radar Charts](./radar)**       | Different types of radar charts                                                |
+| **[Sunburst Charts](./sunburst)** | Sunburst charts                                                                |
+| **[Venn Diagrams](./venn)**       | Venn diagrams                                                                  |
