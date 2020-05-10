@@ -29,6 +29,8 @@ dependencies {
 }
 ```
 
+See also [Material Design styles for pie charts](../piechart-material).
+
 ## Layout
 
 To add a pie chart to a layout, use a `PieChart` view:
@@ -42,6 +44,109 @@ To add a pie chart to a layout, use a `PieChart` view:
 
 Never use `wrap_content` to determine the size of a `PieChart`. This value will set the size to `0dp`.
 Instead, you may use `layout_constraintHeight_percent` attribute of a `ConstraintLayout`.
+
+## Styling
+
+### Available Attributes
+
+#### Pie Chart
+
+`PieChart` view has the following attributes:
+
+| Attribute                             | Description                                                      |
+| ------------------------------------- | ---------------------------------------------------------------- |
+| `android:padding`                     | View padding                                                     |
+| `android:gravity`                     | Gravity of the pie chart inside the view                         |
+| `pieChart_rotationAngle`              | Rotation angle of the pie chart (start angle of the first slice) |
+| `pieChart_dataSetInterpolator`        | Interpolator for data set changes animation                      |
+| `pieChart_dataSetAnimationDuration`   | Duration of data set changes animation (in milliseconds)         |
+| `pieChart_selectionInterpolator`      | Interpolator for slice selection animation                       |
+| `pieChart_selectionAnimationDuration` | Duration of slice selection animation (in milliseconds)          |
+| `pieChart_ui`                         | Name of a class implementing `PieChartUI`                        |
+| `pieChart_uiAppearance`               | Style for the `PieChartUI`                                       |
+| `pieChart_labelsPaddingHorizontal`    | Additional horizontal padding for labels                         |
+| `pieChart_labelsPaddingVertical`      | Additional vertical padding for labels                           |
+| `pieChart_labelsPaddingFromText`      | Text to be measured to determine as padding for labels           |
+| `pieChart_labelsUI`                   | Name of a class implementing `PieChartLabelsUI`                  |
+| `pieChart_labelsAppearance`           | Style for the `PieChartLabelsUI`                                 |
+
+#### Simple Pie Chart UI
+
+Set `pieChart_ui` to `it.czerwinski.android.charts.piechart.SimplePieChartUI`.
+
+`SimplePieChartUI` has the following attributes:
+
+| Attribute                             | Description                                                             |
+| ------------------------------------- | ----------------------------------------------------------------------- |
+| `simplePieChartUI_colors`             | A single color or an array of colors for pie chart slices               |
+| `simplePieChartUI_shadowColor`        | Pie chart slice shadow color                                            |
+| `simplePieChartUI_sliceSpacing`       | Pie chart slice spacing                                                 |
+| `simplePieChartUI_selectionColors`    | A single color or an array of colors for pie chart slices when selected |
+| `simplePieChartUI_selectionShift`     | Outwards shift distance of a selected slice                             |
+| `simplePieChartUI_selectionElevation` | Elevation of a selected slice                                           |
+
+#### Donut Pie Chart UI
+
+Set `pieChart_ui` to `it.czerwinski.android.charts.piechart.DonutPieChartUI`.
+
+`DonutPieChartUI` has the following attributes:
+
+| Attribute                            | Description                                                               |
+| ------------------------------------ | ------------------------------------------------------------------------- |
+| `donutPieChartUI_colors`             | A single color or an array of colors for donut chart slices               |
+| `donutPieChartUI_shadowColor`        | Donut chart slice shadow color                                            |
+| `donutPieChartUI_donutWidth`         | Donut width                                                               |
+| `donutPieChartUI_donutSpacing`       | Pie chart slice spacing                                                   |
+| `donutPieChartUI_selectionColors`    | A single color or an array of colors for donut chart slices when selected |
+| `donutPieChartUI_selectionWidth`     | Width of a selected donut slice                                           |
+| `donutPieChartUI_selectionShift`     | Outwards shift distance of a selected slice                               |
+| `donutPieChartUI_selectionElevation` | Elevation of a selected slice                                             |
+
+#### Simple Pie Chart Labels UI
+
+Set `pieChart_` to `it.czerwinski.android.charts.piechart.SimplePieChartLabelsUI`.
+
+`SimplePieChartLabelsUI` has the following attributes:
+
+| Attribute                                | Description                                            |
+| ---------------------------------------- | ------------------------------------------------------ |
+| `simplePieChartLabelsUI_textAppearance`  | Text appearance as defined in [`charts-core`](../core) |
+| `simplePieChartLabelsUI_labelPosition`   | Labels position, `inside` or `outside` the chart       |
+| `simplePieChartLabelsUI_labelSpacing`    | Labels spacing from the edge of the pie chart          |
+| `simplePieChartLabelsUI_labelMinPercent` | Minimum slice value in percent to display a label      |
+
+### Provided Styles
+
+See also [Material Design styles](../piechart-material).
+
+#### Pie Chart – Light Theme
+
+Style: `AndroidCharts.PieChart.Simple.LightTheme`
+
+{% include image.html src="/assets/img/project/android-charts/piechart/piechart_simple_light.png" %}
+
+#### Pie Chart – Dark Theme
+
+Style: `AndroidCharts.PieChart.Simple.DarkTheme`
+
+{% include image.html src="/assets/img/project/android-charts/piechart/piechart_simple_dark.png" %}
+
+#### Donut Chart – Light Theme
+
+Style: `AndroidCharts.PieChart.Donut.LightTheme`
+
+{% include image.html src="/assets/img/project/android-charts/piechart/piechart_donut_light.png" %}
+
+#### Donut Chart – Dark Theme
+
+Style: `AndroidCharts.PieChart.Donut.DarkTheme`
+
+{% include image.html src="/assets/img/project/android-charts/piechart/piechart_donut_dark.png" %}
+
+### Custom UI
+
+To define a custom style for `PieChart`, you can create your own implementation
+of `PieChartUI` and/or `PieChartLabelsUI`.
 
 ## Data Set Adapters
 
@@ -68,41 +173,3 @@ class CustomPieChartAdapter : PieChart.DataSetAdapter() {
     override fun getLabel(index: Int): String = labels[index]
 }
 ```
-
-## UI Styles
-
-### Simple Pie Chart
-
-```xml
-<style name="AppTheme">
-    <item name="pieChartStyle">@style/AndroidCharts.PieChart.Simple.LightTheme</item>
-</style>
-```
-
-```xml
-<it.czerwinski.android.charts.piechart.PieChart
-    android:id="@+id/pieChart"
-    android:gravity="center"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/AndroidCharts.PieChart.Simple.LightTheme" />
-```
-
-### Donut Chart
-
-```xml
-<style name="AppTheme">
-    <item name="pieChartStyle">@style/AndroidCharts.PieChart.Donut.LightTheme</item>
-</style>
-```
-
-```xml
-<it.czerwinski.android.charts.piechart.PieChart
-    android:id="@+id/pieChart"
-    android:gravity="center"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    style="@style/AndroidCharts.PieChart.Donut.LightTheme" />
-```
-
-### Custom UI

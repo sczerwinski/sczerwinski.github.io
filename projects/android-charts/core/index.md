@@ -28,3 +28,49 @@ dependencies {
     implementation "it.czerwinski.android:charts-core-material:$android_charts_version"
 }
 ```
+
+See also [Material Design styles for core library](../core-material).
+
+## Styling
+
+### Available Attributes
+
+#### Text Paint
+
+`TextPaing` has the following attributes:
+
+| Attribute            | Description                                       |
+| -------------------- | ------------------------------------------------- |
+| `android:textSize`   | Text size                                         |
+| `android:textColor`  | Text color                                        |
+| `android:textStyle`  | Text style: `normal`, `bold`, `italic`            |
+| `android:typeface`   | Typeface: `normal`, `sans`, `serif`, `monospace`  |
+| `android:fontFamily` | **Min SDK 16.** Font family name or font resource |
+| `fontFamily`         | Font family name or font resource                 |
+| `textAllCaps`        | If `true`, text will be converted to all caps     |
+
+### Provided Styles
+
+See also [Material Design styles](../core-material).
+
+#### Dark Text
+
+Style: `AndroidCharts.TextAppearance.Dark`
+
+| Attribute            | Value                               |
+| -------------------- | ----------------------------------- |
+| `android:textSize`   | `12sp`                              |
+| `android:textColor`  | `#000000` (black)                   |
+| `android:fontFamily` | **Min SDK 16.** `sans-serif-medium` |
+| `fontFamily`         | `sans-serif-medium`                 |
+
+#### Light Text
+
+Style: `AndroidCharts.TextAppearance.Light`
+
+| Attribute            | Value                               |
+| -------------------- | ----------------------------------- |
+| `android:textSize`   | `12sp`                              |
+| `android:textColor`  | `#FFFFFF` (white)                   |
+| `android:fontFamily` | **Min SDK 16.** `sans-serif-medium` |
+| `fontFamily`         | `sans-serif-medium`                 |

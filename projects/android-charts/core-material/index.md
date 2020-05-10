@@ -23,3 +23,32 @@ dependencies {
     implementation "it.czerwinski.android:charts-core-material:$android_charts_version"
 }
 ```
+
+See also [core library documentation](../core).
+
+## Styles
+
+All styles should work equally fine with both light and dark themes. Colors are determined based on theme attributes:
+`colorOnSurface`, `colorOnPrimarySurface`.
+
+### Label Outside Chart Area (Text On Surface)
+
+Style: `AndroidCharts.Material.TextAppearance.Label.Outside`
+
+Base: `TextAppearance.MaterialComponents.Caption` (Sans-Serif, 12sp)
+
+| Attribute            | Value                  |
+| -------------------- | ---------------------- |
+| `android:textColor`  | `?attr/colorOnSurface` |
+
+### Label Inside Chart Area (Text On Primary Surface)
+
+Style: `AndroidCharts.Material.TextAppearance.Label.Inside`
+
+Base: `TextAppearance.MaterialComponents.Caption` (Sans-Serif, 12sp)
+
+| Attribute            | Value                               |
+| -------------------- | ----------------------------------- |
+| `android:textColor`  | `?attr/colorOnPrimarySurface`       |
+| `android:fontFamily` | **Min SDK 16.** `sans-serif-medium` |
+| `fontFamily`         | `sans-serif-medium`                 |
