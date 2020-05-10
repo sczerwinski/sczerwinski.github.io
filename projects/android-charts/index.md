@@ -5,6 +5,8 @@ abstract: Android charts
 keywords: oss,software,programming,android,charts,graphs,kotlin
 ---
 
+{% include breadcrumbs-project.html %}
+
 [![Build Status](https://travis-ci.org/sczerwinski/android-charts.svg?branch=develop)](https://travis-ci.org/sczerwinski/android-charts)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/android-charts)
 ![License](https://img.shields.io/github/license/sczerwinski/android-charts.svg)

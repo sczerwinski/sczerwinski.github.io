@@ -1,0 +1,9 @@
+{% assign project = site.data.projects[include.project] %}
+{% assign title = page.title | split: ":" | last | strip %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/projects">Projects</a></li>
+        <li class="breadcrumb-item"><a href="/projects/{{ include.project }}">{{ project.name }}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ title }}</li>
+    </ol>
+</nav>
