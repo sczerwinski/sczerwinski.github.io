@@ -1,14 +1,14 @@
-- id: kotlin-util
+kotlin-util:
   name: Kotlin utilities
   description: Kotlin utility classes based on Scala
   github: sczerwinski/kotlin-util
 
-- id: android-charts
+android-charts:
   name: Android Charts
   description: Android charts
   github: sczerwinski/android-charts
 
-- id: android-graphics-util
+android-graphics-util:
   name: Android Graphics Utilities
   description: Extensions for Android graphics
   github: sczerwinski/android-graphics-util

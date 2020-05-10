@@ -5,9 +5,9 @@ exclude: 'yes'
 ---
 [{% for project in site.data.projects %}
   {
-    "id": "{{ project.id }}",
-    "title": "{{ project.name }}",{% if project.description %}
-    "abstract": "{{ project.description }}",{% endif %}
-    "url": "{{ site.url }}/projects/{{ project.id }}"
+    "id": "{{ project[0] }}",
+    "title": "{{ project[1].name }}",{% if project[1].description %}
+    "abstract": "{{ project[1].description }}",{% endif %}
+    "url": "{{ site.url }}/projects/{{ project[0] }}"
   }{% if forloop.last %}{% else %},{% endif %}{% endfor %}
 ]
