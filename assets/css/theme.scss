@@ -21,6 +21,16 @@ $theme-colors: (
 @import "bootstrap";
 @import 'tocbot';
 
+table {
+    @extend .shadow-sm;
+    @extend .card;
+    @extend .bg-light;
+    @extend .mt-2;
+    @extend .mb-4;
+
+    display: table;
+}
+
 th, td {
     @extend .px-2;
     @extend .py-3;
