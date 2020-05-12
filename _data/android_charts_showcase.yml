@@ -1,0 +1,5 @@
+- id: pie_chart
+  name: Pie chart
+
+- id: donut_chart
+  name: Donut chart

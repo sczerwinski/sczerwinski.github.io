@@ -1,0 +1,15 @@
+<div class="card-columns">
+{% for example in site.data.android_charts_showcase %}
+    <div class="shadow-sm card">
+        <div class="card-body">
+            <h5 class="card-title">{{ example.name }}</h5>
+        </div>
+        <a href="/assets/img/project/android-charts/showcase/{{ example.id }}.png">
+            <img
+                    class="card-img-bottom"
+                    src="/assets/img/project/android-charts/showcase/{{ example.id }}.png"
+                    alt="Card image cap" />
+        </a>
+    </div>
+{% endfor %}
+</div>

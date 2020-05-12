@@ -1,6 +1,6 @@
 ---
 title: Android Charts
-layout: page
+layout: toc-page
 abstract: Android charts
 keywords: oss,software,programming,android,charts,graphs,kotlin
 ---
@@ -13,6 +13,10 @@ keywords: oss,software,programming,android,charts,graphs,kotlin
 
 {% include warn.html
 content="Library under development. Backward compatibility not guaranteed before version 1.0." %}
+
+## Showcase
+
+{% include android-charts-showcase.html %}
 
 ## Roadmap
 
