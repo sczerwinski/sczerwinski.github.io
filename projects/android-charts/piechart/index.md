@@ -62,13 +62,13 @@ Instead, you may use `layout_constraintHeight_percent` attribute of a `Constrain
 | `pieChart_dataSetAnimationDuration`   | Duration of data set changes animation (in milliseconds)         |
 | `pieChart_selectionInterpolator`      | Interpolator for slice selection animation                       |
 | `pieChart_selectionAnimationDuration` | Duration of slice selection animation (in milliseconds)          |
-| `pieChart_ui`                         | Name of a class implementing `PieChartUI`                        |
-| `pieChart_uiAppearance`               | Style for the `PieChartUI`                                       |
+| `pieChart_ui`                         | Name of a class implementing `PieChart.UI`                       |
+| `pieChart_uiAppearance`               | Style for the `PieChart.UI`                                      |
 | `pieChart_labelsPaddingHorizontal`    | Additional horizontal padding for labels                         |
 | `pieChart_labelsPaddingVertical`      | Additional vertical padding for labels                           |
 | `pieChart_labelsPaddingFromText`      | Text to be measured to determine as padding for labels           |
-| `pieChart_labelsUI`                   | Name of a class implementing `PieChartLabelsUI`                  |
-| `pieChart_labelsAppearance`           | Style for the `PieChartLabelsUI`                                 |
+| `pieChart_labelsUI`                   | Name of a class implementing `PieChart.LabelsUI`                 |
+| `pieChart_labelsAppearance`           | Style for the `PieChart.LabelsUI`                                |
 
 #### Simple Pie Chart UI
 
@@ -146,7 +146,7 @@ Style: `AndroidCharts.PieChart.Donut.DarkTheme`
 ### Custom UI
 
 To define a custom style for `PieChart`, you can create your own implementation
-of `PieChartUI` and/or `PieChartLabelsUI`.
+of `PieChart.UI` and/or `PieChart.LabelsUI`.
 
 ## Data Set Adapters
 
