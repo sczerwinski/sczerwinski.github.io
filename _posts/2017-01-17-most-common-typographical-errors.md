@@ -6,6 +6,7 @@ layout: post
 abstract: All tests are green, spelling is double-checked, and you believe, there are no errors in your software? After reading this article, you may change your mind.
 keywords: typography
 tags: typography
+image: 2017-01-17-most-common-typographical-errors.png
 ---
 
 {% include warn.html
@@ -244,3 +245,6 @@ It is always a good idea to consult the style guide before publishing the text.
 * [*Non-breaking space*, Wikipedia](https://en.wikipedia.org/wiki/Non-breaking_space)
 * [*Unicode Character Search*, FileFormat.Info](http://www.fileformat.info/info/unicode/char/search.htm)
 * [BrainyQuote](http://www.brainyquote.com/)
+* Social media image by
+[Willi Heidelbach](https://pixabay.com/users/wilhei-883152/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=705674)
+from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=705674)
