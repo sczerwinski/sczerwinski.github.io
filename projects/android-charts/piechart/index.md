@@ -154,6 +154,13 @@ of `PieChart.UI` and/or `PieChart.LabelsUI`.
 
 ### Provided Adapters
 
+There are data set adapters provided for basic types:
+* `IntListPieChartAdapter`
+* `LongListPieChartAdapter`
+* `FloatListPieChartAdapter`
+* `DoubleListPieChartAdapter`
+
+Usage:
 ```kotlin
 val adapter = FloatListPieChartAdapter(requireContext())
 pieChart.adapter = adapter
@@ -163,15 +170,27 @@ adapter.data = listOf(0.1f, 0.2f, 0.3f)
 
 ### Custom Adapters
 
+It is also possible to define a custom data set adapter for any data type, e.g.:
+```kotlin
+data class MyData(
+    val name: String,
+    val amount: Int
+)
+```
+
+A data set adapter can be defined as:
 ```kotlin
 class CustomPieChartAdapter : PieChart.DataSetAdapter() {
 
-    private val values = listOf(0.1f, 0.2f, 0.3f)
-    private val labels = listOf("A", "B", "C")
+    var data: List<MyData> = emptyList()
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
 
-    override val size: Int get() = values.size
-    override val sum: Float get() = values.sum()
-    override fun get(index: Int): Float = values[index]
-    override fun getLabel(index: Int): String = labels[index]
+    override val size: Int get() = data.size
+    override val sum: Float get() = data.sumBy { it.amount }.toFloat()
+    override fun get(index: Int): Float = data[index].amount.toFloat()
+    override fun getLabel(index: Int): String = data[index].name
 }
 ```
