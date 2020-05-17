@@ -29,7 +29,7 @@ Typography is not about spelling or grammar—it is about the beauty and legibil
 A graphic designer provides us with fonts, but usually, it is our responsibility to use proper characters.
 And no school prepares us for&nbsp;it.
 
-### History
+## History
 
 {% include blockquote.html
 quote="We are not makers of history. We are made by history."
@@ -52,7 +52,7 @@ Web pages, on the other hand, are usually created by people who do not know much
 And since there is virtually no distinction between similar punctuation marks in hand-written text,
 we simply do not recognise the differences anymore.
 
-### Dashes
+## Dashes
 
 {% include blockquote.html
 quote="I was built for the long run, not for the short dash, I guess."
@@ -61,14 +61,14 @@ author="William Shatner" %}
 There are no dashes on a computer keyboard. There is no minus either. The only character we may type is a hyphen.
 Many text editors provide an automatic conversion of space-hyphen-space into space-dash-space—which is more or less correct—but that is not good enough.
 
-#### Hyphen
+### Hyphen
 
 A **hyphen**&nbsp;(-) is usually used to group words into compound modifiers, like in *over-the-counter drugs*,
 *mass-produced computer*, *one-way ticket*, or *well-read person*. It might also be used to indicate a prefix or a suffix,
 such as *pre-*, *post-*, *-ing*, *-ish*. Another use case for hyphens would be hyphenation in a justified text.
 The latter, however, is not practised in software user interface—it is mostly used in printed text.
 
-#### En dash, em dash
+### En dash, em dash
 
 When it comes to ranges of values, an **en dash**&nbsp;(–) should be used, which is slightly longer and thinner than a hyphen.
 In most cases, no space should be placed before or after the en dash, e.g. our Android application has been downloaded 100–200 times.
@@ -97,7 +97,7 @@ It is not a typical way to represent a dialogue in English literature, but it is
 In English there is typically no space right before or after the em dash. In some other languages, however, spaces are commonly used.
 Some publishers even use an en dash with spaces instead. The latter is often seen in Polish publications.
 
-#### Minus
+### Minus
 
 Dashes are designed to look nice in text—usually between two lower-case letters. Numbers, on the contrary,
 look better with a **minus**&nbsp;(−) character, which resembles an en dash, but is slightly shifted up.
@@ -106,7 +106,7 @@ Plus and minus signs should always be designed to match each other. Actually, a 
 Note that in some cases a dash could be mistaken for a minus. You should not stick to the rules, if they are likely to cause any confusion,
 e.g. instead of: −10–10°C, you might want to write: −10&nbsp;–&nbsp;10°C, or even&nbsp;−10—10°C.
 
-### Quotation marks
+## Quotation marks
 
 {% include blockquote.html
 quote="Quotation, n: The act of repeating erroneously the words of another."
@@ -127,7 +127,7 @@ In British English, it is usually just the other way about—single quotation ma
 In many languages, different forms of quotation marks are used. In Polish, for instance, a low nine-shaped double quotation mark&nbsp;(„…”) opens a quotation.
 Instead of nested quotation marks, on the other hand, one places inverted guillemets&nbsp;(»…«), i.e. *this is „a&nbsp;»quote« inside a&nbsp;quote”*.
 
-#### Apostrophe
+### Apostrophe
 
 As in the case of quotation marks, there is also no proper **apostrophe**&nbsp;(’) on the keyboard.
 Instead of the default typewriter character, a single closing quotation mark should be used, e.g. *YAML Ain’t Markup Language*.
@@ -137,7 +137,7 @@ This conversion is usually correct, but there is one pitfall, you should beware 
 it should be preceded with an apostrophe. So you can write, *I spent the New Year’s Eve of ’99 at home* (apostrophe),
 but *there is a song called ‘99 Red Balloons’* (single quotation marks). Most editors will convert both cases as the latter.
 
-#### Feet and inches
+### Feet and inches
 
 So finally, which characters should be used to indicate units of measurement—such as feet and inches,
 or minutes and seconds—typewriter quotation marks or proper closing quotation marks? The answer is, neither of them.
@@ -146,7 +146,7 @@ There are two other characters: **prime** (′) and **double prime** (″),&nb
 * *I am 5′&nbsp;10″ tall.*
 * *The latitude and longitude of the JAVEO office are: 52°&nbsp;14′&nbsp;20″&nbsp;N, 21°&nbsp;02′&nbsp;50″&nbsp;E.*
 
-### Ellipses
+## Ellipses
 
 {% include blockquote.html
 quote="We danced on the beach, kissed on the beach and dot,&nbsp;dot,&nbsp;dot."
@@ -159,7 +159,7 @@ There is a common misconception that this punctuation mark is nothing more than 
 However, since correct spacing is important for the readability of ellipses, three successive periods would not be typographically correct.
 So instead, a single Unicode ellipsis character should be used.
 
-### Spaces
+## Spaces
 
 {% include blockquote.html
 quote="Space: the final frontier."
@@ -180,13 +180,13 @@ A similar rule applies to question marks, exclamation marks, commas, colons, sem
 Brackets and quotation marks, on the other hand, should be kept with the text surrounded by them.
 So the space should be placed before the opening mark, and after the closing mark.
 
-#### Units of measurement
+### Units of measurement
 
 When a number is followed by a unit symbol starting with a letter, a space should be inserted in between,
 e.g. 1&nbsp;kg, 10&nbsp;m, 2&nbsp;h. However, there are no spaces before non-alphabetic symbols
 like percent, feet and inches, or degrees: 45°, 10%, 6′&nbsp;2″.
 
-#### Non-breaking spaces
+### Non-breaking spaces
 
 In some cases, however, a non-breaking space is required, so that a line break will be avoided.
 Measurement units are a good example—you probably want to keep them right next to the number.
@@ -209,7 +209,7 @@ However, there are many other rules that you should follow.
 Also, as you may have noticed, some of the principles vary between languages.
 It is always a good idea to consult the style guide before publishing the text.
 
-### Cheat sheet for programmers
+## Cheat sheet for programmers
 
 | Character                          | HTML       | Java String | Android XML | LaTeX                 |
 | ---------------------------------- | ---------- | ----------- | ----------- | --------------------- |
@@ -230,7 +230,7 @@ It is always a good idea to consult the style guide before publishing the text.
 | ellipsis (…)                       | `&hellip;` | `\u2026`    | `&#8230;`   | `\ldots`              |
 | non-breaking space                 | `&nbsp;`   | `\u00A0`    | `&#160;`    | `~`                   |
 
-### Bibliography
+## Bibliography
 
 * [*ASCII*, Wikipedia](https://en.wikipedia.org/wiki/ASCII)
 * [*UTF-8*, Wikipedia](https://en.wikipedia.org/wiki/UTF-8)
@@ -245,6 +245,9 @@ It is always a good idea to consult the style guide before publishing the text.
 * [*Non-breaking space*, Wikipedia](https://en.wikipedia.org/wiki/Non-breaking_space)
 * [*Unicode Character Search*, FileFormat.Info](http://www.fileformat.info/info/unicode/char/search.htm)
 * [BrainyQuote](http://www.brainyquote.com/)
+
+## Credits
+
 * Social media image by
 [Willi Heidelbach](https://pixabay.com/users/wilhei-883152/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=705674)
 from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=705674)
