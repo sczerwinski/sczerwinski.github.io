@@ -10,6 +10,9 @@ keywords: oss,software,programming
 {% for project in site.data.projects %}
     <div class="col-xs-12 col-md-6 col-xl-4">
         <div class="shadow-sm card my-2">
+            <a class="text-body" href="/projects/{{ project[0] }}">
+                <img src="/assets/img/project/{{ project[0] }}/banner.png" class="card-img-top" alt="{{ project[1].name }}" />
+            </a>
             <div class="card-body">
                 <h5 class="card-title">
                     <a class="text-body" href="/projects/{{ project[0] }}">{{ project[1].name }}</a>
