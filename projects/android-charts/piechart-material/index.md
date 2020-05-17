@@ -7,6 +7,7 @@ keywords: oss,software,programming,android,charts,pie,donut,graphs,kotlin,materi
 
 {% include breadcrumbs-subproject.html project="android-charts" %}
 
+[![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android/charts-piechart-material.svg)](https://repo1.maven.org/maven2/it/czerwinski/android/charts-piechart-material/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski.android/charts-piechart-material.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/charts-piechart-material/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/android-charts)
 ![License](https://img.shields.io/github/license/sczerwinski/android-charts.svg)
