@@ -6,6 +6,7 @@ layout: post
 abstract: How to solve the problem of boilerplate code related to SharedPreferences in Android applications
 keywords: kotlin,delegation,android,sharedpreferences
 tags: kotlin,android
+image: 2017-05-17-delegating-android-shared-preferences-in-kotlin.png
 ---
 
 {% include blockquote.html
@@ -216,3 +217,11 @@ e.g. `Array`, `List`, `Date`, as well as `data` classes.
 
 In the meantime, feel free to use the existing features.
 The library is still in development stage, but it has been fully tested.
+
+---
+
+## Credits
+
+* Social media image by
+[Gerd Altmann](https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1971162)
+from [Pixabay](https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1971162)
