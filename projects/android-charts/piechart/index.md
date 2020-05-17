@@ -78,11 +78,13 @@ Set `pieChart_ui` to `it.czerwinski.android.charts.piechart.SimplePieChartUI`.
 
 | Attribute                             | Description                                                               |
 | ------------------------------------- | ------------------------------------------------------------------------- |
-| `simplePieChartUI_colors`             | A single color state list or an array of state lists for pie chart slices |
+| `simplePieChartUI_colors` __*__       | A single color state list or an array of state lists for pie chart slices |
 | `simplePieChartUI_shadowColor`        | Pie chart slice shadow color                                              |
 | `simplePieChartUI_sliceSpacing`       | Pie chart slice spacing                                                   |
 | `simplePieChartUI_selectionShift`     | Outwards shift distance of a selected slice                               |
 | `simplePieChartUI_selectionElevation` | Elevation of a selected slice                                             |
+
+__*)__ See also [Defining Lists Of Colors](../core/#defining-lists-of-colors).
 
 #### Donut Pie Chart UI
 
@@ -92,13 +94,15 @@ Set `pieChart_ui` to `it.czerwinski.android.charts.piechart.DonutPieChartUI`.
 
 | Attribute                            | Description                                                                 |
 | ------------------------------------ | --------------------------------------------------------------------------- |
-| `donutPieChartUI_colors`             | A single color state list or an array of state lists for donut chart slices |
+| `donutPieChartUI_colors` __*__       | A single color state list or an array of state lists for donut chart slices |
 | `donutPieChartUI_shadowColor`        | Donut chart slice shadow color                                              |
 | `donutPieChartUI_donutWidth`         | Donut width                                                                 |
 | `donutPieChartUI_donutSpacing`       | Pie chart slice spacing                                                     |
 | `donutPieChartUI_selectionWidth`     | Width of a selected donut slice                                             |
 | `donutPieChartUI_selectionShift`     | Outwards shift distance of a selected slice                                 |
 | `donutPieChartUI_selectionElevation` | Elevation of a selected slice                                               |
+
+__*)__ See also [Defining Lists Of Colors](../core/#defining-lists-of-colors).
 
 #### Simple Pie Chart Labels UI
 

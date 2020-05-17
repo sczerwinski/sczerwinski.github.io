@@ -74,3 +74,44 @@ Style: `AndroidCharts.TextAppearance.Light`
 | `android:textColor`  | `#FFFFFF` (white)                   |
 | `android:fontFamily` | **Min SDK 16.** `sans-serif-medium` |
 | `fontFamily`         | `sans-serif-medium`                 |
+
+### Defining Lists Of Colors
+
+`TypedArray.getColors()` extension allows for defining lists of `ColorStateList` objects in resources.
+
+The list can be provided as:
+* A single color (literal, resource or attribute).
+* A single [color state list resource](https://developer.android.com/guide/topics/resources/color-list-resource).
+* A [typed array resource](https://developer.android.com/guide/topics/resources/more-resources#TypedArray),
+containing colors or color state lists.
+
+Examples:
+
+```xml
+<style name="MyStyle">
+    <item name="colors1">#ff000000</item>
+    <item name="colors2">@color/black</item>
+    <item name="colors3">?attr/colorPrimary</item>
+    <item name="colors4">@color/my_color_state_list</item>
+    <item name="colors5">@array/my_colors</item>
+</style>
+```
+
+where `my_color_state_list.xml`:
+```xml
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="false" android:color="?attr/colorPrimary" />
+    <item android:state_selected="true" android:color="?attr/colorPrimaryVariant" />
+</selector>
+```
+
+and `colors.xml`:
+```xml
+<resources>
+    <array name="my_colors">
+        <item>#ff000000</item>
+        <item>@color/black</item>
+        <item>@color/my_color_state_list</item> <!-- Note: attributes are not allowed in typed array -->
+    </array>
+</resources>
+```
