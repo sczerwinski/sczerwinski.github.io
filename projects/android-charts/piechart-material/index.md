@@ -59,12 +59,18 @@ UI appearance:
 
 | Attribute                             | Value                           |
 | ------------------------------------- | ------------------------------- |
-| `simplePieChartUI_colors`             | `?attr/colorPrimary`            |
+| `simplePieChartUI_colors`             | `ColorStateList`                |
 | `simplePieChartUI_shadowColor`        | `#44000000` (black 27% opacity) |
 | `simplePieChartUI_sliceSpacing`       | `2dp`                           |
-| `simplePieChartUI_selectionColors`    | `?attr/colorPrimaryVariant`     |
 | `simplePieChartUI_selectionShift`     | `8dp`                           |
 | `simplePieChartUI_selectionElevation` | `3dp`                           |
+
+Colors:
+
+| State                    | Color                       |
+| ------------------------ | --------------------------- |
+| `state_selected="false"` | `?attr/colorPrimary`        |
+| `state_selected="true"`  | `?attr/colorPrimaryVariant` |
 
 Labels appearance:
 
@@ -92,12 +98,18 @@ UI appearance:
 
 | Attribute                             | Value                           |
 | ------------------------------------- | ------------------------------- |
-| `simplePieChartUI_colors`             | `?attr/colorPrimary`            |
+| `simplePieChartUI_colors`             | `ColorStateList`                |
 | `simplePieChartUI_shadowColor`        | `#44000000` (black 27% opacity) |
 | `simplePieChartUI_sliceSpacing`       | `2dp`                           |
-| `simplePieChartUI_selectionColors`    | `?attr/colorPrimaryVariant`     |
 | `simplePieChartUI_selectionShift`     | `8dp`                           |
 | `simplePieChartUI_selectionElevation` | `3dp`                           |
+
+Colors:
+
+| State                    | Color                       |
+| ------------------------ | --------------------------- |
+| `state_selected="false"` | `?attr/colorPrimary`        |
+| `state_selected="true"`  | `?attr/colorPrimaryVariant` |
 
 Labels appearance:
 
@@ -123,14 +135,20 @@ UI appearance:
 
 | Attribute                            | Value                           |
 | ------------------------------------ | ------------------------------- |
-| `donutPieChartUI_colors`             | `?attr/colorPrimary`            |
+| `donutPieChartUI_colors`             | `ColorStateList`                |
 | `donutPieChartUI_shadowColor`        | `#44000000` (black 27% opacity) |
 | `donutPieChartUI_donutWidth`         | `4dp`                           |
 | `donutPieChartUI_donutSpacing`       | `6dp`                           |
-| `donutPieChartUI_selectionColors`    | `?attr/colorPrimaryVariant`     |
 | `donutPieChartUI_selectionWidth`     | `4dp`                           |
 | `donutPieChartUI_selectionShift`     | `8dp`                           |
 | `donutPieChartUI_selectionElevation` | `3dp`                           |
+
+Colors:
+
+| State                    | Color                       |
+| ------------------------ | --------------------------- |
+| `state_selected="false"` | `?attr/colorPrimary`        |
+| `state_selected="true"`  | `?attr/colorPrimaryVariant` |
 
 Labels appearance:
 
@@ -158,14 +176,20 @@ UI appearance:
 
 | Attribute                            | Value                           |
 | ------------------------------------ | ------------------------------- |
-| `donutPieChartUI_colors`             | `?attr/colorPrimary`            |
+| `donutPieChartUI_colors`             | `ColorStateList`                |
 | `donutPieChartUI_shadowColor`        | `#44000000` (black 27% opacity) |
 | `donutPieChartUI_donutWidth`         | `4dp`                           |
 | `donutPieChartUI_donutSpacing`       | `6dp`                           |
-| `donutPieChartUI_selectionColors`    | `?attr/colorPrimaryVariant`     |
 | `donutPieChartUI_selectionWidth`     | `4dp`                           |
 | `donutPieChartUI_selectionShift`     | `8dp`                           |
 | `donutPieChartUI_selectionElevation` | `3dp`                           |
+
+Colors:
+
+| State                    | Color                       |
+| ------------------------ | --------------------------- |
+| `state_selected="false"` | `?attr/colorPrimary`        |
+| `state_selected="true"`  | `?attr/colorPrimaryVariant` |
 
 Labels appearance:
 
