@@ -3,6 +3,7 @@ title: 'Android Charts: Sunburst Charts'
 layout: toc-page
 abstract: Android sunburst charts
 keywords: oss,software,programming,android,charts,sunburst,graphs,kotlin
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}

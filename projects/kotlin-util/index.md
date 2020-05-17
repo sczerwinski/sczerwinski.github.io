@@ -3,6 +3,7 @@ title: Kotlin utilities
 layout: toc-page
 abstract: Kotlin utility classes based on Scala
 keywords: oss,software,programming,kotlin,utility
+project: kotlin-util
 ---
 
 {% include breadcrumbs-project.html %}

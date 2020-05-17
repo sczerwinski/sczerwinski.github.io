@@ -3,6 +3,7 @@ title: 'Android Charts: Series Charts'
 layout: toc-page
 abstract: Android series charts
 keywords: oss,software,programming,android,charts,point,line,area,bar,candlestick,gantt,graphs,kotlin
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}

@@ -3,6 +3,7 @@ title: 'Android Charts: Pie Charts'
 layout: toc-page
 abstract: Android pie charts
 keywords: oss,software,programming,android,charts,pie,donut,graphs,kotlin
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}

@@ -11,6 +11,8 @@
 
 {% if page.image %}
 <meta name="twitter:card" content="summary_large_image" />
+{% elsif page.project %}
+<meta name="twitter:card" content="summary_large_image" />
 {% else %}
 <meta name="twitter:card" content="summary" />
 {% endif %}
@@ -19,6 +21,8 @@
 {% if page.abstract %}<meta name="twitter:description" content="{{ page.abstract }}" />{% endif %}
 {% if page.image %}
 <meta name="twitter:image" content="{{ site.url }}/assets/img/post/{{ page.image }}" />
+{% elsif page.project %}
+<meta name="twitter:image" content="{{ site.url }}/assets/img/project/{{ page.project }}/banner.png" />
 {% else %}
 <meta name="twitter:image" content="{{ site.url }}/assets/img/icon.png" />
 {% endif %}

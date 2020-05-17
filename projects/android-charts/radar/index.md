@@ -3,6 +3,7 @@ title: 'Android Charts: Radar Charts'
 layout: toc-page
 abstract: Android radar charts
 keywords: oss,software,programming,android,charts,radar,polar,graphs,kotlin
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}

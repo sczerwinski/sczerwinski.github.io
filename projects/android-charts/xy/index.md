@@ -3,6 +3,7 @@ title: 'Android Charts: XY Charts'
 layout: toc-page
 abstract: Android XY charts
 keywords: oss,software,programming,android,charts,xy,cartesian,graphs,kotlin
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}

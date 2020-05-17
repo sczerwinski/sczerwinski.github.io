@@ -3,6 +3,7 @@ title: 'Android Charts: Material Design Styles For Core'
 layout: toc-page
 abstract: Material Design styles for Android charts core
 keywords: oss,software,programming,android,charts,graphs,kotlin,material
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}

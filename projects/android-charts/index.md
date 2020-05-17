@@ -3,6 +3,7 @@ title: Android Charts
 layout: toc-page
 abstract: Android charts
 keywords: oss,software,programming,android,charts,graphs,kotlin
+project: android-charts
 ---
 
 {% include breadcrumbs-project.html %}

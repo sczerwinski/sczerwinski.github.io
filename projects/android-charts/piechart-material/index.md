@@ -3,6 +3,7 @@ title: 'Android Charts: Material Design Styles For Pie Charts'
 layout: toc-page
 abstract: Material Design styles for Android pie charts
 keywords: oss,software,programming,android,charts,pie,donut,graphs,kotlin,material
+project: android-charts
 ---
 
 {% include breadcrumbs-subproject.html project="android-charts" %}
