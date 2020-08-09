@@ -12,3 +12,8 @@ android-graphics-util:
   name: Android Graphics Utilities
   description: Extensions for Android graphics
   github: sczerwinski/android-graphics-util
+
+wavefront-obj-intellij-plugin:
+  name: Wavefront OBJ IntelliJ Plugin
+  description: Wavefront OBJ file type and 3D preview plugin for IntelliJ platform
+  github: sczerwinski/wavefront-obj-intellij-plugin
