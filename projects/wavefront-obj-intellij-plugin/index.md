@@ -87,9 +87,9 @@ file format and editor.
   <kbd>Preferences</kbd> > <kbd>Languages & Frameworks</kbd> > <kbd>Wavefront OBJ</kbd>
 
 [build_badge]: https://github.com/sczerwinski/wavefront-obj-intellij-plugin/workflows/Build/badge.svg
-[jb_version_badge]: https://img.shields.io/jetbrains/plugin/v/it.czerwinski.intellij.wavefront.svg
-[jb_download_badge]: https://img.shields.io/jetbrains/plugin/d/it.czerwinski.intellij.wavefront.svg
-[jb_plugin_page]: https://plugins.jetbrains.com/plugin/it.czerwinski.intellij.wavefront
+[jb_version_badge]: https://img.shields.io/jetbrains/plugin/v/14843-wavefront-obj
+[jb_download_badge]: https://img.shields.io/jetbrains/plugin/d/14843-wavefront-obj
+[jb_plugin_page]: https://plugins.jetbrains.com/plugin/14843-wavefront-obj
 [gh_badge]: https://img.shields.io/badge/source-GitHub-blue.svg
 [gh_project]: https://github.com/sczerwinski/wavefront-obj-intellij-plugin
 [gh_license_badge]: https://img.shields.io/github/license/sczerwinski/wavefront-obj-intellij-plugin.svg
