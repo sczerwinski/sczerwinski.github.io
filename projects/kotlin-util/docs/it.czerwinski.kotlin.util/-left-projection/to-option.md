@@ -1,15 +1,23 @@
 ---
-title: LeftProjection.toOption - Kotlin utilities
+title: toOption -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[LeftProjection](index.md)/[toOption](to-option.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [LeftProjection](index.html) / [toOption](./to-option.html)
 
-# toOption
 
-`fun toOption(): `[`Option`](../-option/index.html)`<`[`L`](index.html#L)`>`
+# toOption  
+[Kotlin utilities]  
+Brief description  
+Returns a [Some](../-some/index.md) containing the [Left](../-left/index.md) value if it exists, or a [None](../-none/index.md) if this is a [Right](../-right/index.md).  
+  
 
-Returns a [Some](../-some/index.html) containing the [Left](../-left/index.html) value if it exists, or a [None](../-none/index.html) if this is a [Right](../-right/index.html).
 
-**Return**
-a [Some](../-some/index.html) containing the [Left](../-left/index.html) value if it exists, or a [None](../-none/index.html) if this is a [Right](../-right/index.html).
+#### Return  
+a [Some](../-some/index.md) containing the [Left](../-left/index.md) value if it exists, or a [None](../-none/index.md) if this is a [Right](../-right/index.md).  
+  
+  
+Content  
+fun [toOption](to-option.md)(): [Option](../-option/index.md)<[L](index.md)>  
+
+
 

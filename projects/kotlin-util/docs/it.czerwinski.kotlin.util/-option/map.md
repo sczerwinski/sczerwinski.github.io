@@ -1,19 +1,33 @@
 ---
-title: Option.map - Kotlin utilities
+title: map -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[map](map.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [map](./map.html)
 
-# map
 
-`inline fun <R> map(transform: (`[`T`](index.html#T)`) -> `[`R`](map.html#R)`): `[`Option`](index.html)`<`[`R`](map.html#R)`>`
+# map  
+[Kotlin utilities]  
+Brief description  
+Maps value of a [Some](../-some/index.md) using [transform]() or returns the same [None](../-none/index.md).  
+  
 
-Maps value of a [Some](../-some/index.html) using [transform](map.html#it.czerwinski.kotlin.util.Option$map(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, it.czerwinski.kotlin.util.Option.map.R)))/transform) or returns the same [None](../-none/index.html).
 
-### Parameters
+#### Return  
+[Some](../-some/index.md) with a value mapped using [transform]() or this object if this is a [None](../-none/index.md).  
+  
 
-`transform` - Function transforming value of a [Some](../-some/index.html).
 
-**Return**
-[Some](../-some/index.html) with a value mapped using [transform](map.html#it.czerwinski.kotlin.util.Option$map(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, it.czerwinski.kotlin.util.Option.map.R)))/transform) or this object if this is a [None](../-none/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming value of a [Some](../-some/index.md).
+  
+  
+Content  
+inline fun <[R](map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [map](map.md)(transform: ([T](index.md)) -> [R](map.md)): [Option](index.md)<[R](map.md)>  
+
+
 

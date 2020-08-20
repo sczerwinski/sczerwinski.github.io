@@ -1,15 +1,28 @@
 ---
-title: RightProjection.forEach - Kotlin utilities
+title: forEach -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[RightProjection](index.md)/[forEach](for-each.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [RightProjection](index.html) / [forEach](./for-each.html)
 
-# forEach
 
-`inline fun forEach(action: (`[`R`](index.html#R)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+# forEach  
+[Kotlin utilities]  
+Brief description  
+Runs [action]() if this is a [Right](../-right/index.md). Returns [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) without any action if this is a [Left](../-left/index.md).  
+  
 
-Runs [action](for-each.html#it.czerwinski.kotlin.util.RightProjection$forEach(kotlin.Function1((it.czerwinski.kotlin.util.RightProjection.R, kotlin.Unit)))/action) if this is a [Right](../-right/index.html). Returns [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) without any action if this is a [Left](../-left/index.html).
 
-### Parameters
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| action| Action to be run on a [Right](../-right/index.md).
+  
+  
+Content  
+inline fun [forEach](for-each.md)(action: ([R](index.md)) -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))  
 
-`action` - Action to be run on a [Right](../-right/index.html).
+
+

@@ -1,19 +1,33 @@
 ---
-title: contains - Kotlin utilities
+title: contains -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[contains](contains.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [contains](./contains.html)
 
-# contains
 
-`operator fun <T> `[`Option`](-option/index.html)`<`[`T`](contains.html#T)`>.contains(element: `[`T`](contains.html#T)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# contains  
+[Kotlin utilities]  
+Brief description  
+Tests whether the [Option](-option/index.md) contains the given [element]().  
+  
 
-Tests whether the [Option](-option/index.html) contains the given [element](contains.html#it.czerwinski.kotlin.util$contains(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.contains.T)), it.czerwinski.kotlin.util.contains.T)/element).
 
-### Parameters
+#### Return  
+true if the [element]() is equal to the value of this [Some](-some/index.md), or false otherwise.  
+  
 
-`element` - An element to be tested.
 
-**Return**
-`true` if the [element](contains.html#it.czerwinski.kotlin.util$contains(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.contains.T)), it.czerwinski.kotlin.util.contains.T)/element) is equal to the value of this [Some](-some/index.html), or `false` otherwise.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| element| An element to be tested.
+  
+  
+Content  
+operator fun <[T](contains.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[T](contains.md)>.[contains](contains.md)(element: [T](contains.md)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
 

@@ -1,30 +1,57 @@
 ---
-title: orElse - Kotlin utilities
+title: orElse -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[orElse](or-else.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [orElse](./or-else.html)
 
-# orElse
 
-`inline fun <T> `[`Option`](-option/index.html)`<`[`T`](or-else.html#T)`>.orElse(default: () -> `[`Option`](-option/index.html)`<`[`T`](or-else.html#T)`>): `[`Option`](-option/index.html)`<`[`T`](or-else.html#T)`>`
+# orElse  
+[Kotlin utilities]  
+Brief description  
+Returns this [Option](-option/index.md) if this is a [Some](-some/index.md) or [default]() if this is [None](-none/index.md).  
+  
 
-Returns this [Option](-option/index.html) if this is a [Some](-some/index.html) or [default](or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)))))/default) if this is [None](-none/index.html).
 
-### Parameters
+#### Return  
+This [Some](-some/index.md) or [default]().  
+  
 
-`default` - Default [Option](-option/index.html) provider.
 
-**Return**
-This [Some](-some/index.html) or [default](or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.orElse.T)))))/default).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default [Option](-option/index.md) provider.
+  
+  
+Content  
+inline fun <[T](or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[T](or-else.md)>.[orElse](or-else.md)(default: () -> [Option](-option/index.md)<[T](or-else.md)>): [Option](-option/index.md)<[T](or-else.md)>  
 
-`inline fun <T> `[`Try`](-try/index.html)`<`[`T`](or-else.html#T)`>.orElse(default: () -> `[`Try`](-try/index.html)`<`[`T`](or-else.html#T)`>): `[`Try`](-try/index.html)`<`[`T`](or-else.html#T)`>`
 
-Returns this [Try](-try/index.html) if this is a [Success](-success/index.html) or [default](or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)))))/default) if this is a [Failure](-failure/index.html).
+[Kotlin utilities]  
+Brief description  
+Returns this [Try](-try/index.md) if this is a [Success](-success/index.md) or [default]() if this is a [Failure](-failure/index.md).  
+  
 
-### Parameters
 
-`default` - Default [Try](-try/index.html) provider.
+#### Return  
+This [Success](-success/index.md) or [default]().  
+  
 
-**Return**
-This [Success](-success/index.html) or [default](or-else.html#it.czerwinski.kotlin.util$orElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.orElse.T)))))/default).
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default [Try](-try/index.md) provider.
+  
+  
+Content  
+inline fun <[T](or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[T](or-else.md)>.[orElse](or-else.md)(default: () -> [Try](-try/index.md)<[T](or-else.md)>): [Try](-try/index.md)<[T](or-else.md)>  
+
+
 

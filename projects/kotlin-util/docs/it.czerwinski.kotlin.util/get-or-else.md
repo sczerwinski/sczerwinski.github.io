@@ -1,66 +1,134 @@
 ---
-title: getOrElse - Kotlin utilities
+title: getOrElse -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[getOrElse](get-or-else.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [getOrElse](./get-or-else.html)
 
-# getOrElse
 
-`inline fun <L, R> `[`Either`](-either/index.html)`<`[`L`](get-or-else.html#L)`, `[`R`](get-or-else.html#R)`>.getOrElse(default: () -> `[`R`](get-or-else.html#R)`): `[`R`](get-or-else.html#R)
+# getOrElse  
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Right](-right/index.md) or [default]() value if this is [Left](-left/index.md).  
+  
 
-Gets value of this [Right](-right/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.R)))/default) value if this is [Left](-left/index.html).
 
-### Parameters
+#### Return  
+Value of this [Right](-right/index.md) or [default]().  
+  
 
-`default` - Default value provider.
 
-**Return**
-Value of this [Right](-right/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.R)))/default).
+#### Since  
+1.3  
+  
 
-**Since**
-1.3
 
-`inline fun <L, R> `[`LeftProjection`](-left-projection/index.html)`<`[`L`](get-or-else.html#L)`, `[`R`](get-or-else.html#R)`>.getOrElse(default: () -> `[`L`](get-or-else.html#L)`): `[`L`](get-or-else.html#L)
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default value provider.
+  
+  
+Content  
+inline fun <[L](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Either](-either/index.md)<[L](get-or-else.md), [R](get-or-else.md)>.[getOrElse](get-or-else.md)(default: () -> [R](get-or-else.md)): [R](get-or-else.md)  
 
-Gets value of this [Left](-left/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.L)))/default) value if this is [Right](-right/index.html).
 
-### Parameters
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Left](-left/index.md) or [default]() value if this is [Right](-right/index.md).  
+  
 
-`default` - Default value provider.
 
-**Return**
-Value of this [Left](-left/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.L)))/default).
+#### Return  
+Value of this [Left](-left/index.md) or [default]().  
+  
 
-`inline fun <L, R> `[`RightProjection`](-right-projection/index.html)`<`[`L`](get-or-else.html#L)`, `[`R`](get-or-else.html#R)`>.getOrElse(default: () -> `[`R`](get-or-else.html#R)`): `[`R`](get-or-else.html#R)
 
-Gets value of this [Right](-right/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.R)))/default) value if this is [Left](-left/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default value provider.
+  
+  
+Content  
+inline fun <[L](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [LeftProjection](-left-projection/index.md)<[L](get-or-else.md), [R](get-or-else.md)>.[getOrElse](get-or-else.md)(default: () -> [L](get-or-else.md)): [L](get-or-else.md)  
 
-### Parameters
 
-`default` - Default value provider.
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Right](-right/index.md) or [default]() value if this is [Left](-left/index.md).  
+  
 
-**Return**
-Value of this [Right](-right/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.getOrElse.L, it.czerwinski.kotlin.util.getOrElse.R)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.R)))/default).
 
-`inline fun <T> `[`Option`](-option/index.html)`<`[`T`](get-or-else.html#T)`>.getOrElse(default: () -> `[`T`](get-or-else.html#T)`): `[`T`](get-or-else.html#T)
+#### Return  
+Value of this [Right](-right/index.md) or [default]().  
+  
 
-Gets the value of a [Some](-some/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.getOrElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.T)))/default) value if this is [None](-none/index.html).
 
-### Parameters
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default value provider.
+  
+  
+Content  
+inline fun <[L](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [RightProjection](-right-projection/index.md)<[L](get-or-else.md), [R](get-or-else.md)>.[getOrElse](get-or-else.md)(default: () -> [R](get-or-else.md)): [R](get-or-else.md)  
 
-`default` - Default value provider.
 
-**Return**
-Value of a [Some](-some/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.getOrElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.T)))/default) value.
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Some](-some/index.md) or [default]() value if this is [None](-none/index.md).  
+  
 
-`inline fun <T> `[`Try`](-try/index.html)`<`[`T`](get-or-else.html#T)`>.getOrElse(default: () -> `[`T`](get-or-else.html#T)`): `[`T`](get-or-else.html#T)
 
-Gets the value of a [Success](-success/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.getOrElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.T)))/default) value if this is a [Failure](-failure/index.html).
+#### Return  
+Value of a [Some](-some/index.md) or [default]() value.  
+  
 
-### Parameters
 
-`default` - Default value provider.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default value provider.
+  
+  
+Content  
+inline fun <[T](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[T](get-or-else.md)>.[getOrElse](get-or-else.md)(default: () -> [T](get-or-else.md)): [T](get-or-else.md)  
 
-**Return**
-Value of a [Success](-success/index.html) or [default](get-or-else.html#it.czerwinski.kotlin.util$getOrElse(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.getOrElse.T)), kotlin.Function0((it.czerwinski.kotlin.util.getOrElse.T)))/default) value.
+
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Success](-success/index.md) or [default]() value if this is a [Failure](-failure/index.md).  
+  
+
+
+#### Return  
+Value of a [Success](-success/index.md) or [default]() value.  
+  
+
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| default| Default value provider.
+  
+  
+Content  
+inline fun <[T](get-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[T](get-or-else.md)>.[getOrElse](get-or-else.md)(default: () -> [T](get-or-else.md)): [T](get-or-else.md)  
+
+
 

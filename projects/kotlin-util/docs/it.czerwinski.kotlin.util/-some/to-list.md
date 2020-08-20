@@ -1,19 +1,23 @@
 ---
-title: Some.toList - Kotlin utilities
+title: toList -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Some](index.md)/[toList](to-list.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Some](index.html) / [toList](./to-list.html)
 
-# toList
 
-`fun toList(): `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](index.html#T)`>`
+# toList  
+[Kotlin utilities]  
+Brief description  
+Returns a singleton list containing the option's value if it is defined, or an empty list if the option is empty.  
+  
 
-Overrides [Option.toList](../-option/to-list.html)
 
-Returns a singleton list containing the option's value if it is defined,
-or an empty list if the option is empty.
+#### Return  
+A singleton list returning the option's value if it is defined, or an empty iterator if the option is empty.  
+  
+  
+Content  
+open override fun [toList](to-list.md)(): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[T](index.md)>  
 
-**Return**
-A singleton list returning the option's value if it is defined,
-or an empty iterator if the option is empty.
+
 

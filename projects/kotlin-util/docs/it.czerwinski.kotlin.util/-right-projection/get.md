@@ -1,19 +1,23 @@
 ---
-title: RightProjection.get - Kotlin utilities
+title: get -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[RightProjection](index.md)/[get](get.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [RightProjection](index.html) / [get](./get.html)
 
-# get
 
-`fun get(): `[`R`](index.html#R)
+# get  
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Right](../-right/index.md).  
+  
 
-Gets value of this [Right](../-right/index.html).
 
-### Exceptions
+#### Return  
+Value of this [Right](../-right/index.md).  
+  
+  
+Content  
+fun [get](get.md)(): [R](index.md)  
 
-`NoSuchElementException` - If this is [Left](../-left/index.html).
 
-**Return**
-Value of this [Right](../-right/index.html).
 

@@ -1,21 +1,33 @@
 ---
-title: RightProjection.filterToOption - Kotlin utilities
+title: filterToOption -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[RightProjection](index.md)/[filterToOption](filter-to-option.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [RightProjection](index.html) / [filterToOption](./filter-to-option.html)
 
-# filterToOption
 
-`inline fun filterToOption(predicate: (`[`R`](index.html#R)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Option`](../-option/index.html)`<`[`Either`](../-either/index.html)`<`[`L`](index.html#L)`, `[`R`](index.html#R)`>>`
+# filterToOption  
+[Kotlin utilities]  
+Brief description  
+Returns [Some](../-some/index.md) containing the same [Right](../-right/index.md) if the [predicate]() is satisfied for the value. Otherwise returns [None](../-none/index.md).  
+  
 
-Returns [Some](../-some/index.html) containing the same [Right](../-right/index.html) if the [predicate](filter-to-option.html#it.czerwinski.kotlin.util.RightProjection$filterToOption(kotlin.Function1((it.czerwinski.kotlin.util.RightProjection.R, kotlin.Boolean)))/predicate) is satisfied for the value.
-Otherwise returns [None](../-none/index.html).
 
-### Parameters
+#### Return  
+[Some](../-some/index.md) containing the same [Right](../-right/index.md) if the [predicate]() is satisfied for the value. Otherwise returns [None](../-none/index.md).  
+  
 
-`predicate` - Predicate function.
 
-**Return**
-[Some](../-some/index.html) containing the same [Right](../-right/index.html) if the [predicate](filter-to-option.html#it.czerwinski.kotlin.util.RightProjection$filterToOption(kotlin.Function1((it.czerwinski.kotlin.util.RightProjection.R, kotlin.Boolean)))/predicate) is satisfied for the value.
-Otherwise returns [None](../-none/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+inline fun [filterToOption](filter-to-option.md)(predicate: ([R](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Option](../-option/index.md)<[Either](../-either/index.md)<[L](index.md), [R](index.md)>>  
+
+
 

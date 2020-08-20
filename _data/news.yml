@@ -1,12 +1,14 @@
+- date: 2019-07-24
+  title: "Kotlin Utilities: Release 1.4.0"
+  content: |
+    Kotlin utility types based on Scala open source project.<br />
+    <b>NEW:</b> Experimental multiplatform support.
+  url: /projects/kotlin-util/
+
 - date: 2020-05-17
   title: "Android Charts: Release 0.1"
   content: First milestone release for Android Charts projects. Introduces pie charts.
   url: /projects/android-charts/
-
-- date: 2019-07-24
-  title: "Kotlin Utilities: Release 1.3"
-  content: Kotlin utility types based on Scala open source project.
-  url: /projects/kotlin-util/
 
 - date: 2018-11-30
   title: The Case Against Double Exclamation Operator

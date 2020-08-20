@@ -1,19 +1,33 @@
 ---
-title: Try.filterIsInstance - Kotlin utilities
+title: filterIsInstance -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[filterIsInstance](filter-is-instance.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [filterIsInstance](./filter-is-instance.html)
 
-# filterIsInstance
 
-`inline fun <reified R> filterIsInstance(): `[`Try`](index.html)`<`[`R`](filter-is-instance.html#R)`>`
+# filterIsInstance  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Success](../-success/index.md) casted to type [R]() if it is [R](). Otherwise returns a [Failure](../-failure/index.md).  
+  
 
-Returns the same [Success](../-success/index.html) casted to type [R](filter-is-instance.html#R) if it is [R](filter-is-instance.html#R). Otherwise returns a [Failure](../-failure/index.html).
 
-### Parameters
+#### Return  
+The same [Success](../-success/index.md) casted to type [R]() if it is [R](). Otherwise returns a [Failure](../-failure/index.md).  
+  
 
-`R` - Required type of the optional value.
 
-**Return**
-The same [Success](../-success/index.html) casted to type [R](filter-is-instance.html#R) if it is [R](filter-is-instance.html#R). Otherwise returns a [Failure](../-failure/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| R| Required type of the optional value.
+  
+  
+Content  
+inline fun <[R](filter-is-instance.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [filterIsInstance](filter-is-instance.md)(): [Try](index.md)<[R](filter-is-instance.md)>  
+
+
 

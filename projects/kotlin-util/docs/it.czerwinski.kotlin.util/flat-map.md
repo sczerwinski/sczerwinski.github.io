@@ -1,44 +1,86 @@
 ---
-title: flatMap - Kotlin utilities
+title: flatMap -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[flatMap](flat-map.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [flatMap](./flat-map.html)
 
-# flatMap
 
-`inline fun <L, R, T> `[`Either`](-either/index.html)`<`[`L`](flat-map.html#L)`, `[`R`](flat-map.html#R)`>.flatMap(transform: (`[`R`](flat-map.html#R)`) -> `[`Either`](-either/index.html)`<`[`L`](flat-map.html#L)`, `[`T`](flat-map.html#T)`>): `[`Either`](-either/index.html)`<`[`L`](flat-map.html#L)`, `[`T`](flat-map.html#T)`>`
+# flatMap  
+[Kotlin utilities]  
+Brief description  
+Maps value of this [Right](-right/index.md) to a new [Either](-either/index.md) using [transform]().  
+  
 
-Maps value of this [Right](-right/index.html) to a new [Either](-either/index.html) using [transform](flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.R, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.T)))))/transform).
 
-### Parameters
+#### Return  
+[Either](-either/index.md) mapped using [transform]() or this object if this is a [Left](-left/index.md).  
+  
 
-`transform` - Function transforming a [Right](-right/index.html) to an [Either](-either/index.html).
 
-**Return**
-[Either](-either/index.html) mapped using [transform](flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.R, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.T)))))/transform) or this object if this is a [Left](-left/index.html).
+#### Since  
+1.3  
+  
 
-**Since**
-1.3
 
-`inline fun <L, R, T> `[`LeftProjection`](-left-projection/index.html)`<`[`L`](flat-map.html#L)`, `[`R`](flat-map.html#R)`>.flatMap(transform: (`[`L`](flat-map.html#L)`) -> `[`Either`](-either/index.html)`<`[`T`](flat-map.html#T)`, `[`R`](flat-map.html#R)`>): `[`Either`](-either/index.html)`<`[`T`](flat-map.html#T)`, `[`R`](flat-map.html#R)`>`
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming a [Right](-right/index.md) to an [Either](-either/index.md).
+  
+  
+Content  
+inline fun <[L](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [T](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Either](-either/index.md)<[L](flat-map.md), [R](flat-map.md)>.[flatMap](flat-map.md)(transform: ([R](flat-map.md)) -> [Either](-either/index.md)<[L](flat-map.md), [T](flat-map.md)>): [Either](-either/index.md)<[L](flat-map.md), [T](flat-map.md)>  
 
-Maps value of this [Left](-left/index.html) to a new [Either](-either/index.html) using [transform](flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.T, it.czerwinski.kotlin.util.flatMap.R)))))/transform).
 
-### Parameters
+[Kotlin utilities]  
+Brief description  
+Maps value of this [Left](-left/index.md) to a new [Either](-either/index.md) using [transform]().  
+  
 
-`transform` - Function transforming a [Left](-left/index.html) to an [Either](-either/index.html).
 
-**Return**
-[Either](-either/index.html) mapped using [transform](flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.T, it.czerwinski.kotlin.util.flatMap.R)))))/transform) or this object if this is a [Right](-right/index.html).
+#### Return  
+[Either](-either/index.md) mapped using [transform]() or this object if this is a [Right](-right/index.md).  
+  
 
-`inline fun <L, R, T> `[`RightProjection`](-right-projection/index.html)`<`[`L`](flat-map.html#L)`, `[`R`](flat-map.html#R)`>.flatMap(transform: (`[`R`](flat-map.html#R)`) -> `[`Either`](-either/index.html)`<`[`L`](flat-map.html#L)`, `[`T`](flat-map.html#T)`>): `[`Either`](-either/index.html)`<`[`L`](flat-map.html#L)`, `[`T`](flat-map.html#T)`>`
 
-Maps value of this [Right](-right/index.html) to a new [Either](-either/index.html) using [transform](flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.R, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.T)))))/transform).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming a [Left](-left/index.md) to an [Either](-either/index.md).
+  
+  
+Content  
+inline fun <[L](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [T](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [LeftProjection](-left-projection/index.md)<[L](flat-map.md), [R](flat-map.md)>.[flatMap](flat-map.md)(transform: ([L](flat-map.md)) -> [Either](-either/index.md)<[T](flat-map.md), [R](flat-map.md)>): [Either](-either/index.md)<[T](flat-map.md), [R](flat-map.md)>  
 
-### Parameters
 
-`transform` - Function transforming a [Right](-right/index.html) to an [Either](-either/index.html).
+[Kotlin utilities]  
+Brief description  
+Maps value of this [Right](-right/index.md) to a new [Either](-either/index.md) using [transform]().  
+  
 
-**Return**
-[Either](-either/index.html) mapped using [transform](flat-map.html#it.czerwinski.kotlin.util$flatMap(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.R)), kotlin.Function1((it.czerwinski.kotlin.util.flatMap.R, it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.flatMap.L, it.czerwinski.kotlin.util.flatMap.T)))))/transform) or this object if this is a [Left](-left/index.html).
+
+#### Return  
+[Either](-either/index.md) mapped using [transform]() or this object if this is a [Left](-left/index.md).  
+  
+
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming a [Right](-right/index.md) to an [Either](-either/index.md).
+  
+  
+Content  
+inline fun <[L](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [T](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [RightProjection](-right-projection/index.md)<[L](flat-map.md), [R](flat-map.md)>.[flatMap](flat-map.md)(transform: ([R](flat-map.md)) -> [Either](-either/index.md)<[L](flat-map.md), [T](flat-map.md)>): [Either](-either/index.md)<[L](flat-map.md), [T](flat-map.md)>  
+
+
 

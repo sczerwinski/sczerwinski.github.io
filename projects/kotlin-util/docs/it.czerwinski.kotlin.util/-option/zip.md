@@ -1,42 +1,68 @@
 ---
-title: Option.zip - Kotlin utilities
+title: zip -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[zip](zip.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [zip](./zip.html)
 
-# zip
 
-`infix fun <R> zip(other: `[`Option`](index.html)`<`[`R`](zip.html#R)`>): `[`Option`](index.html)`<`[`Pair`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)`<`[`T`](index.html#T)`, `[`R`](zip.html#R)`>>`
+# zip  
+[Kotlin utilities]  
+Brief description  
+Returns [Some](../-some/index.md) containing a Pair of values of this and [other](index.md) if both [Option](index.md)s are [Some](../-some/index.md). Otherwise returns [None](../-none/index.md).  
+  
 
-Returns [Some](../-some/index.html) containing a `Pair` of values of this and [other](index.html) if both [Option](index.html)s are [Some](../-some/index.html).
-Otherwise returns [None](../-none/index.html).
 
-### Parameters
+#### Return  
+[Some](../-some/index.md) containing a Pair of values of this and [other](index.md) if both [Option](index.md)s are [Some](../-some/index.md). Otherwise returns [None](../-none/index.md).  
+  
 
-`other` - Other [Option](index.html).
 
-**Return**
-[Some](../-some/index.html) containing a `Pair` of values of this and [other](index.html) if both [Option](index.html)s are [Some](../-some/index.html).
-Otherwise returns [None](../-none/index.html).
+#### Since  
+1.1  
+  
 
-**Since**
-1.1
 
-`inline fun <T1, R> zip(other: `[`Option`](index.html)`<`[`T1`](zip.html#T1)`>, transform: (`[`T`](index.html#T)`, `[`T1`](zip.html#T1)`) -> `[`R`](zip.html#R)`): `[`Option`](index.html)`<`[`R`](zip.html#R)`>`
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| other| Other [Option](index.md).
+  
+  
+Content  
+infix fun <[R](zip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [zip](zip.md)(other: [Option](index.md)<[R](zip.md)>): [Option](index.md)<[Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)<[T](index.md), [R](zip.md)>>  
 
-Returns [Some](../-some/index.html) containing the result of applying [transform](zip.html#it.czerwinski.kotlin.util.Option$zip(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.Option.zip.T1)), kotlin.Function2((it.czerwinski.kotlin.util.Option.T, it.czerwinski.kotlin.util.Option.zip.T1, it.czerwinski.kotlin.util.Option.zip.R)))/transform) to both values of this and [other](index.html)
-if both [Option](index.html)s are [Some](../-some/index.html). Otherwise returns [None](../-none/index.html).
 
-### Parameters
+[Kotlin utilities]  
+Brief description  
+Returns [Some](../-some/index.md) containing the result of applying [transform]() to both values of this and [other](index.md) if both [Option](index.md)s are [Some](../-some/index.md). Otherwise returns [None](../-none/index.md).  
+  
 
-`other` - Other [Option](index.html).
 
-`transform` - Function transforming values of both [Some](../-some/index.html).
+#### Return  
+[Some](../-some/index.md) containing the result of applying [transform]() to both values of this and [other](index.md) if both [Option](index.md)s are [Some](../-some/index.md). Otherwise returns [None](../-none/index.md).  
+  
 
-**Return**
-[Some](../-some/index.html) containing the result of applying [transform](zip.html#it.czerwinski.kotlin.util.Option$zip(it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.Option.zip.T1)), kotlin.Function2((it.czerwinski.kotlin.util.Option.T, it.czerwinski.kotlin.util.Option.zip.T1, it.czerwinski.kotlin.util.Option.zip.R)))/transform) to both values of this and [other](index.html)
-if both [Option](index.html)s are [Some](../-some/index.html). Otherwise returns [None](../-none/index.html).
 
-**Since**
-1.1
+#### Since  
+1.1  
+  
+
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| other| Other [Option](index.md).
+| transform| Function transforming values of both [Some](../-some/index.md).
+  
+  
+Content  
+inline fun <[T1](zip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](zip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [zip](zip.md)(other: [Option](index.md)<[T1](zip.md)>, transform: ([T](index.md), [T1](zip.md)) -> [R](zip.md)): [Option](index.md)<[R](zip.md)>  
+
+
 

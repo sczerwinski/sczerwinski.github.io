@@ -1,15 +1,26 @@
 ---
-title: Some.<init> - Kotlin utilities
+title: <init> -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Some](index.md)/[<init>](-init-.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Some](index.html) / [&lt;init&gt;](./-init-.html)
 
-# &lt;init&gt;
 
-`Some(value: `[`T`](index.html#T)`)`
+# <init>  
+[Kotlin utilities]  
+Brief description  
 
-Representation of a value of type [T](index.html#T).
 
-### Parameters
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| T| Type of the value.
+  
+  
+Content  
+fun <[T](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [<init>](-init-.md)(value: [T](index.md))  
 
-`T` - Type of the value.
+
+

@@ -1,9 +1,14 @@
 ---
-title: SingletonIterator.hasNext - Kotlin utilities
+title: hasNext -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.collections](../index.md)/[SingletonIterator](index.md)/[hasNext](has-next.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.collections](../index.html) / [SingletonIterator](index.html) / [hasNext](./has-next.html)
 
-# hasNext
 
-`fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# hasNext  
+[Kotlin utilities]  
+Content  
+open operator override fun [hasNext](has-next.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
+

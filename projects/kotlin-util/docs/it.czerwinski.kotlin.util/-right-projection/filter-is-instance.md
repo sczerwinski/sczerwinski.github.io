@@ -1,19 +1,33 @@
 ---
-title: RightProjection.filterIsInstance - Kotlin utilities
+title: filterIsInstance -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[RightProjection](index.md)/[filterIsInstance](filter-is-instance.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [RightProjection](index.html) / [filterIsInstance](./filter-is-instance.html)
 
-# filterIsInstance
 
-`inline fun <reified T> filterIsInstance(): `[`Either`](../-either/index.html)`<`[`L`](index.html#L)`, `[`T`](filter-is-instance.html#T)`>?`
+# filterIsInstance  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Right](../-right/index.md) casted to type [T]() if it is [T](). Otherwise returns null.  
+  
 
-Returns the same [Right](../-right/index.html) casted to type [T](filter-is-instance.html#T) if it is [T](filter-is-instance.html#T). Otherwise returns `null`.
 
-### Parameters
+#### Return  
+The same [Right](../-right/index.md) casted to type [T]() if it is [T](). Otherwise returns null.  
+  
 
-`T` - Required type of the optional value.
 
-**Return**
-The same [Right](../-right/index.html) casted to type [T](filter-is-instance.html#T) if it is [T](filter-is-instance.html#T). Otherwise returns `null`.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| T| Required type of the optional value.
+  
+  
+Content  
+inline fun <[T](filter-is-instance.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [filterIsInstance](filter-is-instance.md)(): [Either](../-either/index.md)<[L](index.md), [T](filter-is-instance.md)>?  
+
+
 

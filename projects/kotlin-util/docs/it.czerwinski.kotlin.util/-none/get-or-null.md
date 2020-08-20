@@ -1,17 +1,23 @@
 ---
-title: None.getOrNull - Kotlin utilities
+title: getOrNull -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[None](index.md)/[getOrNull](get-or-null.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [None](index.html) / [getOrNull](./get-or-null.html)
 
-# getOrNull
 
-`fun getOrNull(): `[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`?`
+# getOrNull  
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Some](../-some/index.md) or null if this is a [None](index.md).  
+  
 
-Overrides [Option.getOrNull](../-option/get-or-null.html)
 
-Gets the value of a [Some](../-some/index.html) or `null` if this is a [None](index.html).
+#### Return  
+Value of a [Some](../-some/index.md) or null.  
+  
+  
+Content  
+open override fun [getOrNull](get-or-null.md)(): [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)?  
 
-**Return**
-Value of a [Some](../-some/index.html) or `null`.
+
 

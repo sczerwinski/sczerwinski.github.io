@@ -1,21 +1,33 @@
 ---
-title: Failure.map - Kotlin utilities
+title: map -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Failure](index.md)/[map](map.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Failure](index.html) / [map](./map.html)
 
-# map
 
-`fun <R> map(transform: (`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`) -> `[`R`](map.html#R)`): `[`Try`](../-try/index.html)`<`[`R`](map.html#R)`>`
+# map  
+[Kotlin utilities]  
+Brief description  
+Maps value of a [Success](../-success/index.md) using [transform]() or returns the same [Try](../-try/index.md) if this is a [Failure](index.md).  
+  
 
-Overrides [Try.map](../-try/map.html)
 
-Maps value of a [Success](../-success/index.html) using [transform](../-try/map.html#it.czerwinski.kotlin.util.Try$map(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.map.R)))/transform) or returns the same [Try](../-try/index.html) if this is a [Failure](index.html).
+#### Return  
+[Try](../-try/index.md) with a value mapped using [transform]() or this object if this is a [Failure](index.md).  
+  
 
-### Parameters
 
-`transform` - Function transforming value of a [Success](../-success/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming value of a [Success](../-success/index.md).
+  
+  
+Content  
+open override fun <[R](map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [map](map.md)(transform: ([Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)) -> [R](map.md)): [Try](../-try/index.md)<[R](map.md)>  
 
-**Return**
-[Try](../-try/index.html) with a value mapped using [transform](../-try/map.html#it.czerwinski.kotlin.util.Try$map(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.map.R)))/transform) or this object if this is a [Failure](index.html).
+
 

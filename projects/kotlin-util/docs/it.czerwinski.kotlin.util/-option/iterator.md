@@ -1,24 +1,23 @@
 ---
-title: Option.iterator - Kotlin utilities
+title: iterator -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[iterator](iterator.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [iterator](./iterator.html)
 
-# iterator
 
-`abstract val ~~iterator~~: `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.html#T)`>`
-**Deprecated:** Use iterator() method instead
+# iterator  
+[Kotlin utilities]  
+Brief description  
+Returns a singleton iterator returning the option's value if it is defined, or an empty iterator if the option is empty.  
+  
 
-Returns a singleton iterator returning the option's value if it is defined,
-or an empty iterator if the option is empty.
 
-Deprecated in 1.2, use [iterator](./iterator.html) method instead.
+#### Since  
+1.2  
+  
+  
+Content  
+abstract fun [iterator](iterator.md)(): [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)<[T](index.md)>  
 
-`abstract fun iterator(): `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.html#T)`>`
 
-Returns a singleton iterator returning the option's value if it is defined,
-or an empty iterator if the option is empty.
-
-**Since**
-1.2
 

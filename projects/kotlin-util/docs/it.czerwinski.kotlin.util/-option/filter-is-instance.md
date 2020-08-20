@@ -1,19 +1,33 @@
 ---
-title: Option.filterIsInstance - Kotlin utilities
+title: filterIsInstance -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[filterIsInstance](filter-is-instance.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [filterIsInstance](./filter-is-instance.html)
 
-# filterIsInstance
 
-`inline fun <reified R> filterIsInstance(): `[`Option`](index.html)`<`[`R`](filter-is-instance.html#R)`>`
+# filterIsInstance  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Some](../-some/index.md) casted to type [R]() if it is [R](). Otherwise returns a [None](../-none/index.md).  
+  
 
-Returns the same [Some](../-some/index.html) casted to type [R](filter-is-instance.html#R) if it is [R](filter-is-instance.html#R). Otherwise returns a [None](../-none/index.html).
 
-### Parameters
+#### Return  
+The same [Some](../-some/index.md) casted to type [R]() if it is [R](). Otherwise returns a [None](../-none/index.md).  
+  
 
-`R` - Required type of the optional value.
 
-**Return**
-The same [Some](../-some/index.html) casted to type [R](filter-is-instance.html#R) if it is [R](filter-is-instance.html#R). Otherwise returns a [None](../-none/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| R| Required type of the optional value.
+  
+  
+Content  
+inline fun <[R](filter-is-instance.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [filterIsInstance](filter-is-instance.md)(): [Option](index.md)<[R](filter-is-instance.md)>  
+
+
 

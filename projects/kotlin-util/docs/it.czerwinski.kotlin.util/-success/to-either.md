@@ -1,17 +1,23 @@
 ---
-title: Success.toEither - Kotlin utilities
+title: toEither -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Success](index.md)/[toEither](to-either.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Success](index.html) / [toEither](./to-either.html)
 
-# toEither
 
-`fun toEither(): `[`Either`](../-either/index.html)`<`[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`, `[`T`](index.html#T)`>`
+# toEither  
+[Kotlin utilities]  
+Brief description  
+Converts this [Try](../-try/index.md) to [Either](../-either/index.md).  
+  
 
-Overrides [Try.toEither](../-try/to-either.html)
 
-Converts this [Try](../-try/index.html) to [Either](../-either/index.html).
+#### Return  
+[Left](../-left/index.md) if this is [Failure](../-failure/index.md) or [Right](../-right/index.md) if this is [Success](index.md).  
+  
+  
+Content  
+open override fun [toEither](to-either.md)(): [Either](../-either/index.md)<[Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html), [T](index.md)>  
 
-**Return**
-[Left](../-left/index.html) if this is [Failure](../-failure/index.html) or [Right](../-right/index.html) if this is [Success](index.html).
+
 

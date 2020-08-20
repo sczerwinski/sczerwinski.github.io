@@ -1,9 +1,14 @@
 ---
-title: Success.<init> - Kotlin utilities
+title: <init> -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Success](index.md)/[<init>](-init-.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Success](index.html) / [&lt;init&gt;](./-init-.html)
 
-# &lt;init&gt;
 
-`Success(value: `[`T`](index.html#T)`)`
+# <init>  
+[Kotlin utilities]  
+Content  
+fun <[T](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [<init>](-init-.md)(value: [T](index.md))  
+
+
+

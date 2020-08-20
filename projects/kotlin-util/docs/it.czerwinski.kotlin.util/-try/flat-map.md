@@ -1,19 +1,33 @@
 ---
-title: Try.flatMap - Kotlin utilities
+title: flatMap -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[flatMap](flat-map.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [flatMap](./flat-map.html)
 
-# flatMap
 
-`abstract fun <R> flatMap(transform: (`[`T`](index.html#T)`) -> `[`Try`](index.html)`<`[`R`](flat-map.html#R)`>): `[`Try`](index.html)`<`[`R`](flat-map.html#R)`>`
+# flatMap  
+[Kotlin utilities]  
+Brief description  
+Maps value of a [Success](../-success/index.md) to a new [Try](index.md) using [transform]() or returns the same [Try](index.md) if this is a [Failure](../-failure/index.md).  
+  
 
-Maps value of a [Success](../-success/index.html) to a new [Try](index.html) using [transform](flat-map.html#it.czerwinski.kotlin.util.Try$flatMap(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.flatMap.R)))))/transform) or returns the same [Try](index.html) if this is a [Failure](../-failure/index.html).
 
-### Parameters
+#### Return  
+[Try](index.md) returned by [transform]() or this object if this is a [Failure](../-failure/index.md).  
+  
 
-`transform` - Function transforming value of a [Success](../-success/index.html) to a [Try](index.html).
 
-**Return**
-[Try](index.html) returned by [transform](flat-map.html#it.czerwinski.kotlin.util.Try$flatMap(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.flatMap.R)))))/transform) or this object if this is a [Failure](../-failure/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming value of a [Success](../-success/index.md) to a [Try](index.md).
+  
+  
+Content  
+abstract fun <[R](flat-map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [flatMap](flat-map.md)(transform: ([T](index.md)) -> [Try](index.md)<[R](flat-map.md)>): [Try](index.md)<[R](flat-map.md)>  
+
+
 

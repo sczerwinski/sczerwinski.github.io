@@ -1,15 +1,23 @@
 ---
-title: LeftProjection.getOrNull - Kotlin utilities
+title: getOrNull -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[LeftProjection](index.md)/[getOrNull](get-or-null.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [LeftProjection](index.html) / [getOrNull](./get-or-null.html)
 
-# getOrNull
 
-`fun getOrNull(): `[`L`](index.html#L)`?`
+# getOrNull  
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Left](../-left/index.md) or null if this is [Right](../-right/index.md).  
+  
 
-Gets value of this [Left](../-left/index.html) or `null` if this is [Right](../-right/index.html).
 
-**Return**
-Value of this [Left](../-left/index.html) or `null`.
+#### Return  
+Value of this [Left](../-left/index.md) or null.  
+  
+  
+Content  
+fun [getOrNull](get-or-null.md)(): [L](index.md)?  
+
+
 

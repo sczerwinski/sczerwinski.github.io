@@ -1,21 +1,23 @@
 ---
-title: Success.get - Kotlin utilities
+title: get -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Success](index.md)/[get](get.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Success](index.html) / [get](./get.html)
 
-# get
 
-`fun get(): `[`T`](index.html#T)
+# get  
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Success](index.md) or throw an exception from a [Failure](../-failure/index.md).  
+  
 
-Overrides [Try.get](../-try/get.html)
 
-Gets the value of a [Success](index.html) or throw an exception from a [Failure](../-failure/index.html).
+#### Return  
+Value of a [Success](index.md).  
+  
+  
+Content  
+open override fun [get](get.md)(): [T](index.md)  
 
-### Exceptions
 
-`Throwable` - If this is a [Failure](../-failure/index.html).
-
-**Return**
-Value of a [Success](index.html).
 

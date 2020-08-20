@@ -1,22 +1,38 @@
 ---
-title: Option.none - Kotlin utilities
+title: none -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[none](none.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [none](./none.html)
 
-# none
 
-`inline fun none(predicate: (`[`T`](index.html#T)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# none  
+[Kotlin utilities]  
+Brief description  
+Returns false if the [predicate]() is met by the value if this is [Some](../-some/index.md) or true otherwise.  
+  
 
-Returns `false` if the [predicate](none.html#it.czerwinski.kotlin.util.Option$none(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, kotlin.Boolean)))/predicate) is met by the value if this is [Some](../-some/index.html) or `true` otherwise.
 
-### Parameters
+#### Return  
+false if the [predicate]() is met by the value if this is [Some](../-some/index.md) or true otherwise.  
+  
 
-`predicate` - Predicate function.
 
-**Return**
-`false` if the [predicate](none.html#it.czerwinski.kotlin.util.Option$none(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, kotlin.Boolean)))/predicate) is met by the value if this is [Some](../-some/index.html) or `true` otherwise.
+#### Since  
+1.1  
+  
 
-**Since**
-1.1
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+inline fun [none](none.md)(predicate: ([T](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
 

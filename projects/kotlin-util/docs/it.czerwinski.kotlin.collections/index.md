@@ -1,15 +1,20 @@
 ---
-title: it.czerwinski.kotlin.collections - Kotlin utilities
+title: it.czerwinski.kotlin.collections -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.collections](index.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.collections](./index.html)
 
-## Package it.czerwinski.kotlin.collections
 
-Contains iterators used by the utility types.
+# Package it.czerwinski.kotlin.collections  
+ [Kotlin utilities] Contains iterators used by the utility types.  
+  
+   
 
-### Types
 
-| [EmptyIterator](-empty-iterator/index.html) | `object EmptyIterator : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`>`<br>Iterator producing no values. |
-| [SingletonIterator](-singleton-iterator/index.html) | `class SingletonIterator<T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](-singleton-iterator/index.html#T)`>`<br>Iterator producing a single [element](#). |
+## Types  
+  
+|  Name|  Summary| 
+|---|---|
+| [EmptyIterator](-empty-iterator/index.md)| [Kotlin utilities]  <br>Brief description  <br>Iterator producing no values.  <br>Content  <br>object [EmptyIterator](-empty-iterator/index.md) : [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)  <br><br><br>
+| [SingletonIterator](-singleton-iterator/index.md)| [Kotlin utilities]  <br>Brief description  <br>Iterator producing a single [element]().  <br>Content  <br>class [SingletonIterator](-singleton-iterator/index.md)<[T](-singleton-iterator/index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> (**element**: [T](-singleton-iterator/index.md)) : [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)  <br><br><br>
 

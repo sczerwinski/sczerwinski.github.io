@@ -1,68 +1,99 @@
 ---
-title: filterOrElse - Kotlin utilities
+title: filterOrElse -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[filterOrElse](filter-or-else.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [filterOrElse](./filter-or-else.html)
 
-# filterOrElse
 
-`inline fun <L, R> `[`Either`](-either/index.html)`<`[`L`](filter-or-else.html#L)`, `[`R`](filter-or-else.html#R)`>.filterOrElse(predicate: (`[`R`](filter-or-else.html#R)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, zero: () -> `[`L`](filter-or-else.html#L)`): `[`Either`](-either/index.html)`<`[`L`](filter-or-else.html#L)`, `[`R`](filter-or-else.html#R)`>?`
+# filterOrElse  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Right](-right/index.md) if the [predicate]() is satisfied for the value, Left(zero) if the [predicate]() is not satisfied for the value, or the same [Left](-left/index.md) if this is [Left](-left/index.md).  
+  
 
-Returns the same [Right](-right/index.html) if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is satisfied for the value,
-`Left(zero)` if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is not satisfied for the value,
-or the same [Left](-left/index.html) if this is [Left](-left/index.html).
 
-### Parameters
+#### Return  
+The same [Right](-right/index.md) if the [predicate]() is satisfied for the value, Left(zero) if the [predicate]() is not satisfied for the value, or the same [Left](-left/index.md) if this is [Left](-left/index.md).  
+  
 
-`predicate` - Predicate function.
 
-`zero` - Provider of the value used if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is not satisfied.
+#### Since  
+1.3  
+  
 
-**Return**
-The same [Right](-right/index.html) if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is satisfied for the value,
-`Left(zero)` if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.Either((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is not satisfied for the value,
-or the same [Left](-left/index.html) if this is [Left](-left/index.html).
 
-**Since**
-1.3
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+| zero| Provider of the value used if the [predicate]() is not satisfied.
+  
+  
+Content  
+inline fun <[L](filter-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](filter-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Either](-either/index.md)<[L](filter-or-else.md), [R](filter-or-else.md)>.[filterOrElse](filter-or-else.md)(predicate: ([R](filter-or-else.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), zero: () -> [L](filter-or-else.md)): [Either](-either/index.md)<[L](filter-or-else.md), [R](filter-or-else.md)>?  
 
-`inline fun <L, R> `[`LeftProjection`](-left-projection/index.html)`<`[`L`](filter-or-else.html#L)`, `[`R`](filter-or-else.html#R)`>.filterOrElse(predicate: (`[`L`](filter-or-else.html#L)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, zero: () -> `[`R`](filter-or-else.html#R)`): `[`Either`](-either/index.html)`<`[`L`](filter-or-else.html#L)`, `[`R`](filter-or-else.html#R)`>?`
 
-Returns the same [Left](-left/index.html) if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate) is satisfied for the value,
-`Right(zero)` if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate) is not satisfied for the value,
-or the same [Right](-right/index.html) if this is [Right](-right/index.html).
+[Kotlin utilities]  
+Brief description  
+Returns the same [Left](-left/index.md) if the [predicate]() is satisfied for the value, Right(zero) if the [predicate]() is not satisfied for the value, or the same [Right](-right/index.md) if this is [Right](-right/index.md).  
+  
 
-### Parameters
 
-`predicate` - Predicate function.
+#### Return  
+The same [Left](-left/index.md) if the [predicate]() is satisfied for the value, Right(zero) if the [predicate]() is not satisfied for the value, or the same [Right](-right/index.md) if this is [Right](-right/index.md).  
+  
 
-`zero` - Provider of the value used if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate) is not satisfied.
 
-**Return**
-The same [Left](-left/index.html) if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate) is satisfied for the value,
-`Right(zero)` if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.LeftProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.L, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.R)))/predicate) is not satisfied for the value,
-or the same [Right](-right/index.html) if this is [Right](-right/index.html).
+#### Since  
+1.2  
+  
 
-**Since**
-1.2
 
-`inline fun <L, R> `[`RightProjection`](-right-projection/index.html)`<`[`L`](filter-or-else.html#L)`, `[`R`](filter-or-else.html#R)`>.filterOrElse(predicate: (`[`R`](filter-or-else.html#R)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, zero: () -> `[`L`](filter-or-else.html#L)`): `[`Either`](-either/index.html)`<`[`L`](filter-or-else.html#L)`, `[`R`](filter-or-else.html#R)`>?`
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+| zero| Provider of the value used if the [predicate]() is not satisfied.
+  
+  
+Content  
+inline fun <[L](filter-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](filter-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [LeftProjection](-left-projection/index.md)<[L](filter-or-else.md), [R](filter-or-else.md)>.[filterOrElse](filter-or-else.md)(predicate: ([L](filter-or-else.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), zero: () -> [R](filter-or-else.md)): [Either](-either/index.md)<[L](filter-or-else.md), [R](filter-or-else.md)>?  
 
-Returns the same [Right](-right/index.html) if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is satisfied for the value,
-`Left(zero)` if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is not satisfied for the value,
-or the same [Left](-left/index.html) if this is [Left](-left/index.html).
 
-### Parameters
+[Kotlin utilities]  
+Brief description  
+Returns the same [Right](-right/index.md) if the [predicate]() is satisfied for the value, Left(zero) if the [predicate]() is not satisfied for the value, or the same [Left](-left/index.md) if this is [Left](-left/index.md).  
+  
 
-`predicate` - Predicate function.
 
-`zero` - Provider of the value used if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is not satisfied.
+#### Return  
+The same [Right](-right/index.md) if the [predicate]() is satisfied for the value, Left(zero) if the [predicate]() is not satisfied for the value, or the same [Left](-left/index.md) if this is [Left](-left/index.md).  
+  
 
-**Return**
-The same [Right](-right/index.html) if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is satisfied for the value,
-`Left(zero)` if the [predicate](filter-or-else.html#it.czerwinski.kotlin.util$filterOrElse(it.czerwinski.kotlin.util.RightProjection((it.czerwinski.kotlin.util.filterOrElse.L, it.czerwinski.kotlin.util.filterOrElse.R)), kotlin.Function1((it.czerwinski.kotlin.util.filterOrElse.R, kotlin.Boolean)), kotlin.Function0((it.czerwinski.kotlin.util.filterOrElse.L)))/predicate) is not satisfied for the value,
-or the same [Left](-left/index.html) if this is [Left](-left/index.html).
 
-**Since**
-1.2
+#### Since  
+1.2  
+  
+
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+| zero| Provider of the value used if the [predicate]() is not satisfied.
+  
+  
+Content  
+inline fun <[L](filter-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](filter-or-else.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [RightProjection](-right-projection/index.md)<[L](filter-or-else.md), [R](filter-or-else.md)>.[filterOrElse](filter-or-else.md)(predicate: ([R](filter-or-else.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), zero: () -> [L](filter-or-else.md)): [Either](-either/index.md)<[L](filter-or-else.md), [R](filter-or-else.md)>?  
+
+
 

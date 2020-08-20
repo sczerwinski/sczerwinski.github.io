@@ -1,28 +1,39 @@
 ---
-title: Failure.filterOrElse - Kotlin utilities
+title: filterOrElse -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Failure](index.md)/[filterOrElse](filter-or-else.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Failure](index.html) / [filterOrElse](./filter-or-else.html)
 
-# filterOrElse
 
-`fun filterOrElse(predicate: (`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`, throwable: (`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`) -> `[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`): `[`Try`](../-try/index.html)`<`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`>`
+# filterOrElse  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Success](../-success/index.md) if the [predicate]() is satisfied for the value. Otherwise returns a [Failure](index.md) containing the given [throwable]().  
+  
 
-Overrides [Try.filterOrElse](../-try/filter-or-else.html)
 
-Returns the same [Success](../-success/index.html) if the [predicate](../-try/filter-or-else.html#it.czerwinski.kotlin.util.Try$filterOrElse(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)), kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Throwable)))/predicate) is satisfied for the value.
-Otherwise returns a [Failure](index.html) containing the given [throwable](../-try/filter-or-else.html#it.czerwinski.kotlin.util.Try$filterOrElse(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)), kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Throwable)))/throwable).
+#### Return  
+The same [Success](../-success/index.md) if the [predicate]() is satisfied for the value. Otherwise returns a [Failure](index.md) containing the given [throwable]().  
+  
 
-### Parameters
 
-`predicate` - Predicate function.
+#### Since  
+1.2  
+  
 
-`throwable` - Function providing a throwable to be used when the [predicate](../-try/filter-or-else.html#it.czerwinski.kotlin.util.Try$filterOrElse(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)), kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Throwable)))/predicate) is not satisfied.
 
-**Return**
-The same [Success](../-success/index.html) if the [predicate](../-try/filter-or-else.html#it.czerwinski.kotlin.util.Try$filterOrElse(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)), kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Throwable)))/predicate) is satisfied for the value.
-Otherwise returns a [Failure](index.html) containing the given [throwable](../-try/filter-or-else.html#it.czerwinski.kotlin.util.Try$filterOrElse(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)), kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Throwable)))/throwable).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+| throwable| Function providing a throwable to be used when the [predicate]() is not satisfied.
+  
+  
+Content  
+open override fun [filterOrElse](filter-or-else.md)(predicate: ([Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html), throwable: ([Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)) -> [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)): [Try](../-try/index.md)<[Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)>  
 
-**Since**
-1.2
+
 

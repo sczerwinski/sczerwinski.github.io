@@ -1,15 +1,23 @@
 ---
-title: Try.toOption - Kotlin utilities
+title: toOption -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[toOption](to-option.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [toOption](./to-option.html)
 
-# toOption
 
-`abstract fun toOption(): `[`Option`](../-option/index.html)`<`[`T`](index.html#T)`>`
+# toOption  
+[Kotlin utilities]  
+Brief description  
+Converts this [Try](index.md) to [Option](../-option/index.md).  
+  
 
-Converts this [Try](index.html) to [Option](../-option/index.html).
 
-**Return**
-[None](../-none/index.html) if this is [Failure](../-failure/index.html) or [Some](../-some/index.html) if this is [Success](../-success/index.html).
+#### Return  
+[None](../-none/index.md) if this is [Failure](../-failure/index.md) or [Some](../-some/index.md) if this is [Success](../-success/index.md).  
+  
+  
+Content  
+abstract fun [toOption](to-option.md)(): [Option](../-option/index.md)<[T](index.md)>  
+
+
 

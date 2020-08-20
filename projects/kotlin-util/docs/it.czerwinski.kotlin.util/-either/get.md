@@ -1,22 +1,28 @@
 ---
-title: Either.get - Kotlin utilities
+title: get -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Either](index.md)/[get](get.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Either](index.html) / [get](./get.html)
 
-# get
 
-`fun get(): `[`R`](index.html#R)
+# get  
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Right](../-right/index.md).  
+  
 
-Gets value of this [Right](../-right/index.html).
 
-### Exceptions
+#### Return  
+Value of this [Right](../-right/index.md).  
+  
 
-`NoSuchElementException` - If this is [Left](../-left/index.html).
 
-**Return**
-Value of this [Right](../-right/index.html).
+#### Since  
+1.3  
+  
+  
+Content  
+fun [get](get.md)(): [R](index.md)  
 
-**Since**
-1.3
+
 

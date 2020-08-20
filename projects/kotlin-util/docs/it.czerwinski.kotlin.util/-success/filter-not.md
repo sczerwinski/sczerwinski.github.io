@@ -1,21 +1,33 @@
 ---
-title: Success.filterNot - Kotlin utilities
+title: filterNot -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Success](index.md)/[filterNot](filter-not.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Success](index.html) / [filterNot](./filter-not.html)
 
-# filterNot
 
-`fun filterNot(predicate: (`[`T`](index.html#T)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Try`](../-try/index.html)`<`[`T`](index.html#T)`>`
+# filterNot  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Success](index.md) if the [predicate]() is not satisfied for the value. Otherwise returns a [Failure](../-failure/index.md).  
+  
 
-Overrides [Try.filterNot](../-try/filter-not.html)
 
-Returns the same [Success](index.html) if the [predicate](../-try/filter-not.html#it.czerwinski.kotlin.util.Try$filterNot(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)))/predicate) is not satisfied for the value. Otherwise returns a [Failure](../-failure/index.html).
+#### Return  
+The same [Success](index.md) if the [predicate]() is not satisfied for the value. Otherwise returns a [Failure](../-failure/index.md).  
+  
 
-### Parameters
 
-`predicate` - Predicate function.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+open override fun [filterNot](filter-not.md)(predicate: ([T](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Try](../-try/index.md)<[T](index.md)>  
 
-**Return**
-The same [Success](index.html) if the [predicate](../-try/filter-not.html#it.czerwinski.kotlin.util.Try$filterNot(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)))/predicate) is not satisfied for the value. Otherwise returns a [Failure](../-failure/index.html).
+
 

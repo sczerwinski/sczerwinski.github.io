@@ -1,39 +1,70 @@
 ---
-title: filterNotNull - Kotlin utilities
+title: filterNotNull -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[filterNotNull](filter-not-null.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [filterNotNull](./filter-not-null.html)
 
-# filterNotNull
 
-`fun <L, R> `[`Either`](-either/index.html)`<`[`L`](filter-not-null.html#L)`, `[`R`](filter-not-null.html#R)`?>.filterNotNull(): `[`Either`](-either/index.html)`<`[`L`](filter-not-null.html#L)`, `[`R`](filter-not-null.html#R)`>?`
+# filterNotNull  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Right](-right/index.md) if its value is not null. Otherwise returns null.  
+  
 
-Returns the same [Right](-right/index.html) if its value is not `null`. Otherwise returns `null`.
 
-**Return**
-The same [Right](-right/index.html) if its value is not `null`. Otherwise returns `null`.
+#### Return  
+The same [Right](-right/index.md) if its value is not null. Otherwise returns null.  
+  
 
-**Since**
-1.3
 
-`fun <L, R> `[`LeftProjection`](-left-projection/index.html)`<`[`L`](filter-not-null.html#L)`?, `[`R`](filter-not-null.html#R)`>.filterNotNull(): `[`Either`](-either/index.html)`<`[`L`](filter-not-null.html#L)`, `[`R`](filter-not-null.html#R)`>?`
+#### Since  
+1.3  
+  
+  
+Content  
+fun <[L](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Either](-either/index.md)<[L](filter-not-null.md), [R](filter-not-null.md)??>.[filterNotNull](filter-not-null.md)(): [Either](-either/index.md)<[L](filter-not-null.md), [R](filter-not-null.md)>?  
 
-Returns the same [Left](-left/index.html) if its value is not `null`. Otherwise returns `null`.
 
-**Return**
-The same [Left](-left/index.html) if its value is not `null`. Otherwise returns `null`.
+[Kotlin utilities]  
+Brief description  
+Returns the same [Left](-left/index.md) if its value is not null. Otherwise returns null.  
+  
 
-`fun <L, R> `[`RightProjection`](-right-projection/index.html)`<`[`L`](filter-not-null.html#L)`, `[`R`](filter-not-null.html#R)`?>.filterNotNull(): `[`Either`](-either/index.html)`<`[`L`](filter-not-null.html#L)`, `[`R`](filter-not-null.html#R)`>?`
 
-Returns the same [Right](-right/index.html) if its value is not `null`. Otherwise returns `null`.
+#### Return  
+The same [Left](-left/index.md) if its value is not null. Otherwise returns null.  
+  
+  
+Content  
+fun <[L](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [LeftProjection](-left-projection/index.md)<[L](filter-not-null.md)??, [R](filter-not-null.md)>.[filterNotNull](filter-not-null.md)(): [Either](-either/index.md)<[L](filter-not-null.md), [R](filter-not-null.md)>?  
 
-**Return**
-The same [Right](-right/index.html) if its value is not `null`. Otherwise returns `null`.
 
-`fun <T> `[`Try`](-try/index.html)`<`[`T`](filter-not-null.html#T)`?>.filterNotNull(): `[`Try`](-try/index.html)`<`[`T`](filter-not-null.html#T)`>`
+[Kotlin utilities]  
+Brief description  
+Returns the same [Right](-right/index.md) if its value is not null. Otherwise returns null.  
+  
 
-Returns the same [Success](-success/index.html) if its value is not `null`. Otherwise returns a [Failure](-failure/index.html).
 
-**Return**
-The same [Success](-success/index.html) if its value is not `null`. Otherwise returns a [Failure](-failure/index.html).
+#### Return  
+The same [Right](-right/index.md) if its value is not null. Otherwise returns null.  
+  
+  
+Content  
+fun <[L](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [RightProjection](-right-projection/index.md)<[L](filter-not-null.md), [R](filter-not-null.md)??>.[filterNotNull](filter-not-null.md)(): [Either](-either/index.md)<[L](filter-not-null.md), [R](filter-not-null.md)>?  
+
+
+[Kotlin utilities]  
+Brief description  
+Returns the same [Success](-success/index.md) if its value is not null. Otherwise returns a [Failure](-failure/index.md).  
+  
+
+
+#### Return  
+The same [Success](-success/index.md) if its value is not null. Otherwise returns a [Failure](-failure/index.md).  
+  
+  
+Content  
+fun <[T](filter-not-null.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[T](filter-not-null.md)??>.[filterNotNull](filter-not-null.md)(): [Try](-try/index.md)<[T](filter-not-null.md)>  
+
+
 

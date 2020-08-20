@@ -1,15 +1,23 @@
 ---
-title: merge - Kotlin utilities
+title: merge -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[merge](merge.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [merge](./merge.html)
 
-# merge
 
-`fun <T> `[`Either`](-either/index.html)`<`[`T`](merge.html#T)`, `[`T`](merge.html#T)`>.merge(): `[`T`](merge.html#T)
+# merge  
+[Kotlin utilities]  
+Brief description  
+Merges [Left](-left/index.md) and [Right](-right/index.md) of the same type to a single value.  
+  
 
-Merges [Left](-left/index.html) and [Right](-right/index.html) of the same type to a single value.
 
-**Return**
-Value of either [Left](-left/index.html) or [Right](-right/index.html).
+#### Return  
+Value of either [Left](-left/index.md) or [Right](-right/index.md).  
+  
+  
+Content  
+fun <[T](merge.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Either](-either/index.md)<[T](merge.md), [T](merge.md)>.[merge](merge.md)(): [T](merge.md)  
+
+
 

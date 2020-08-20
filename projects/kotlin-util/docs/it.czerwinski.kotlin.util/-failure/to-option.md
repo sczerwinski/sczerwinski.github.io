@@ -1,17 +1,23 @@
 ---
-title: Failure.toOption - Kotlin utilities
+title: toOption -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Failure](index.md)/[toOption](to-option.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Failure](index.html) / [toOption](./to-option.html)
 
-# toOption
 
-`fun toOption(): `[`Option`](../-option/index.html)`<`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`>`
+# toOption  
+[Kotlin utilities]  
+Brief description  
+Converts this [Try](../-try/index.md) to [Option](../-option/index.md).  
+  
 
-Overrides [Try.toOption](../-try/to-option.html)
 
-Converts this [Try](../-try/index.html) to [Option](../-option/index.html).
+#### Return  
+[None](../-none/index.md) if this is [Failure](index.md) or [Some](../-some/index.md) if this is [Success](../-success/index.md).  
+  
+  
+Content  
+open override fun [toOption](to-option.md)(): [Option](../-option/index.md)<[Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)>  
 
-**Return**
-[None](../-none/index.html) if this is [Failure](index.html) or [Some](../-some/index.html) if this is [Success](../-success/index.html).
+
 

@@ -1,19 +1,33 @@
 ---
-title: Try.map - Kotlin utilities
+title: map -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[map](map.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [map](./map.html)
 
-# map
 
-`abstract fun <R> map(transform: (`[`T`](index.html#T)`) -> `[`R`](map.html#R)`): `[`Try`](index.html)`<`[`R`](map.html#R)`>`
+# map  
+[Kotlin utilities]  
+Brief description  
+Maps value of a [Success](../-success/index.md) using [transform]() or returns the same [Try](index.md) if this is a [Failure](../-failure/index.md).  
+  
 
-Maps value of a [Success](../-success/index.html) using [transform](map.html#it.czerwinski.kotlin.util.Try$map(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.map.R)))/transform) or returns the same [Try](index.html) if this is a [Failure](../-failure/index.html).
 
-### Parameters
+#### Return  
+[Try](index.md) with a value mapped using [transform]() or this object if this is a [Failure](../-failure/index.md).  
+  
 
-`transform` - Function transforming value of a [Success](../-success/index.html).
 
-**Return**
-[Try](index.html) with a value mapped using [transform](map.html#it.czerwinski.kotlin.util.Try$map(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.map.R)))/transform) or this object if this is a [Failure](../-failure/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming value of a [Success](../-success/index.md).
+  
+  
+Content  
+abstract fun <[R](map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [map](map.md)(transform: ([T](index.md)) -> [R](map.md)): [Try](index.md)<[R](map.md)>  
+
+
 

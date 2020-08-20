@@ -1,17 +1,23 @@
 ---
-title: joinLeft - Kotlin utilities
+title: joinLeft -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[joinLeft](join-left.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [joinLeft](./join-left.html)
 
-# joinLeft
 
-`fun <L, R> `[`Either`](-either/index.html)`<`[`Either`](-either/index.html)`<`[`L`](join-left.html#L)`, `[`R`](join-left.html#R)`>, `[`R`](join-left.html#R)`>.joinLeft(): `[`Either`](-either/index.html)`<`[`L`](join-left.html#L)`, `[`R`](join-left.html#R)`>`
+# joinLeft  
+[Kotlin utilities]  
+Brief description  
+Returns this if this is [Right](-right/index.md). Otherwise returns value of [Left](-left/index.md).Requires [Left](-left/index.md) to be an [Either](-either/index.md).  
+  
 
-Returns this if this is [Right](-right/index.html). Otherwise returns value of [Left](-left/index.html).
 
-Requires [Left](-left/index.html) to be an [Either](-either/index.html).
+#### Return  
+This if this is [Right](-right/index.md). Otherwise returns value of [Left](-left/index.md).  
+  
+  
+Content  
+fun <[L](join-left.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](join-left.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Either](-either/index.md)<[Either](-either/index.md)<[L](join-left.md), [R](join-left.md)>, [R](join-left.md)>.[joinLeft](join-left.md)(): [Either](-either/index.md)<[L](join-left.md), [R](join-left.md)>  
 
-**Return**
-This if this is [Right](-right/index.html). Otherwise returns value of [Left](-left/index.html).
+
 

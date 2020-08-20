@@ -1,25 +1,37 @@
 ---
-title: unzip - Kotlin utilities
+title: unzip -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[unzip](unzip.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [unzip](./unzip.html)
 
-# unzip
 
-`fun <A, B> `[`Option`](-option/index.html)`<`[`Pair`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)`<`[`A`](unzip.html#A)`, `[`B`](unzip.html#B)`>>.unzip(): `[`Pair`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)`<`[`Option`](-option/index.html)`<`[`A`](unzip.html#A)`>, `[`Option`](-option/index.html)`<`[`B`](unzip.html#B)`>>`
+# unzip  
+[Kotlin utilities]  
+Brief description  
+Transforms an [Option](-option/index.md) of a Pair into a Pair of an [Option](-option/index.md) of the first value and an [Option](-option/index.md) of the second value.  
+  
 
-Transforms an [Option](-option/index.html) of a `Pair` into a `Pair` of an [Option](-option/index.html) of the first value
-and an [Option](-option/index.html) of the second value.
 
-**Return**
-A `Pair` of an [Option](-option/index.html) of the first value and an [Option](-option/index.html) of the second value.
+#### Return  
+A Pair of an [Option](-option/index.md) of the first value and an [Option](-option/index.md) of the second value.  
+  
+  
+Content  
+fun <[A](unzip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [B](unzip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)<[A](unzip.md), [B](unzip.md)>>.[unzip](unzip.md)(): [Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)<[Option](-option/index.md)<[A](unzip.md)>, [Option](-option/index.md)<[B](unzip.md)>>  
 
-`fun <A, B, C> `[`Option`](-option/index.html)`<`[`Triple`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html)`<`[`A`](unzip.html#A)`, `[`B`](unzip.html#B)`, `[`C`](unzip.html#C)`>>.unzip(): `[`Triple`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html)`<`[`Option`](-option/index.html)`<`[`A`](unzip.html#A)`>, `[`Option`](-option/index.html)`<`[`B`](unzip.html#B)`>, `[`Option`](-option/index.html)`<`[`C`](unzip.html#C)`>>`
 
-Transforms an [Option](-option/index.html) of a `Triple` into a `Triple` of an [Option](-option/index.html) of the first value,
-an [Option](-option/index.html) of the second value, and an [Option](-option/index.html) of the third value.
+[Kotlin utilities]  
+Brief description  
+Transforms an [Option](-option/index.md) of a Triple into a Triple of an [Option](-option/index.md) of the first value, an [Option](-option/index.md) of the second value, and an [Option](-option/index.md) of the third value.  
+  
 
-**Return**
-A `Triple` of an [Option](-option/index.html) of the first value, an [Option](-option/index.html) of the second value,
-and an [Option](-option/index.html) of the third value.
+
+#### Return  
+A Triple of an [Option](-option/index.md) of the first value, an [Option](-option/index.md) of the second value, and an [Option](-option/index.md) of the third value.  
+  
+  
+Content  
+fun <[A](unzip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [B](unzip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [C](unzip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[Triple](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html)<[A](unzip.md), [B](unzip.md), [C](unzip.md)>>.[unzip](unzip.md)(): [Triple](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-triple/index.html)<[Option](-option/index.md)<[A](unzip.md)>, [Option](-option/index.md)<[B](unzip.md)>, [Option](-option/index.md)<[C](unzip.md)>>  
+
+
 

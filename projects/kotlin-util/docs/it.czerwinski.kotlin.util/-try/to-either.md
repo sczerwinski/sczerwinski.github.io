@@ -1,15 +1,23 @@
 ---
-title: Try.toEither - Kotlin utilities
+title: toEither -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[toEither](to-either.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [toEither](./to-either.html)
 
-# toEither
 
-`abstract fun toEither(): `[`Either`](../-either/index.html)`<`[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`, `[`T`](index.html#T)`>`
+# toEither  
+[Kotlin utilities]  
+Brief description  
+Converts this [Try](index.md) to [Either](../-either/index.md).  
+  
 
-Converts this [Try](index.html) to [Either](../-either/index.html).
 
-**Return**
-[Left](../-left/index.html) if this is [Failure](../-failure/index.html) or [Right](../-right/index.html) if this is [Success](../-success/index.html).
+#### Return  
+[Left](../-left/index.md) if this is [Failure](../-failure/index.md) or [Right](../-right/index.md) if this is [Success](../-success/index.md).  
+  
+  
+Content  
+abstract fun [toEither](to-either.md)(): [Either](../-either/index.md)<[Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html), [T](index.md)>  
+
+
 

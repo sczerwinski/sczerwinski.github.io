@@ -8,7 +8,7 @@ project: kotlin-util
 
 {% include breadcrumbs-project.html %}
 
-[![Build Status](https://travis-ci.org/sczerwinski/kotlin-util.svg?branch=develop)](https://travis-ci.org/sczerwinski/kotlin-util)
+![Build](https://github.com/sczerwinski/kotlin-util/workflows/Build/badge.svg)
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/kotlin-util)
@@ -23,14 +23,14 @@ project: kotlin-util
 <dependency>
   <groupId>it.czerwinski</groupId>
   <artifactId>kotlin-util</artifactId>
-  <version>1.3</version>
+  <version>1.4.0</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'it.czerwinski:kotlin-util:1.3'
+implementation 'it.czerwinski:kotlin-util:1.4.0'
 ```
 
 ## Supported Types

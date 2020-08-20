@@ -1,15 +1,23 @@
 ---
-title: Try.getOrNull - Kotlin utilities
+title: getOrNull -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[getOrNull](get-or-null.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [getOrNull](./get-or-null.html)
 
-# getOrNull
 
-`abstract fun getOrNull(): `[`T`](index.html#T)`?`
+# getOrNull  
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Success](../-success/index.md) or null if this is a [Failure](../-failure/index.md).  
+  
 
-Gets the value of a [Success](../-success/index.html) or `null` if this is a [Failure](../-failure/index.html).
 
-**Return**
-Value of a [Success](../-success/index.html) or `null`.
+#### Return  
+Value of a [Success](../-success/index.md) or null.  
+  
+  
+Content  
+abstract fun [getOrNull](get-or-null.md)(): [T](index.md)?  
+
+
 

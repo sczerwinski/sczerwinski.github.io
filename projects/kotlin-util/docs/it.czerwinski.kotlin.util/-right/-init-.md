@@ -1,9 +1,14 @@
 ---
-title: Right.<init> - Kotlin utilities
+title: <init> -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Right](index.md)/[<init>](-init-.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Right](index.html) / [&lt;init&gt;](./-init-.html)
 
-# &lt;init&gt;
 
-`Right(value: `[`R`](index.html#R)`)`
+# <init>  
+[Kotlin utilities]  
+Content  
+fun <[R](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [<init>](-init-.md)(value: [R](index.md))  
+
+
+

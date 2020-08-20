@@ -1,19 +1,33 @@
 ---
-title: recover - Kotlin utilities
+title: recover -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[recover](recover.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [recover](./recover.html)
 
-# recover
 
-`inline fun <T> `[`Try`](-try/index.html)`<`[`T`](recover.html#T)`>.recover(rescue: (`[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`) -> `[`T`](recover.html#T)`): `[`Try`](-try/index.html)`<`[`T`](recover.html#T)`>`
+# recover  
+[Kotlin utilities]  
+Brief description  
+Returns this [Try](-try/index.md) if this is a [Success](-success/index.md) or a [Try](-try/index.md) created for the [rescue]() operation if this is a [Failure](-failure/index.md).  
+  
 
-Returns this [Try](-try/index.html) if this is a [Success](-success/index.html) or a [Try](-try/index.html) created for the [rescue](recover.html#it.czerwinski.kotlin.util$recover(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recover.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.recover.T)))/rescue) operation if this is a [Failure](-failure/index.html).
 
-### Parameters
+#### Return  
+This [Try](-try/index.md) if this is a [Success](-success/index.md) or a [Try](-try/index.md) created for the [rescue]() operation if this is a [Failure](-failure/index.md).  
+  
 
-`rescue` - Function creating a new value from the exception of a [Failure](-failure/index.html).
 
-**Return**
-This [Try](-try/index.html) if this is a [Success](-success/index.html) or a [Try](-try/index.html) created for the [rescue](recover.html#it.czerwinski.kotlin.util$recover(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recover.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.recover.T)))/rescue) operation if this is a [Failure](-failure/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| rescue| Function creating a new value from the exception of a [Failure](-failure/index.md).
+  
+  
+Content  
+inline fun <[T](recover.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[T](recover.md)>.[recover](recover.md)(rescue: ([Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)) -> [T](recover.md)): [Try](-try/index.md)<[T](recover.md)>  
+
+
 

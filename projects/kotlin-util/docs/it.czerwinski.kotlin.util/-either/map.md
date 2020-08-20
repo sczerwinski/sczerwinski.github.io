@@ -1,22 +1,38 @@
 ---
-title: Either.map - Kotlin utilities
+title: map -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Either](index.md)/[map](map.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Either](index.html) / [map](./map.html)
 
-# map
 
-`inline fun <T> map(transform: (`[`R`](index.html#R)`) -> `[`T`](map.html#T)`): `[`Either`](index.html)`<`[`L`](index.html#L)`, `[`T`](map.html#T)`>`
+# map  
+[Kotlin utilities]  
+Brief description  
+Maps value of this [Right](../-right/index.md) using [transform]().  
+  
 
-Maps value of this [Right](../-right/index.html) using [transform](map.html#it.czerwinski.kotlin.util.Either$map(kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.map.T)))/transform).
 
-### Parameters
+#### Return  
+[Right](../-right/index.md) mapped using [transform]() or this object if this is a [Left](../-left/index.md).  
+  
 
-`transform` - Function transforming a [Right](../-right/index.html).
 
-**Return**
-[Right](../-right/index.html) mapped using [transform](map.html#it.czerwinski.kotlin.util.Either$map(kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.map.T)))/transform) or this object if this is a [Left](../-left/index.html).
+#### Since  
+1.3  
+  
 
-**Since**
-1.3
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming a [Right](../-right/index.md).
+  
+  
+Content  
+inline fun <[T](map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [map](map.md)(transform: ([R](index.md)) -> [T](map.md)): [Either](index.md)<[L](index.md), [T](map.md)>  
+
+
 

@@ -1,21 +1,33 @@
 ---
-title: LeftProjection.any - Kotlin utilities
+title: any -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[LeftProjection](index.md)/[any](any.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [LeftProjection](index.html) / [any](./any.html)
 
-# any
 
-`inline fun any(predicate: (`[`L`](index.html#L)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# any  
+[Kotlin utilities]  
+Brief description  
+Returns the result of applying the [predicate]() to the value if this is [Left](../-left/index.md) or false if this is [Right](../-right/index.md).  
+  
 
-Returns the result of applying the [predicate](any.html#it.czerwinski.kotlin.util.LeftProjection$any(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate) to the value if this is [Left](../-left/index.html)
-or `false` if this is [Right](../-right/index.html).
 
-### Parameters
+#### Return  
+The result of applying the [predicate]() to the value if this is [Left](../-left/index.md) or false if this is [Right](../-right/index.md).  
+  
 
-`predicate` - Predicate function.
 
-**Return**
-The result of applying the [predicate](any.html#it.czerwinski.kotlin.util.LeftProjection$any(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, kotlin.Boolean)))/predicate) to the value if this is [Left](../-left/index.html)
-or `false` if this is [Right](../-right/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+inline fun [any](any.md)(predicate: ([L](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
 

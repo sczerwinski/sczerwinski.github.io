@@ -1,21 +1,23 @@
 ---
-title: EmptyIterator - Kotlin utilities
+title: EmptyIterator -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.collections](../index.md)/[EmptyIterator](index.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.collections](../index.html) / [EmptyIterator](./index.html)
 
-# EmptyIterator
 
-`object EmptyIterator : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`>`
+# EmptyIterator  
+ [Kotlin utilities] Iterator producing no values.  
+  
+object [EmptyIterator](index.md) : [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)   
 
-Iterator producing no values.
 
-### Functions
-
-| [hasNext](has-next.html) | `fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [next](next.html) | `fun next(): `[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html) |
-
-### Extension Functions
-
-| [asOption](../../it.czerwinski.kotlin.util/as-option.html) | `fun <T> `[`T`](../../it.czerwinski.kotlin.util/as-option.html#T)`?.asOption(): `[`Option`](../../it.czerwinski.kotlin.util/-option/index.html)`<`[`T`](../../it.czerwinski.kotlin.util/as-option.html#T)`>`<br>Returns [Some](../../it.czerwinski.kotlin.util/-some/index.html) if this is not `null` or [None](../../it.czerwinski.kotlin.util/-none/index.html) if this is `null`. |
+## Functions  
+  
+|  Name|  Summary| 
+|---|---|
+| [equals](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/equals.html)| [Kotlin utilities]  <br>Content  <br>open operator override fun [equals](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/equals.html)(other: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  <br><br><br>
+| [hashCode](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/hash-code.html)| [Kotlin utilities]  <br>Content  <br>open override fun [hashCode](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/hash-code.html)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>
+| [hasNext](has-next.md)| [Kotlin utilities]  <br>Content  <br>open operator override fun [hasNext](has-next.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  <br><br><br>
+| [next](next.md)| [Kotlin utilities]  <br>Content  <br>open operator override fun [next](next.md)(): [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)  <br><br><br>
+| [toString](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/to-string.html)| [Kotlin utilities]  <br>Content  <br>open override fun [toString](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/to-string.html)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  <br><br><br>
 

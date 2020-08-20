@@ -1,9 +1,14 @@
 ---
-title: EmptyIterator.next - Kotlin utilities
+title: next -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.collections](../index.md)/[EmptyIterator](index.md)/[next](next.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.collections](../index.html) / [EmptyIterator](index.html) / [next](./next.html)
 
-# next
 
-`fun next(): `[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)
+# next  
+[Kotlin utilities]  
+Content  
+open operator override fun [next](next.md)(): [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)  
+
+
+

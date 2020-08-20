@@ -1,18 +1,28 @@
 ---
-title: Either.getOrNull - Kotlin utilities
+title: getOrNull -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Either](index.md)/[getOrNull](get-or-null.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Either](index.html) / [getOrNull](./get-or-null.html)
 
-# getOrNull
 
-`fun getOrNull(): `[`R`](index.html#R)`?`
+# getOrNull  
+[Kotlin utilities]  
+Brief description  
+Gets value of this [Right](../-right/index.md) or null if this is [Left](../-left/index.md).  
+  
 
-Gets value of this [Right](../-right/index.html) or `null` if this is [Left](../-left/index.html).
 
-**Return**
-Value of this [Right](../-right/index.html) or `null`.
+#### Return  
+Value of this [Right](../-right/index.md) or null.  
+  
 
-**Since**
-1.3
+
+#### Since  
+1.3  
+  
+  
+Content  
+fun [getOrNull](get-or-null.md)(): [R](index.md)?  
+
+
 

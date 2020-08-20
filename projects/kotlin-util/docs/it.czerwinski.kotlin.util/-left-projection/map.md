@@ -1,19 +1,33 @@
 ---
-title: LeftProjection.map - Kotlin utilities
+title: map -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[LeftProjection](index.md)/[map](map.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [LeftProjection](index.html) / [map](./map.html)
 
-# map
 
-`inline fun <T> map(transform: (`[`L`](index.html#L)`) -> `[`T`](map.html#T)`): `[`Either`](../-either/index.html)`<`[`T`](map.html#T)`, `[`R`](index.html#R)`>`
+# map  
+[Kotlin utilities]  
+Brief description  
+Maps value of this [Left](../-left/index.md) using [transform]().  
+  
 
-Maps value of this [Left](../-left/index.html) using [transform](map.html#it.czerwinski.kotlin.util.LeftProjection$map(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, it.czerwinski.kotlin.util.LeftProjection.map.T)))/transform).
 
-### Parameters
+#### Return  
+[Left](../-left/index.md) mapped using [transform]() or this object if this is a [Right](../-right/index.md).  
+  
 
-`transform` - Function transforming a [Left](../-left/index.html).
 
-**Return**
-[Left](../-left/index.html) mapped using [transform](map.html#it.czerwinski.kotlin.util.LeftProjection$map(kotlin.Function1((it.czerwinski.kotlin.util.LeftProjection.L, it.czerwinski.kotlin.util.LeftProjection.map.T)))/transform) or this object if this is a [Right](../-right/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| transform| Function transforming a [Left](../-left/index.md).
+  
+  
+Content  
+inline fun <[T](map.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [map](map.md)(transform: ([L](index.md)) -> [T](map.md)): [Either](../-either/index.md)<[T](map.md), [R](index.md)>  
+
+
 

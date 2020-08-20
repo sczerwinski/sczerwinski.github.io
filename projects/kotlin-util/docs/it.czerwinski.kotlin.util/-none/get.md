@@ -1,21 +1,23 @@
 ---
-title: None.get - Kotlin utilities
+title: get -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[None](index.md)/[get](get.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [None](index.html) / [get](./get.html)
 
-# get
 
-`fun get(): `[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)
+# get  
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Some](../-some/index.md) or throws an exception.  
+  
 
-Overrides [Option.get](../-option/get.html)
 
-Gets the value of a [Some](../-some/index.html) or throws an exception.
+#### Return  
+Value of a [Some](../-some/index.md).  
+  
+  
+Content  
+open override fun [get](get.md)(): [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)  
 
-### Exceptions
 
-`NoSuchElementException` - If this is [None](index.html).
-
-**Return**
-Value of a [Some](../-some/index.html).
 

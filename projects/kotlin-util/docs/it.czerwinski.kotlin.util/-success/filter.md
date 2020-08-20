@@ -1,21 +1,33 @@
 ---
-title: Success.filter - Kotlin utilities
+title: filter -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Success](index.md)/[filter](filter.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Success](index.html) / [filter](./filter.html)
 
-# filter
 
-`fun filter(predicate: (`[`T`](index.html#T)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Try`](../-try/index.html)`<`[`T`](index.html#T)`>`
+# filter  
+[Kotlin utilities]  
+Brief description  
+Returns the same [Success](index.md) if the [predicate]() is satisfied for the value. Otherwise returns a [Failure](../-failure/index.md).  
+  
 
-Overrides [Try.filter](../-try/filter.html)
 
-Returns the same [Success](index.html) if the [predicate](../-try/filter.html#it.czerwinski.kotlin.util.Try$filter(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)))/predicate) is satisfied for the value. Otherwise returns a [Failure](../-failure/index.html).
+#### Return  
+The same [Success](index.md) if the [predicate]() is satisfied for the value. Otherwise returns a [Failure](../-failure/index.md).  
+  
 
-### Parameters
 
-`predicate` - Predicate function.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+open override fun [filter](filter.md)(predicate: ([T](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Try](../-try/index.md)<[T](index.md)>  
 
-**Return**
-The same [Success](index.html) if the [predicate](../-try/filter.html#it.czerwinski.kotlin.util.Try$filter(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, kotlin.Boolean)))/predicate) is satisfied for the value. Otherwise returns a [Failure](../-failure/index.html).
+
 

@@ -1,5 +1,7 @@
 $dokka.format:jekyll
-$dokka.linkExtension:html
-$dokka.location:it.czerwinski.kotlin.util$flatten(kotlin.collections.Iterable((it.czerwinski.kotlin.util.Option((it.czerwinski.kotlin.util.flatten.T)))))it.czerwinski.kotlin.util/kotlin.collections.-iterable/flatten.html
+$dokka.linkExtension:md
+
+it.czerwinski.kotlin
 it.czerwinski.kotlin.collections
 it.czerwinski.kotlin.util
+

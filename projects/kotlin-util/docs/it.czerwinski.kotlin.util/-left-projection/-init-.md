@@ -1,9 +1,14 @@
 ---
-title: LeftProjection.<init> - Kotlin utilities
+title: <init> -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[LeftProjection](index.md)/[<init>](-init-.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [LeftProjection](index.html) / [&lt;init&gt;](./-init-.html)
 
-# &lt;init&gt;
 
-`LeftProjection(either: `[`Either`](../-either/index.html)`<`[`L`](index.html#L)`, `[`R`](index.html#R)`>)`
+# <init>  
+[Kotlin utilities]  
+Content  
+fun <[L](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [<init>](-init-.md)(either: [Either](../-either/index.md)<[L](index.md), [R](index.md)>)  
+
+
+

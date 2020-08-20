@@ -1,15 +1,28 @@
 ---
-title: Option.forEach - Kotlin utilities
+title: forEach -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[forEach](for-each.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [forEach](./for-each.html)
 
-# forEach
 
-`inline fun forEach(action: (`[`T`](index.html#T)`) -> `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)`): `[`Unit`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html)
+# forEach  
+[Kotlin utilities]  
+Brief description  
+Runs [action]() if this is a [Some](../-some/index.md). Returns [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) without any action if this is [None](../-none/index.md).  
+  
 
-Runs [action](for-each.html#it.czerwinski.kotlin.util.Option$forEach(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, kotlin.Unit)))/action) if this is a [Some](../-some/index.html). Returns [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html) without any action if this is [None](../-none/index.html).
 
-### Parameters
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| action| Action to be run on a value of a [Some](../-some/index.md).
+  
+  
+Content  
+inline fun [forEach](for-each.md)(action: ([T](index.md)) -> [Unit](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html))  
 
-`action` - Action to be run on a value of a [Some](../-some/index.html).
+
+

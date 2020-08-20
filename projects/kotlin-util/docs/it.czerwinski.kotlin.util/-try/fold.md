@@ -1,21 +1,34 @@
 ---
-title: Try.fold - Kotlin utilities
+title: fold -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[fold](fold.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [fold](./fold.html)
 
-# fold
 
-`inline fun <R> fold(successTransform: (`[`T`](index.html#T)`) -> `[`R`](fold.html#R)`, failureTransform: (`[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`) -> `[`R`](fold.html#R)`): `[`R`](fold.html#R)
+# fold  
+[Kotlin utilities]  
+Brief description  
+Transforms a [Success](../-success/index.md) using [successTransform]() or a [Failure](../-failure/index.md) using [failureTransform]().  
+  
 
-Transforms a [Success](../-success/index.html) using [successTransform](fold.html#it.czerwinski.kotlin.util.Try$fold(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.fold.R)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try.fold.R)))/successTransform) or a [Failure](../-failure/index.html) using [failureTransform](fold.html#it.czerwinski.kotlin.util.Try$fold(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.fold.R)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try.fold.R)))/failureTransform).
 
-### Parameters
+#### Return  
+Result of applying [successTransform]() on [Success](../-success/index.md) or [failureTransform]() on [Failure](../-failure/index.md).  
+  
 
-`successTransform` - Function transforming value of a [Success](../-success/index.html) to a new [Try](index.html).
 
-`failureTransform` - Function transforming exception from a [Failure](../-failure/index.html) to a new [Try](index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| failureTransform| Function transforming exception from a [Failure](../-failure/index.md) to a new [Try](index.md).
+| successTransform| Function transforming value of a [Success](../-success/index.md) to a new [Try](index.md).
+  
+  
+Content  
+inline fun <[R](fold.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [fold](fold.md)(successTransform: ([T](index.md)) -> [R](fold.md), failureTransform: ([Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)) -> [R](fold.md)): [R](fold.md)  
 
-**Return**
-Result of applying [successTransform](fold.html#it.czerwinski.kotlin.util.Try$fold(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.fold.R)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try.fold.R)))/successTransform) on [Success](../-success/index.html) or [failureTransform](fold.html#it.czerwinski.kotlin.util.Try$fold(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.fold.R)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try.fold.R)))/failureTransform) on [Failure](../-failure/index.html).
+
 

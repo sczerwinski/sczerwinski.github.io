@@ -1,22 +1,34 @@
 ---
-title: Try.transform - Kotlin utilities
+title: transform -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[transform](transform.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [transform](./transform.html)
 
-# transform
 
-`inline fun <R> transform(successTransform: (`[`T`](index.html#T)`) -> `[`Try`](index.html)`<`[`R`](transform.html#R)`>, failureTransform: (`[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`) -> `[`Try`](index.html)`<`[`R`](transform.html#R)`>): `[`Try`](index.html)`<`[`R`](transform.html#R)`>`
+# transform  
+[Kotlin utilities]  
+Brief description  
+Transforms a [Success](../-success/index.md) using [successTransform]() or a [Failure](../-failure/index.md) using [failureTransform]().  
+  
 
-Transforms a [Success](../-success/index.html) using [successTransform](transform.html#it.czerwinski.kotlin.util.Try$transform(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))))/successTransform) or a [Failure](../-failure/index.html) using [failureTransform](transform.html#it.czerwinski.kotlin.util.Try$transform(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))))/failureTransform).
 
-### Parameters
+#### Return  
+New [Try](index.md) being a result of a transformation of a [Success](../-success/index.md) with [successTransform]() or a [Failure](../-failure/index.md) with [failureTransform]().  
+  
 
-`successTransform` - Function transforming value of a [Success](../-success/index.html) to a new [Try](index.html).
 
-`failureTransform` - Function transforming exception from a [Failure](../-failure/index.html) to a new [Try](index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| failureTransform| Function transforming exception from a [Failure](../-failure/index.md) to a new [Try](index.md).
+| successTransform| Function transforming value of a [Success](../-success/index.md) to a new [Try](index.md).
+  
+  
+Content  
+inline fun <[R](transform.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [transform](transform.md)(successTransform: ([T](index.md)) -> [Try](index.md)<[R](transform.md)>, failureTransform: ([Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)) -> [Try](index.md)<[R](transform.md)>): [Try](index.md)<[R](transform.md)>  
 
-**Return**
-New [Try](index.html) being a result of a transformation of a [Success](../-success/index.html) with [successTransform](transform.html#it.czerwinski.kotlin.util.Try$transform(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))))/successTransform)
-or a [Failure](../-failure/index.html) with [failureTransform](transform.html#it.czerwinski.kotlin.util.Try$transform(kotlin.Function1((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.transform.R)))))/failureTransform).
+
 

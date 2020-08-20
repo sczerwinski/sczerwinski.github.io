@@ -1,21 +1,34 @@
 ---
-title: Either.fold - Kotlin utilities
+title: fold -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Either](index.md)/[fold](fold.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Either](index.html) / [fold](./fold.html)
 
-# fold
 
-`inline fun <T> fold(leftTransform: (`[`L`](index.html#L)`) -> `[`T`](fold.html#T)`, rightTransform: (`[`R`](index.html#R)`) -> `[`T`](fold.html#T)`): `[`T`](fold.html#T)
+# fold  
+[Kotlin utilities]  
+Brief description  
+Transforms [Left](../-left/index.md) with [leftTransform]() or [Right](../-right/index.md) with [rightTransform]().  
+  
 
-Transforms [Left](../-left/index.html) with [leftTransform](fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/leftTransform) or [Right](../-right/index.html) with [rightTransform](fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/rightTransform).
 
-### Parameters
+#### Return  
+Result of applying [leftTransform]() on [Left](../-left/index.md) or [rightTransform]() on [Right](../-right/index.md).  
+  
 
-`leftTransform` - Function transforming [Left](../-left/index.html) value.
 
-`rightTransform` - Function transforming [Right](../-right/index.html) value.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| leftTransform| Function transforming [Left](../-left/index.md) value.
+| rightTransform| Function transforming [Right](../-right/index.md) value.
+  
+  
+Content  
+inline fun <[T](fold.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [fold](fold.md)(leftTransform: ([L](index.md)) -> [T](fold.md), rightTransform: ([R](index.md)) -> [T](fold.md)): [T](fold.md)  
 
-**Return**
-Result of applying [leftTransform](fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/leftTransform) on [Left](../-left/index.html) or [rightTransform](fold.html#it.czerwinski.kotlin.util.Either$fold(kotlin.Function1((it.czerwinski.kotlin.util.Either.L, it.czerwinski.kotlin.util.Either.fold.T)), kotlin.Function1((it.czerwinski.kotlin.util.Either.R, it.czerwinski.kotlin.util.Either.fold.T)))/rightTransform) on [Right](../-right/index.html).
+
 

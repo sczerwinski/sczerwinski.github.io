@@ -1,17 +1,23 @@
 ---
-title: Failure.getOrNull - Kotlin utilities
+title: getOrNull -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Failure](index.md)/[getOrNull](get-or-null.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Failure](index.html) / [getOrNull](./get-or-null.html)
 
-# getOrNull
 
-`fun getOrNull(): `[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`?`
+# getOrNull  
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Success](../-success/index.md) or null if this is a [Failure](index.md).  
+  
 
-Overrides [Try.getOrNull](../-try/get-or-null.html)
 
-Gets the value of a [Success](../-success/index.html) or `null` if this is a [Failure](index.html).
+#### Return  
+Value of a [Success](../-success/index.md) or null.  
+  
+  
+Content  
+open override fun [getOrNull](get-or-null.md)(): [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)?  
 
-**Return**
-Value of a [Success](../-success/index.html) or `null`.
+
 

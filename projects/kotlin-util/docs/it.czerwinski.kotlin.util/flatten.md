@@ -1,43 +1,93 @@
 ---
-title: flatten - Kotlin utilities
+title: flatten -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[flatten](flatten.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [flatten](./flatten.html)
 
-# flatten
 
-`fun <T> `[`Try`](-try/index.html)`<`[`Option`](-option/index.html)`<`[`T`](flatten.html#T)`>>.flatten(): `[`Option`](-option/index.html)`<`[`T`](flatten.html#T)`>`
+# flatten  
+[Kotlin utilities]  
+Brief description  
+Extracts an [Option](-option/index.md) nested in the [Try](-try/index.md) to a not nested [Option](-option/index.md).  
+  
 
-Extracts an [Option](-option/index.html) nested in the [Try](-try/index.html) to a not nested [Option](-option/index.html).
 
-**Return**
-[Option](-option/index.html) nested in a [Success](-success/index.html) or [None](-none/index.html) if this is a [Failure](-failure/index.html).
+#### Return  
+[Option](-option/index.md) nested in a [Success](-success/index.md) or [None](-none/index.md) if this is a [Failure](-failure/index.md).  
+  
+  
+Content  
+fun <[T](flatten.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[Option](-option/index.md)<[T](flatten.md)>>.[flatten](flatten.md)(): [Option](-option/index.md)<[T](flatten.md)>  
 
-`fun <T> `[`Option`](-option/index.html)`<`[`Try`](-try/index.html)`<`[`T`](flatten.html#T)`>>.flatten(): `[`Option`](-option/index.html)`<`[`T`](flatten.html#T)`>`
 
-Returns [Some](-some/index.html) if this [Some](-some/index.html) contains a [Success](-success/index.html). Otherwise returns [None](-none/index.html).
+[Kotlin utilities]  
+Brief description  
+Returns [Some](-some/index.md) if this [Some](-some/index.md) contains a [Success](-success/index.md). Otherwise returns [None](-none/index.md).  
+  
 
-**Return**
-[Some](-some/index.html) if this [Some](-some/index.html) contains a [Success](-success/index.html). Otherwise returns [None](-none/index.html).
 
-`fun <T> `[`Option`](-option/index.html)`<`[`Iterable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)`<`[`T`](flatten.html#T)`>>.flatten(): `[`List`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)`<`[`T`](flatten.html#T)`>`
+#### Return  
+[Some](-some/index.md) if this [Some](-some/index.md) contains a [Success](-success/index.md). Otherwise returns [None](-none/index.md).  
+  
+  
+Content  
+fun <[T](flatten.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[Try](-try/index.md)<[T](flatten.md)>>.[flatten](flatten.md)(): [Option](-option/index.md)<[T](flatten.md)>  
 
-Returns nested [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) if this is [Some](-some/index.html). Otherwise returns an empty [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html).
 
-**Return**
-Nested [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html) if this is [Some](-some/index.html). Otherwise returns an empty [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html).
+[Kotlin utilities]  
+Brief description  
+Returns nested [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html) if this is [Some](-some/index.md). Otherwise returns an empty [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html).  
+  
 
-`fun <T> `[`Option`](-option/index.html)`<`[`Option`](-option/index.html)`<`[`T`](flatten.html#T)`>>.flatten(): `[`Option`](-option/index.html)`<`[`T`](flatten.html#T)`>`
 
-Transforms a nested [Option](-option/index.html) to a not nested [Option](-option/index.html).
+#### Return  
+Nested [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html) if this is [Some](-some/index.md). Otherwise returns an empty [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html).  
+  
+  
+Content  
+fun <[T](flatten.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)<[T](flatten.md)>>.[flatten](flatten.md)(): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[T](flatten.md)>  
 
-**Return**
-[Option](-option/index.html) nested in a [Some](-some/index.html) or [None](-none/index.html) if this option is empty.
 
-`fun <T> `[`Try`](-try/index.html)`<`[`Try`](-try/index.html)`<`[`T`](flatten.html#T)`>>.flatten(): `[`Try`](-try/index.html)`<`[`T`](flatten.html#T)`>`
+[Kotlin utilities]  
+Brief description  
+Returns [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html) of values of each [Some](-some/index.md) in this [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html).  
+  
 
-Transforms a nested [Try](-try/index.html) to a not nested [Try](-try/index.html).
 
-**Return**
-[Try](-try/index.html) nested in a [Success](-success/index.html) or this object if this is a [Failure](-failure/index.html).
+#### Return  
+[List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html) of values of each [Some](-some/index.md) in this [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/index.html).  
+  
+  
+Content  
+fun <[T](flatten.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Iterable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html)<[Option](-option/index.md)<[T](flatten.md)>>.[flatten](flatten.md)(): [List](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html)<[T](flatten.md)>  
+
+
+[Kotlin utilities]  
+Brief description  
+Transforms a nested [Option](-option/index.md) to a not nested [Option](-option/index.md).  
+  
+
+
+#### Return  
+[Option](-option/index.md) nested in a [Some](-some/index.md) or [None](-none/index.md) if this option is empty.  
+  
+  
+Content  
+fun <[T](flatten.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Option](-option/index.md)<[Option](-option/index.md)<[T](flatten.md)>>.[flatten](flatten.md)(): [Option](-option/index.md)<[T](flatten.md)>  
+
+
+[Kotlin utilities]  
+Brief description  
+Transforms a nested [Try](-try/index.md) to a not nested [Try](-try/index.md).  
+  
+
+
+#### Return  
+[Try](-try/index.md) nested in a [Success](-success/index.md) or this object if this is a [Failure](-failure/index.md).  
+  
+  
+Content  
+fun <[T](flatten.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[Try](-try/index.md)<[T](flatten.md)>>.[flatten](flatten.md)(): [Try](-try/index.md)<[T](flatten.md)>  
+
+
 

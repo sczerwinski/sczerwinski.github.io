@@ -1,9 +1,14 @@
 ---
-title: Failure.<init> - Kotlin utilities
+title: <init> -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Failure](index.md)/[<init>](-init-.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Failure](index.html) / [&lt;init&gt;](./-init-.html)
 
-# &lt;init&gt;
 
-`Failure(exception: `[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`)`
+# <init>  
+[Kotlin utilities]  
+Content  
+fun [<init>](-init-.md)(exception: [Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html))  
+
+
+

@@ -1,17 +1,23 @@
 ---
-title: Right.swap - Kotlin utilities
+title: swap -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Right](index.md)/[swap](swap.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Right](index.html) / [swap](./swap.html)
 
-# swap
 
-`fun swap(): `[`Either`](../-either/index.html)`<`[`R`](index.html#R)`, `[`Nothing`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)`>`
+# swap  
+[Kotlin utilities]  
+Brief description  
+Swaps [Left](../-left/index.md) to [Right](index.md) and [Right](index.md) to [Left](../-left/index.md).  
+  
 
-Overrides [Either.swap](../-either/swap.html)
 
-Swaps [Left](../-left/index.html) to [Right](index.html) and [Right](index.html) to [Left](../-left/index.html).
+#### Return  
+[Left](../-left/index.md) if this is [Right](index.md) or [Right](index.md) if this is [Left](../-left/index.md).  
+  
+  
+Content  
+open override fun [swap](swap.md)(): [Either](../-either/index.md)<[R](index.md), [Nothing](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html)>  
 
-**Return**
-[Left](../-left/index.html) if this is [Right](index.html) or [Right](index.html) if this is [Left](../-left/index.html).
+
 

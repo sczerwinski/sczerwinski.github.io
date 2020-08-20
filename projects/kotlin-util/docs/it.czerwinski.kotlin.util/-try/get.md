@@ -1,19 +1,23 @@
 ---
-title: Try.get - Kotlin utilities
+title: get -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[get](get.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [get](./get.html)
 
-# get
 
-`abstract fun get(): `[`T`](index.html#T)
+# get  
+[Kotlin utilities]  
+Brief description  
+Gets the value of a [Success](../-success/index.md) or throw an exception from a [Failure](../-failure/index.md).  
+  
 
-Gets the value of a [Success](../-success/index.html) or throw an exception from a [Failure](../-failure/index.html).
 
-### Exceptions
+#### Return  
+Value of a [Success](../-success/index.md).  
+  
+  
+Content  
+abstract fun [get](get.md)(): [T](index.md)  
 
-`Throwable` - If this is a [Failure](../-failure/index.html).
 
-**Return**
-Value of a [Success](../-success/index.html).
 

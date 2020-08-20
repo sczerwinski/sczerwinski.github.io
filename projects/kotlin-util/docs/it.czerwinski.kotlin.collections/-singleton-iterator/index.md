@@ -1,31 +1,41 @@
 ---
-title: SingletonIterator - Kotlin utilities
+title: SingletonIterator -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.collections](../index.md)/[SingletonIterator](index.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.collections](../index.html) / [SingletonIterator](./index.html)
 
-# SingletonIterator
 
-`class SingletonIterator<T> : `[`Iterator`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)`<`[`T`](index.html#T)`>`
+# SingletonIterator  
+ [Kotlin utilities] Iterator producing a single [element]().  
+  
+class [SingletonIterator](index.md)<[T](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> (**element**: [T](index.md)) : [Iterator](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterator/index.html)   
 
-Iterator producing a single [element](#).
 
-### Parameters
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| element| The element to be produced by the iterator.
+| T| Type of the [element]().
+  
 
-`element` - The element to be produced by the iterator.
 
-`T` - Type of the [element](#).
+## Constructors  
+  
+|  Name|  Summary| 
+|---|---|
+| [<init>](-init-.md)|  [Kotlin utilities] The element to be produced by the iterator.fun <[T](index.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [<init>](-init-.md)(element: [T](index.md))   <br>
 
-### Constructors
 
-| [&lt;init&gt;](-init-.html) | `SingletonIterator(element: `[`T`](index.html#T)`)`<br>Iterator producing a single [element](#). |
-
-### Functions
-
-| [hasNext](has-next.html) | `fun hasNext(): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html) |
-| [next](next.html) | `fun next(): `[`T`](index.html#T) |
-
-### Extension Functions
-
-| [asOption](../../it.czerwinski.kotlin.util/as-option.html) | `fun <T> `[`T`](../../it.czerwinski.kotlin.util/as-option.html#T)`?.asOption(): `[`Option`](../../it.czerwinski.kotlin.util/-option/index.html)`<`[`T`](../../it.czerwinski.kotlin.util/as-option.html#T)`>`<br>Returns [Some](../../it.czerwinski.kotlin.util/-some/index.html) if this is not `null` or [None](../../it.czerwinski.kotlin.util/-none/index.html) if this is `null`. |
+## Functions  
+  
+|  Name|  Summary| 
+|---|---|
+| [equals](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/equals.html)| [Kotlin utilities]  <br>Content  <br>open operator override fun [equals](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/equals.html)(other: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  <br><br><br>
+| [hashCode](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/hash-code.html)| [Kotlin utilities]  <br>Content  <br>open override fun [hashCode](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/hash-code.html)(): [Int](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html)  <br><br><br>
+| [hasNext](has-next.md)| [Kotlin utilities]  <br>Content  <br>open operator override fun [hasNext](has-next.md)(): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  <br><br><br>
+| [next](next.md)| [Kotlin utilities]  <br>Content  <br>open operator override fun [next](next.md)(): [T](index.md)  <br><br><br>
+| [toString](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/to-string.html)| [Kotlin utilities]  <br>Content  <br>open override fun [toString](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/to-string.html)(): [String](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html)  <br><br><br>
 

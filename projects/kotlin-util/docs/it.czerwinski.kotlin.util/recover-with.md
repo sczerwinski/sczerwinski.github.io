@@ -1,19 +1,33 @@
 ---
-title: recoverWith - Kotlin utilities
+title: recoverWith -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[recoverWith](recover-with.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [recoverWith](./recover-with.html)
 
-# recoverWith
 
-`inline fun <T> `[`Try`](-try/index.html)`<`[`T`](recover-with.html#T)`>.recoverWith(rescue: (`[`Throwable`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)`) -> `[`Try`](-try/index.html)`<`[`T`](recover-with.html#T)`>): `[`Try`](-try/index.html)`<`[`T`](recover-with.html#T)`>`
+# recoverWith  
+[Kotlin utilities]  
+Brief description  
+Returns this [Try](-try/index.md) if this is a [Success](-success/index.md) or a [Try](-try/index.md) created by the [rescue]() function if this is a [Failure](-failure/index.md).  
+  
 
-Returns this [Try](-try/index.html) if this is a [Success](-success/index.html) or a [Try](-try/index.html) created by the [rescue](recover-with.html#it.czerwinski.kotlin.util$recoverWith(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recoverWith.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recoverWith.T)))))/rescue) function if this is a [Failure](-failure/index.html).
 
-### Parameters
+#### Return  
+This [Try](-try/index.md) if this is a [Success](-success/index.md) or a [Try](-try/index.md) created by the [rescue]() function if this is a [Failure](-failure/index.md).  
+  
 
-`rescue` - Function creating a new [Try](-try/index.html) from the exception of a [Failure](-failure/index.html).
 
-**Return**
-This [Try](-try/index.html) if this is a [Success](-success/index.html) or a [Try](-try/index.html) created by the [rescue](recover-with.html#it.czerwinski.kotlin.util$recoverWith(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recoverWith.T)), kotlin.Function1((kotlin.Throwable, it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.recoverWith.T)))))/rescue) function if this is a [Failure](-failure/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| rescue| Function creating a new [Try](-try/index.md) from the exception of a [Failure](-failure/index.md).
+  
+  
+Content  
+inline fun <[T](recover-with.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [Try](-try/index.md)<[T](recover-with.md)>.[recoverWith](recover-with.md)(rescue: ([Throwable](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-throwable/index.html)) -> [Try](-try/index.md)<[T](recover-with.md)>): [Try](-try/index.md)<[T](recover-with.md)>  
+
+
 

@@ -1,42 +1,68 @@
 ---
-title: Try.zip - Kotlin utilities
+title: zip -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Try](index.md)/[zip](zip.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Try](index.html) / [zip](./zip.html)
 
-# zip
 
-`infix fun <R> zip(other: `[`Try`](index.html)`<`[`R`](zip.html#R)`>): `[`Try`](index.html)`<`[`Pair`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)`<`[`T`](index.html#T)`, `[`R`](zip.html#R)`>>`
+# zip  
+[Kotlin utilities]  
+Brief description  
+Returns [Success](../-success/index.md) containing a Pair of values of this and [other](index.md) if both instances of [Try](index.md) are [Success](../-success/index.md). Otherwise returns first [Failure](../-failure/index.md).  
+  
 
-Returns [Success](../-success/index.html) containing a `Pair` of values of this and [other](index.html)
-if both instances of [Try](index.html) are [Success](../-success/index.html). Otherwise returns first [Failure](../-failure/index.html).
 
-### Parameters
+#### Return  
+[Success](../-success/index.md) containing a Pair of values of this and [other](index.md) if both instances of [Try](index.md) are [Success](../-success/index.md). Otherwise returns first [Failure](../-failure/index.md).  
+  
 
-`other` - Other [Try](index.html).
 
-**Return**
-[Success](../-success/index.html) containing a `Pair` of values of this and [other](index.html)
-if both instances of [Try](index.html) are [Success](../-success/index.html). Otherwise returns first [Failure](../-failure/index.html).
+#### Since  
+1.1  
+  
 
-**Since**
-1.1
 
-`inline fun <T1, R> zip(other: `[`Try`](index.html)`<`[`T1`](zip.html#T1)`>, transform: (`[`T`](index.html#T)`, `[`T1`](zip.html#T1)`) -> `[`R`](zip.html#R)`): `[`Try`](index.html)`<`[`R`](zip.html#R)`>`
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| other| Other [Try](index.md).
+  
+  
+Content  
+infix fun <[R](zip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [zip](zip.md)(other: [Try](index.md)<[R](zip.md)>): [Try](index.md)<[Pair](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html)<[T](index.md), [R](zip.md)>>  
 
-Returns [Success](../-success/index.html) containing the result of applying [transform](zip.html#it.czerwinski.kotlin.util.Try$zip(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.zip.T1)), kotlin.Function2((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.zip.T1, it.czerwinski.kotlin.util.Try.zip.R)))/transform) to both values of this and [other](index.html)
-if both instances of [Try](index.html) are [Success](../-success/index.html). Otherwise returns first [Failure](../-failure/index.html).
 
-### Parameters
+[Kotlin utilities]  
+Brief description  
+Returns [Success](../-success/index.md) containing the result of applying [transform]() to both values of this and [other](index.md) if both instances of [Try](index.md) are [Success](../-success/index.md). Otherwise returns first [Failure](../-failure/index.md).  
+  
 
-`other` - Other [Try](index.html).
 
-`transform` - Function transforming values of both instances of [Success](../-success/index.html).
+#### Return  
+[Success](../-success/index.md) containing the result of applying [transform]() to both values of this and [other](index.md) if both instances of [Try](index.md) are [Success](../-success/index.md). Otherwise returns first [Failure](../-failure/index.md).  
+  
 
-**Return**
-[Success](../-success/index.html) containing the result of applying [transform](zip.html#it.czerwinski.kotlin.util.Try$zip(it.czerwinski.kotlin.util.Try((it.czerwinski.kotlin.util.Try.zip.T1)), kotlin.Function2((it.czerwinski.kotlin.util.Try.T, it.czerwinski.kotlin.util.Try.zip.T1, it.czerwinski.kotlin.util.Try.zip.R)))/transform) to both values of this and [other](index.html)
-if both instances of [Try](index.html) are [Success](../-success/index.html). Otherwise returns first [Failure](../-failure/index.html).
 
-**Since**
-1.1
+#### Since  
+1.1  
+  
+
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| other| Other [Try](index.md).
+| transform| Function transforming values of both instances of [Success](../-success/index.md).
+  
+  
+Content  
+inline fun <[T1](zip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?, [R](zip.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [zip](zip.md)(other: [Try](index.md)<[T1](zip.md)>, transform: ([T](index.md), [T1](zip.md)) -> [R](zip.md)): [Try](index.md)<[R](zip.md)>  
+
+
 

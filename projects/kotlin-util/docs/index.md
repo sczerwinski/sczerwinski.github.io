@@ -1,16 +1,21 @@
 ---
-title: Kotlin utilities
+title: kotlin-util -
 ---
+//[kotlin-util](index.md)
 
-[Kotlin utilities](./index.html)
 
-Kotlin utility types based on Scala.
 
-### Packages
+# kotlin-util  
+ [Kotlin utilities] Kotlin utility types based on Scala.  
+  
+   
 
-| [it.czerwinski.kotlin.collections](it.czerwinski.kotlin.collections/index.html) | Contains iterators used by the utility types. |
-| [it.czerwinski.kotlin.util](it.czerwinski.kotlin.util/index.html) | Contains utility types based on Scala. |
 
-### Index
+## Packages  
+  
+|  Name|  Summary| 
+|---|---|
+| [it.czerwinski.kotlin](it.czerwinski.kotlin.md) | 
+| [it.czerwinski.kotlin.collections](it.czerwinski.kotlin.collections/index.md) | 
+| [it.czerwinski.kotlin.util](it.czerwinski.kotlin.util/index.md) | 
 
-[All Types](alltypes/index.html)

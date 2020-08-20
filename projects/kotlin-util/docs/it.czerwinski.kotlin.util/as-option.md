@@ -1,19 +1,33 @@
 ---
-title: asOption - Kotlin utilities
+title: asOption -
 ---
+//[kotlin-util](../index.md)/[it.czerwinski.kotlin.util](index.md)/[asOption](as-option.md)
 
-[Kotlin utilities](../index.html) / [it.czerwinski.kotlin.util](index.html) / [asOption](./as-option.html)
 
-# asOption
 
-`fun <T> `[`T`](as-option.html#T)`?.asOption(): `[`Option`](-option/index.html)`<`[`T`](as-option.html#T)`>`
+# asOption  
+[Kotlin utilities]  
+Brief description  
+Returns [Some](-some/index.md) if this is not null or [None](-none/index.md) if this is null.  
+  
 
-Returns [Some](-some/index.html) if this is not `null` or [None](-none/index.html) if this is `null`.
 
-### Parameters
+#### Return  
+[Some](-some/index.md) if this is not null or [None](-none/index.md) if this is null.  
+  
 
-`T` - Type of the nullable value.
 
-**Return**
-[Some](-some/index.html) if this is not `null` or [None](-none/index.html) if this is `null`.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| T| Type of the nullable value.
+  
+  
+Content  
+fun <[T](as-option.md) : [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)?> [T](as-option.md)?.[asOption](as-option.md)(): [Option](-option/index.md)<[T](as-option.md)>  
+
+
 

@@ -1,19 +1,33 @@
 ---
-title: Either.contains - Kotlin utilities
+title: contains -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Either](index.md)/[contains](contains.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Either](index.html) / [contains](./contains.html)
 
-# contains
 
-`abstract operator fun contains(element: `[`Any`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# contains  
+[Kotlin utilities]  
+Brief description  
+Returns true if the [element]() is equal to the value of this [Either](index.md), or false otherwise.  
+  
 
-Returns `true` if the [element](contains.html#it.czerwinski.kotlin.util.Either$contains(kotlin.Any)/element) is equal to the value of this [Either](index.html), or `false` otherwise.
 
-### Parameters
+#### Return  
+true if the [element]() is equal to the value of this [Either](index.md), or false otherwise.  
+  
 
-`element` - An element of any type.
 
-**Return**
-`true` if the [element](contains.html#it.czerwinski.kotlin.util.Either$contains(kotlin.Any)/element) is equal to the value of this [Either](index.html), or `false` otherwise.
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| element| An element of any type.
+  
+  
+Content  
+abstract operator fun [contains](contains.md)(element: [Any](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
 

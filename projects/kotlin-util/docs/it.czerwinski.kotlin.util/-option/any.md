@@ -1,21 +1,33 @@
 ---
-title: Option.any - Kotlin utilities
+title: any -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Option](index.md)/[any](any.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Option](index.html) / [any](./any.html)
 
-# any
 
-`inline fun any(predicate: (`[`T`](index.html#T)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# any  
+[Kotlin utilities]  
+Brief description  
+Returns the result of applying the [predicate]() to the value if this is [Some](../-some/index.md) or false if this is [None](../-none/index.md).  
+  
 
-Returns the result of applying the [predicate](any.html#it.czerwinski.kotlin.util.Option$any(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, kotlin.Boolean)))/predicate) to the value if this is [Some](../-some/index.html)
-or `false` if this is [None](../-none/index.html).
 
-### Parameters
+#### Return  
+The result of applying the [predicate]() to the value if this is [Some](../-some/index.md) or false if this is [None](../-none/index.md).  
+  
 
-`predicate` - Predicate function.
 
-**Return**
-The result of applying the [predicate](any.html#it.czerwinski.kotlin.util.Option$any(kotlin.Function1((it.czerwinski.kotlin.util.Option.T, kotlin.Boolean)))/predicate) to the value if this is [Some](../-some/index.html)
-or `false` if this is [None](../-none/index.html).
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+inline fun [any](any.md)(predicate: ([T](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
 

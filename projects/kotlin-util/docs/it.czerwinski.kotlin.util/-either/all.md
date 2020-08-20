@@ -1,24 +1,38 @@
 ---
-title: Either.all - Kotlin utilities
+title: all -
 ---
+//[kotlin-util](../../index.md)/[it.czerwinski.kotlin.util](../index.md)/[Either](index.md)/[all](all.md)
 
-[Kotlin utilities](../../index.html) / [it.czerwinski.kotlin.util](../index.html) / [Either](index.html) / [all](./all.html)
 
-# all
 
-`inline fun all(predicate: (`[`R`](index.html#R)`) -> `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)`): `[`Boolean`](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)
+# all  
+[Kotlin utilities]  
+Brief description  
+Returns the result of applying the [predicate]() to the value if this is [Right](../-right/index.md) or true if this is [Left](../-left/index.md).  
+  
 
-Returns the result of applying the [predicate](all.html#it.czerwinski.kotlin.util.Either$all(kotlin.Function1((it.czerwinski.kotlin.util.Either.R, kotlin.Boolean)))/predicate) to the value if this is [Right](../-right/index.html)
-or `true` if this is [Left](../-left/index.html).
 
-### Parameters
+#### Return  
+The result of applying the [predicate]() to the value if this is [Right](../-right/index.md) or true if this is [Left](../-left/index.md).  
+  
 
-`predicate` - Predicate function.
 
-**Return**
-The result of applying the [predicate](all.html#it.czerwinski.kotlin.util.Either$all(kotlin.Function1((it.czerwinski.kotlin.util.Either.R, kotlin.Boolean)))/predicate) to the value if this is [Right](../-right/index.html)
-or `true` if this is [Left](../-left/index.html).
+#### Since  
+1.3  
+  
 
-**Since**
-1.3
+
+## Parameters  
+  
+Kotlin utilities  
+  
+|  Name|  Summary| 
+|---|---|
+| predicate| Predicate function.
+  
+  
+Content  
+inline fun [all](all.md)(predicate: ([R](index.md)) -> [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)): [Boolean](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html)  
+
+
 
