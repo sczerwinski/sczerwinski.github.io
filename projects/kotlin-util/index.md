@@ -9,13 +9,20 @@ project: kotlin-util
 {% include breadcrumbs-project.html %}
 
 ![Build](https://github.com/sczerwinski/kotlin-util/workflows/Build/badge.svg)
+![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet)
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/kotlin-util)
 [![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](1.4.10/docs)
-![License](https://img.shields.io/github/license/sczerwinski/kotlin-util.svg)
+![License](https://img.shields.io/badge/license-Apache%202-blue)
 
 ## Project Setup
+
+### Gradle
+
+```groovy
+implementation 'it.czerwinski:kotlin-util:1.4.10'
+```
 
 ### Maven
 
@@ -25,12 +32,6 @@ project: kotlin-util
   <artifactId>kotlin-util</artifactId>
   <version>1.4.10</version>
 </dependency>
-```
-
-### Gradle
-
-```groovy
-implementation 'it.czerwinski:kotlin-util:1.4.10'
 ```
 
 ## Supported Types
