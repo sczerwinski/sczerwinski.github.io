@@ -12,7 +12,7 @@ project: kotlin-util
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)
 [![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/kotlin-util)
-[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](./docs)
+[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](1.4.10/docs)
 ![License](https://img.shields.io/github/license/sczerwinski/kotlin-util.svg)
 
 ## Project Setup
@@ -23,14 +23,14 @@ project: kotlin-util
 <dependency>
   <groupId>it.czerwinski</groupId>
   <artifactId>kotlin-util</artifactId>
-  <version>1.4.0</version>
+  <version>1.4.10</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'it.czerwinski:kotlin-util:1.4.0'
+implementation 'it.czerwinski:kotlin-util:1.4.10'
 ```
 
 ## Supported Types
