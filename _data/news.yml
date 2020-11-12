@@ -1,5 +1,5 @@
-- date: 2020-08-20
-  title: "Kotlin Utilities: Release 1.4.0"
+- date: 2020-11-12
+  title: "Kotlin Utilities: Release 1.4.10"
   content: |
     Kotlin utility types based on Scala open source project.<br />
     <b>NEW:</b> Experimental multiplatform support.
