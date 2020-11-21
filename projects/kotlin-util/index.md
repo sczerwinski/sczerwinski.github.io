@@ -147,7 +147,7 @@ java.util.Collections.singletonList(element).iterator()
 
 ## Kotlin Multiplatform Mobile Example
 
-1. Create a new Kotlin Multiplatform Mobile project.
+1. Create a new [Kotlin Multiplatform Mobile](https://kotlinlang.org/docs/mobile/home.html) project.
 2. In `shared/build.gradle.kts`, add `kotlin-util` dependency to `commonMain`:
     ```kotlin
     repositories {
