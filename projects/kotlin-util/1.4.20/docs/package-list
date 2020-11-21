@@ -1,0 +1,6 @@
+$dokka.format:jekyll-v1
+$dokka.linkExtension:md
+
+it.czerwinski.kotlin.collections
+it.czerwinski.kotlin.util
+

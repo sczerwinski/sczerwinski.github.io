@@ -8,20 +8,30 @@ project: kotlin-util
 
 {% include breadcrumbs-project.html %}
 
-![Build](https://github.com/sczerwinski/kotlin-util/workflows/Build/badge.svg)
-![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet)
-[![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)
-[![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)
+[![Build](https://github.com/sczerwinski/kotlin-util/workflows/Build/badge.svg)](https://github.com/sczerwinski/kotlin-util/actions)
+![Kotlin Multiplatform](https://img.shields.io/badge/Kotlin-Multiplatform-blueviolet)  
+[![Release](https://github.com/sczerwinski/kotlin-util/workflows/Release/badge.svg)](https://github.com/sczerwinski/kotlin-util/actions)
+[![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski/kotlin-util.svg)](https://repo1.maven.org/maven2/it/czerwinski/kotlin-util/)  
+[![Snapshot Release](https://github.com/sczerwinski/kotlin-util/workflows/Snapshot%20Release/badge.svg)](https://github.com/sczerwinski/kotlin-util/actions)
+[![Sonatype Snapshot](https://img.shields.io/nexus/s/https/oss.sonatype.org/it.czerwinski/kotlin-util.svg)](https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/kotlin-util/)  
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/kotlin-util)
-[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](1.4.10/docs)
+[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](1.4.20/docs)
 ![License](https://img.shields.io/badge/license-Apache%202-blue)
 
 ## Project Setup
 
 ### Gradle
 
+#### Kotlin
+
+```kotlin
+implementation("it.czerwinski:kotlin-util:1.4.20")
+```
+
+#### Groovy
+
 ```groovy
-implementation 'it.czerwinski:kotlin-util:1.4.10'
+implementation 'it.czerwinski:kotlin-util:1.4.20'
 ```
 
 ### Maven
@@ -30,9 +40,13 @@ implementation 'it.czerwinski:kotlin-util:1.4.10'
 <dependency>
   <groupId>it.czerwinski</groupId>
   <artifactId>kotlin-util</artifactId>
-  <version>1.4.10</version>
+  <version>1.4.20</version>
 </dependency>
 ```
+
+### Kotlin Multiplatform Projects
+
+In multiplatform projects, the library can be used as `commonMain` dependency.
 
 ## Supported Types
 
