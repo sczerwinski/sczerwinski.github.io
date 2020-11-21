@@ -48,6 +48,8 @@ implementation 'it.czerwinski:kotlin-util:1.4.20'
 
 In multiplatform projects, the library can be used as `commonMain` dependency.
 
+See also [Kotlin Multiplatform Mobile Example](#kotlin-multiplatform-mobile-example).
+
 ## Supported Types
 
 ### Utilities
@@ -142,3 +144,66 @@ from a new instance of a singleton list, e.g.:
 ```kotlin
 java.util.Collections.singletonList(element).iterator()
 ```
+
+## Kotlin Multiplatform Mobile Example
+
+1. Create a new Kotlin Multiplatform Mobile project.
+2. In `shared/build.gradle.kts`, add `kotlin-util` dependency to `commonMain`:
+    ```kotlin
+    repositories {
+        // [...]
+    
+        mavenCentral()
+    }
+    kotlin {
+        // [...]
+    
+        sourceSets {
+            // [...]
+    
+            val commonMain by getting {
+                dependencies {
+                    implementation("it.czerwinski:kotlin-util:1.4.20")
+                }
+            }
+        }
+    }
+    ```
+3. Edit `Platform` class to return `Option<String>`:
+    `commonMain`:
+    ```kotlin
+    expect class Platform() {
+        val platform: Option<String>
+    }
+    ```
+    `androidMain`:
+    ```kotlin
+    actual class Platform actual constructor() {
+        actual val platform: Option<String> = Some("Android ${android.os.Build.VERSION.SDK_INT}")
+    }
+    ```
+    `iosMain`:
+    ```kotlin
+    actual class Platform actual constructor() {
+        actual val platform: Option<String> = Some(
+            UIDevice.currentDevice.systemName() + " " + UIDevice.currentDevice.systemVersion
+        )
+    }
+    ```
+4. Edit `Greetings` class to get value from `Option`:
+    ```kotlin
+    class Greeting {
+        fun greeting(): String {
+            return "Hello, kotlin-util on ${Platform().platform.getOrElse { "unknown platform" }}!"
+        }
+    }    
+    ```
+5. Run both mobile apps.
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        {% include thumbnail.html image="/assets/img/project/kotlin-util/kmm/screenshot-android.png" thumb="/assets/img/project/kotlin-util/kmm/screenshot-android-thumb.png" title="Android screenshot" %}
+    </div>
+    <div class="col-xs-12 col-md-6">
+        {% include thumbnail.html image="/assets/img/project/kotlin-util/kmm/screenshot-ios.png" thumb="/assets/img/project/kotlin-util/kmm/screenshot-ios-thumb.png" title="iOS screenshot" %}
+    </div>
+</div>
