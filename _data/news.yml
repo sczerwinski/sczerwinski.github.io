@@ -1,3 +1,10 @@
+- date: 2020-11-28
+  title: "Xpresso: Release 1.0"
+  content: |
+    Kotlin Android Espresso Extensions.<br />
+    <b>NEW:</b> <code>RecyclerView</code> support.
+  url: /projects/android-xpresso/
+
 - date: 2020-11-21
   title: "Kotlin Utilities: Release 1.4.20"
   content: |

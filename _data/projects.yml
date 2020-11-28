@@ -8,6 +8,11 @@ android-charts:
   description: Android charts
   github: sczerwinski/android-charts
 
+android-xpresso:
+  name: Xpresso
+  description: Kotlin Android Espresso Extensions
+  github: sczerwinski/android-xpresso
+
 android-graphics-util:
   name: Android Graphics Utilities
   description: Extensions for Android graphics
