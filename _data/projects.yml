@@ -2,23 +2,28 @@ kotlin-util:
   name: Kotlin utilities
   description: Kotlin utility classes based on Scala
   github: sczerwinski/kotlin-util
+  tags: kotlin
 
 android-charts:
   name: Android Charts
   description: Android charts
   github: sczerwinski/android-charts
+  tags: android
 
 android-xpresso:
   name: Xpresso
   description: Kotlin Android Espresso Extensions
   github: sczerwinski/android-xpresso
+  tags: android, testing
 
 android-graphics-util:
   name: Android Graphics Utilities
   description: Extensions for Android graphics
   github: sczerwinski/android-graphics-util
+  tags: android
 
 wavefront-obj-intellij-plugin:
   name: Wavefront OBJ IntelliJ Plugin
   description: Wavefront OBJ file type and 3D preview plugin for IntelliJ platform
   github: sczerwinski/wavefront-obj-intellij-plugin
+  tags: plugins
