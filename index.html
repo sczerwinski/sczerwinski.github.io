@@ -20,7 +20,15 @@ keywords: software,developer,programming,java,android
                 {% endif %}
             </h5>
             <h6 class="card-subtitle text-muted mb-3"><time datetime="{{ item.date }}" itemprop="datePublished">{{ item.date | date: '%d %B %Y' }}</time></h6>
-            <p class="card-text">{{ item.content }}</p>
+            <h6 class="card-subtitle text-muted mb-3">
+                {% assign tags = item.tags | split: ", " %}
+                {% for tag in tags %}
+                <span class="badge badge-light">{{ tag }}</span>
+                {% endfor %}
+            </h6>
+            <p class="card-text">
+                {{ item.content }}
+            </p>
             {% if item.url %}
             {% if item.url contains '://' %}
             <a class="btn btn-light" href="{{ item.url }}" target="_blank">Read more&nbsp;<i class="fas fa-external-link-alt"></i></a>

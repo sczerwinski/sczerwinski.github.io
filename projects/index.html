@@ -17,6 +17,12 @@ keywords: oss,software,programming
                 <h5 class="card-title">
                     <a class="text-body" href="/projects/{{ project[0] }}">{{ project[1].name }}</a>
                 </h5>
+                <h6 class="card-subtitle text-muted mb-3">
+                    {% assign tags = project[1].tags | split: ", " %}
+                    {% for tag in tags %}
+                    <span class="badge badge-light">{{ tag }}</span>
+                    {% endfor %}
+                </h6>
                 <p class="card-text">{{ project[1].description }}</p>
                 <a class="btn btn-primary my-2" href="/projects/{{ project[0] }}">Project page</a>
                 <a class="btn btn-light my-2" target="_blank" href="https://github.com/{{ project[1].github }}"><i class="fab fa-github"></i> GitHub page</a>
