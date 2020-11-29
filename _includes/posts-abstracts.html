@@ -11,6 +11,12 @@
                 <a class="text-body" href="{{ post.url }}">{{ post.title }}</a>
             </h5>
             <h6 class="card-subtitle text-muted mb-3"><time datetime="{{ post.date }}" itemprop="datePublished">{{ post.date | date: '%d %B %Y' }}</time></h6>
+            <h6 class="card-subtitle text-muted mb-3">
+                {% assign tags = post.tags[0] | split: ',' %}
+                {% for tag in tags %}
+                <span class="badge badge-light">{{ tag }}</span>
+                {% endfor %}
+            </h6>
             <p class="card-text" itemprop="description">{{ post.abstract }}</p>
             <a class="btn btn-primary" href="{{ post.url }}">Read more</a>
         </div>
