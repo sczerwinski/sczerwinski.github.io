@@ -17,6 +17,12 @@ project: android-lifecycle
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.lifecycle/lifecycle-livedata)][lifecycle-livedata-release]
 [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.lifecycle/lifecycle-livedata?server=https%3A%2F%2Foss.sonatype.org)][lifecycle-livedata-snapshot]
 
+### Types
+
+#### `ConstantLiveData`
+
+[LiveData] that always emits a single constant value.
+
 ### Build Configuration
 
 #### Kotlin
@@ -72,11 +78,11 @@ val failureLiveData: LiveData<Failure> = resultLiveData.filterIsInstance<Failure
 Returns a [LiveData] emitting accumulated value starting with the first value emitted by this LiveData and applying
 `operation` from left to right to current accumulator value and each value emitted by this.
 
-  ```kotlin
-  val newOperationsCountLiveData: LiveData<Int?> = // ...
-  val operationsCountLiveData: LiveData<Int?> =
-      newOperationsCountLiveData.reduce { acc, next -> if (next == null) null else acc + next }
-  ```
+```kotlin
+val newOperationsCountLiveData: LiveData<Int?> = // ...
+val operationsCountLiveData: LiveData<Int?> =
+    newOperationsCountLiveData.reduce { acc, next -> if (next == null) null else acc + next }
+```
 
 #### `reduceNotNull`
 Returns a [LiveData] emitting non-null accumulated value starting with the first non-null value emitted by this
@@ -86,26 +92,70 @@ emitted by this LiveData.
 ```kotlin
 val newOperationsCountLiveData: LiveData<Int> = // ...
 val operationsCountLiveData: LiveData<Int> =
-   newOperationsCountLiveData.reduceNotNull { acc, next -> acc + next }
+    newOperationsCountLiveData.reduceNotNull { acc, next -> acc + next }
 ```
 
 #### `throttleWithTimeout`
-
 Returns a [LiveData] emitting values from this LiveData, after dropping values followed by newer values before
 `timeInMillis` expires.
 
 ```kotlin
 val isLoadingLiveData: LiveData<Boolean> = // ...
 val isLoadingThrottledLiveData: LiveData<Boolean> = isLoadingLiveData.throttleWithTimeout(
-   timeInMillis = 1000L,
-   context = viewModelScope.coroutineContext
+    timeInMillis = 1000L,
+    context = viewModelScope.coroutineContext
 )
+```
+
+#### `merge`
+Returns a [LiveData] emitting each value emitted by any of the given LiveData.
+
+```kotlin
+val serverError: LiveData<String> = // ...
+val databaseError: LiveData<String> = // ...
+val error: LiveData<String> = serverError merge databaseError
+```
+
+```kotlin
+val serverError: LiveData<String> = // ...
+val databaseError: LiveData<String> = // ...
+val fileError: LiveData<String> = // ...
+val error: LiveData<String> = merge(serverError, databaseError, fileError)
+```
+
+#### `combineLatest`
+Returns a [LiveData] emitting pairs, triples or lists of latest values emitted by the given LiveData.
+
+```kotlin
+val userLiveData: LiveData<User> = // ...
+val avatarUrlLiveData: LiveData<String> = // ...
+val userWithAvatar: LiveData<Pair<User?, String?>> = combineLatest(userLiveData, avatarUrlLiveData)
+```
+
+```kotlin
+val userLiveData: LiveData<User> = ...
+val avatarUrlLiveData: LiveData<String> = ...
+val userWithAvatar: LiveData<UserWithAvatar> =
+    combineLatest(userLiveData, avatarUrlLiveData) { user, avatarUrl ->
+        UserWithAvatar(user, avatarUrl)
+    }
+```
+
+#### `defaultIfEmpty`
+Returns a [LiveData] that emits the values emitted by this LiveData or a specified default value if this LiveData has
+not yet emitted any values at the time of observing.
+
+```kotlin
+val errorLiveData: LiveData<String> = // ...
+val statusLiveData: LiveData<String?> = errorLiveData.defaultIfEmpty("No errors")
 ```
 
 ## LivaData Testing Utilities
 
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit5)][lifecycle-livedata-test-junit5-release]
 [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit5?server=https%3A%2F%2Foss.sonatype.org)][lifecycle-livedata-test-junit5-snapshot]
+
+### Build Configuration
 
 #### Kotlin
 ```kotlin
