@@ -16,6 +16,12 @@ android-xpresso:
   github: sczerwinski/android-xpresso
   tags: android, testing
 
+android-lifecycle:
+  name: Android Lifecycle Extensions
+  description: Extensions for Jetpack Lifecycle
+  github: sczerwinski/android-lifecycle
+  tags: android
+
 android-graphics-util:
   name: Android Graphics Utilities
   description: Extensions for Android graphics
