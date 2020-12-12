@@ -25,13 +25,13 @@ project: kotlin-util
 #### Kotlin
 
 ```kotlin
-implementation("it.czerwinski:kotlin-util:1.4.20")
+implementation("it.czerwinski:kotlin-util:1.4.21")
 ```
 
 #### Groovy
 
 ```groovy
-implementation 'it.czerwinski:kotlin-util:1.4.20'
+implementation 'it.czerwinski:kotlin-util:1.4.21'
 ```
 
 ### Maven
@@ -40,7 +40,7 @@ implementation 'it.czerwinski:kotlin-util:1.4.20'
 <dependency>
   <groupId>it.czerwinski</groupId>
   <artifactId>kotlin-util</artifactId>
-  <version>1.4.20</version>
+  <version>1.4.21</version>
 </dependency>
 ```
 
@@ -163,7 +163,7 @@ java.util.Collections.singletonList(element).iterator()
     
             val commonMain by getting {
                 dependencies {
-                    implementation("it.czerwinski:kotlin-util:1.4.20")
+                    implementation("it.czerwinski:kotlin-util:1.4.21")
                 }
             }
         }
