@@ -42,7 +42,7 @@ dependencies {
 [MediatorLiveData] subclass which provides a separate [LiveData] per each result returned by `keySelector` function
 executed on subsequent values emitted by the source LiveData.
 
-### Transformations
+### LiveData Transformations
 
 #### `mapNotNull`
 Returns a [LiveData] emitting only the non-null results of applying the given `transform` function to each value
@@ -181,6 +181,20 @@ not yet emitted any values at the time of observing.
 ```kotlin
 val errorLiveData: LiveData<String> = // ...
 val statusLiveData: LiveData<String?> = errorLiveData.defaultIfEmpty("No errors")
+```
+
+### MediatorLiveData Extensions
+
+#### `addDirectSource`
+Starts to listen the given source LiveData.
+Whenever source value is changed, it is set as a new value of this [MediatorLiveData].
+
+```kotlin
+mediatorLiveData.addDirectSource(liveData)
+```
+is equivalent to:
+```kotlin
+mediatorLiveData.addSource(liveData) { x -> mediatorLiveData.value = x }
 ```
 
 ## LivaData Testing Utilities
