@@ -22,6 +22,12 @@ android-lifecycle:
   github: sczerwinski/android-lifecycle
   tags: android
 
+android-room:
+  name: Android Room Extensions
+  description: Extensions for Jetpack Room
+  github: sczerwinski/android-room
+  tags: android
+
 android-graphics-util:
   name: Android Graphics Utilities
   description: Extensions for Android graphics
