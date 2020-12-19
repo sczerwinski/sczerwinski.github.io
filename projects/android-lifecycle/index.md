@@ -22,14 +22,14 @@ project: android-lifecycle
 #### Kotlin
 ```kotlin
 dependencies {
-   implementation("it.czerwinski.android.lifecycle:lifecycle-livedata:[VERSION]")
+    implementation("it.czerwinski.android.lifecycle:lifecycle-livedata:[VERSION]")
 }
 ```
 
 #### Groovy
 ```groovy
 dependencies {
-   implementation 'it.czerwinski.android.lifecycle:lifecycle-livedata:[VERSION]'
+    implementation 'it.czerwinski.android.lifecycle:lifecycle-livedata:[VERSION]'
 }
 ```
 
@@ -117,8 +117,8 @@ Returns a [LiveData] emitting values from this LiveData, after dropping values f
 ```kotlin
 val resultLiveData: LiveData<ResultData> = // ...
 val delayedResultLiveData: LiveData<ResultData> = resultLiveData.delayStart(
-  timeInMillis = 1000L,
-  context = viewModelScope.coroutineContext
+    timeInMillis = 1000L,
+    context = viewModelScope.coroutineContext
 )
 ```
 
@@ -197,7 +197,44 @@ is equivalent to:
 mediatorLiveData.addSource(liveData) { x -> mediatorLiveData.value = x }
 ```
 
-## LivaData Testing Utilities
+## LivaData Testing Utilities For JUnit4
+
+[![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit4)][lifecycle-livedata-test-junit4-release]
+[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit4?server=https%3A%2F%2Foss.sonatype.org)][lifecycle-livedata-test-junit4-snapshot]
+
+#### Kotlin
+```kotlin
+dependencies {
+    testImplementation("junit:junit:4.13.1")
+    testImplementation("it.czerwinski.android.lifecycle:lifecycle-livedata-test-junit4:[VERSION]")
+}
+```
+
+#### Groovy
+```groovy
+dependencies {
+    testImplementation 'junit:junit:4.13.1'
+    testImplementation 'it.czerwinski.android.lifecycle:lifecycle-livedata-test-junit4:[VERSION]'
+}
+```
+
+### JUnit4 Rules
+
+#### `TestCoroutineDispatcherRule`
+JUnit4 test rule that swaps main coroutine dispatcher with [TestCoroutineDispatcher].
+
+```kotlin
+class MyTestClass {
+
+    @Rule
+    @JvmField
+    val testCoroutineDispatcherRule = TestCoroutineDispatcherRule()
+
+    // ...
+}
+```
+
+## LivaData Testing Utilities For JUnit5
 
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit5)][lifecycle-livedata-test-junit5-release]
 [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit5?server=https%3A%2F%2Foss.sonatype.org)][lifecycle-livedata-test-junit5-snapshot]
@@ -207,18 +244,18 @@ mediatorLiveData.addSource(liveData) { x -> mediatorLiveData.value = x }
 #### Kotlin
 ```kotlin
 dependencies {
-   testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
-   testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
-   testImplementation("it.czerwinski.android.lifecycle:lifecycle-livedata-test-junit5:[VERSION]")
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.0")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.7.0")
+    testImplementation("it.czerwinski.android.lifecycle:lifecycle-livedata-test-junit5:[VERSION]")
 }
 ```
 
 #### Groovy
 ```groovy
 dependencies {
-   testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-   testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-   testImplementation 'it.czerwinski.android.lifecycle:lifecycle-livedata-test-junit5:[VERSION]'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'it.czerwinski.android.lifecycle:lifecycle-livedata-test-junit5:[VERSION]'
 }
 ```
 
@@ -233,7 +270,7 @@ This extension is analogous to [InstantTaskExecutorRule] for JUnit4.
 ```kotlin
 @ExtendWith(InstantTaskExecutorExtension::class)
 class MyTestClass {
-   // ...
+    // ...
 }
 ```
 
@@ -243,15 +280,17 @@ JUnit5 extension that swaps main coroutine dispatcher with [TestCoroutineDispatc
 ```kotlin
 @ExtendWith(TestCoroutineDispatcherExtension::class)
 class MyTestClass {
-   // ...
+    // ...
 }
 ```
 
 
 [ci-build]: https://github.com/sczerwinski/android-lifecycle/actions?query=workflow%3ABuild
 [lifecycle-livedata-release]: https://repo1.maven.org/maven2/it/czerwinski/android/lifecycle/lifecycle-livedata/
+[lifecycle-livedata-test-junit4-release]: https://repo1.maven.org/maven2/it/czerwinski/android/lifecycle/lifecycle-livedata-test-junit4/
 [lifecycle-livedata-test-junit5-release]: https://repo1.maven.org/maven2/it/czerwinski/android/lifecycle/lifecycle-livedata-test-junit5/
 [lifecycle-livedata-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/lifecycle/lifecycle-livedata/
+[lifecycle-livedata-test-junit4-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/lifecycle/lifecycle-livedata-test-junit4/
 [lifecycle-livedata-test-junit5-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/lifecycle/lifecycle-livedata-test-junit5/
 
 [LiveData]: https://developer.android.com/reference/androidx/lifecycle/LiveData
