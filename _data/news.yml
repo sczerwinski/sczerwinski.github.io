@@ -1,9 +1,9 @@
 - date: 2020-12-23
-  title: "Android Room Extensions: Release 1.0.0-ALPHA2"
+  title: "Android Room Extensions: Release 1.0.0-ALPHA3"
   content: |
     Extensions for Jetpack Room.<br />
-    <code>RoomDatabase.Builder</code> extensions.
-  url: /projects/android-lifecycle/
+    <code>RoomDatabase.Builder</code> extensions, <code>TypeConverter</code> generator.
+  url: /projects/android-room/
   tags: android
 
 - date: 2020-12-22
