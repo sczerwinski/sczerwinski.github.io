@@ -1,8 +1,8 @@
-- date: 2020-12-19
-  title: "Android Lifecycle Extensions: Release 1.0.0-BETA3"
+- date: 2020-12-22
+  title: "Android Lifecycle Extensions: Release 1.0.0-RC1"
   content: |
     Extensions for Jetpack Lifecycle.<br />
-    <code>LiveData</code> transformations, JUnit5 extensions.
+    <code>LiveData</code> transformations, JUnit extensions.
   url: /projects/android-lifecycle/
   tags: android
 
