@@ -1,3 +1,11 @@
+- date: 2020-12-23
+  title: "Android Room Extensions: Release 1.0.0-ALPHA2"
+  content: |
+    Extensions for Jetpack Room.<br />
+    <code>RoomDatabase.Builder</code> extensions.
+  url: /projects/android-lifecycle/
+  tags: android
+
 - date: 2020-12-22
   title: "Android Lifecycle Extensions: Release 1.0.0-RC1"
   content: |
@@ -39,12 +47,6 @@
   content: Why Kotlin not-null assertion operator (a.k.a. double exclamation operator) should be avoided
   url: /2018/11/30/the-case-against-double-exclamation-operator.html
   tags: kotlin
-
-- date: 2017-06-04
-  title: Simplifying Android Espresso Test Rules With Reified Type Parameters
-  content: How to simplify Android Espresso test rules with reified type parameters in Kotlin
-  url: /2017/06/04/simplifying-activitytestrule-syntax-with-reified-type-parameters.html
-  tags: kotlin, android
 
 - date: 2017-01-17
   title: Most Common Typographical Errors in Software
