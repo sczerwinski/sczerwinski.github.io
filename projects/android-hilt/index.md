@@ -59,22 +59,22 @@ val property: Int by intProvider
 
 ### Generating Hilt Modules
 
-#### `@Primary`
+#### `@BoundTo`
 Marks primary implementation of the given supertype.
 
 For example:
 ```kotlin
 interface Repository
 
-@Primary(supertype = Repository::class, component = SingletonComponent::class)
+@BoundTo(supertype = Repository::class, component = SingletonComponent::class)
 class RepositoryA @Inject constructor() : Repository
 
-@Primary(supertype = Repository::class, component = SingletonComponent::class)
+@BoundTo(supertype = Repository::class, component = SingletonComponent::class)
 @Singleton
 @Named("online")
 class RepositoryB @Inject constructor() : Repository
 
-@Primary(supertype = Repository::class, component = SingletonComponent::class)
+@BoundTo(supertype = Repository::class, component = SingletonComponent::class)
 @Named("offline")
 class RepositoryC @Inject constructor() : Repository
 ```
@@ -82,7 +82,7 @@ will generate module:
 ```java
 @Module
 @InstallIn(SingletonComponent.class)
-public interface SingletonComponent_PrimaryModule {
+public interface SingletonComponent_BindingsModule {
 
     @Binds
     Repository bindRepositoryA(RepositoryA implementation);
@@ -163,7 +163,56 @@ public class SingletonComponent_FactoryMethodsModule {
 }
 ```
 
+## Hilt Testing Extensions
+
+[![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.hilt/hilt-fragment-testing)][hilt-fragment-testing-release]
+[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.hilt/hilt-fragment-testing?server=https%3A%2F%2Foss.sonatype.org)][hilt-fragment-testing-snapshot]
+
+### Build Configuration
+Must be used as `debugImplementation` dependency to properly register `EmptyFragmentActivity`
+in manifest.
+
+#### Kotlin
+```kotlin
+dependencies {
+    implementation("com.google.dagger:hilt-android:2.30.1-alpha")
+
+    androidTestImplementation("androidx.test:runner:1.3.0")
+    debugImplementation("it.czerwinski.android.hilt:hilt-fragment-testing:[VERSION]")
+}
+```
+
+#### Groovy
+```groovy
+dependencies {
+    implementation 'com.google.dagger:hilt-android:2.30.1-alpha'
+
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    debugImplementation 'it.czerwinski.android.hilt:hilt-fragment-testing:[VERSION]'
+}
+```
+
+### Testing Fragments With Hilt
+
+#### `HiltFragmentScenario`
+Works exactly like [FragmentScenario], but supports Hilt dependency injection in fragments.
+
+Just replace `androidx.fragment:fragment-testing` dependency with
+`it.czerwinski.android.hilt:hilt-fragment-testing`. All `launchFragment`
+and `launchFragmentInContainer` functions are available with exactly the same signatures,
+but return `HiltFragmentScenario` instead of `FragmentScenario`.
+
+In addition, it is possible to run tests using a custom class extending `FragmentActivity`,
+so if you are using a base activity in your project, you can run tests of your fragment in it.
+
+`HiltFragmentScenario` also implements `onActivity`, which allows for running `ActivityAction`s,
+even when the fragment has already been removed.
+
 
 [ci-build]: https://github.com/sczerwinski/android-hilt/actions?query=workflow%3ABuild
 [hilt-extensions-release]: https://repo1.maven.org/maven2/it/czerwinski/android/hilt/hilt-extensions/
 [hilt-extensions-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/hilt/hilt-extensions/
+[hilt-fragment-testing-release]: https://repo1.maven.org/maven2/it/czerwinski/android/hilt/hilt-fragment-testing/
+[hilt-fragment-testing-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/hilt/hilt-fragment-testing/
+
+[FragmentScenario]: https://developer.android.com/guide/fragments/test
