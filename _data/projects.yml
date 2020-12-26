@@ -10,6 +10,12 @@ android-graphics-util:
   github: sczerwinski/android-graphics-util
   tags: android
 
+android-hilt:
+  name: Android Hilt Extensions
+  description: Extensions for Dagger Hilt
+  github: sczerwinski/android-hilt
+  tags: android
+
 android-lifecycle:
   name: Android Lifecycle Extensions
   description: Extensions for Jetpack Lifecycle
