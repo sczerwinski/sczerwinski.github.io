@@ -4,12 +4,6 @@ android-charts:
   github: sczerwinski/android-charts
   tags: android
 
-android-graphics-util:
-  name: Android Graphics Utilities
-  description: Extensions for Android graphics
-  github: sczerwinski/android-graphics-util
-  tags: android
-
 android-extensions:
   name: Android Extensions
   description: Extensions for Hilt, Jetpack Lifecycle, Room
@@ -33,6 +27,12 @@ android-extensions:
       description: Extensions for Jetpack Room
       github: sczerwinski/android-room
       tags: android
+
+android-graphics-util:
+  name: Android Graphics Utilities
+  description: Extensions for Android graphics
+  github: sczerwinski/android-graphics-util
+  tags: android
 
 kotlin-util:
   name: Kotlin utilities
