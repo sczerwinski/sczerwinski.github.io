@@ -10,23 +10,29 @@ android-graphics-util:
   github: sczerwinski/android-graphics-util
   tags: android
 
-android-hilt:
-  name: Android Hilt Extensions
-  description: Extensions for Dagger Hilt
-  github: sczerwinski/android-hilt
+android-extensions:
+  name: Android Extensions
+  description: Extensions for Hilt, Jetpack Lifecycle, Room
   tags: android
+  projects:
 
-android-lifecycle:
-  name: Android Lifecycle Extensions
-  description: Extensions for Jetpack Lifecycle
-  github: sczerwinski/android-lifecycle
-  tags: android
+    android-hilt:
+      name: Android Hilt Extensions
+      description: Extensions for Dagger Hilt
+      github: sczerwinski/android-hilt
+      tags: android
 
-android-room:
-  name: Android Room Extensions
-  description: Extensions for Jetpack Room
-  github: sczerwinski/android-room
-  tags: android
+    android-lifecycle:
+      name: Android Lifecycle Extensions
+      description: Extensions for Jetpack Lifecycle
+      github: sczerwinski/android-lifecycle
+      tags: android
+
+    android-room:
+      name: Android Room Extensions
+      description: Extensions for Jetpack Room
+      github: sczerwinski/android-room
+      tags: android
 
 kotlin-util:
   name: Kotlin utilities
