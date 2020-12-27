@@ -202,6 +202,8 @@ mediatorLiveData.addSource(liveData) { x -> mediatorLiveData.value = x }
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit4)][lifecycle-livedata-test-junit4-release]
 [![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.lifecycle/lifecycle-livedata-test-junit4?server=https%3A%2F%2Foss.sonatype.org)][lifecycle-livedata-test-junit4-snapshot]
 
+### Build Configuration
+
 #### Kotlin
 ```kotlin
 dependencies {
