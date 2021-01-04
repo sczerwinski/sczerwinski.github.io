@@ -1,23 +1,15 @@
 
-{% for post in site.posts  %}
+{% assign posts_by_year = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
 
-{% assign curr_year = post.date | date: "%Y" %}
-{% assign next_year = post.previous.date | date: "%Y" %}
+{% for year in posts_by_year %}
+<div class="card-header">
+    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse{{ year.name }}">{{ year.name }}</button>
+</div>
+<ul id="collapse{{ year.name }}" class="collapse list-group list-group-flush" data-parent="#posts-accordion">
 
-{% if forloop.first %}
-<div class="card-header">{{curr_year}}</div>
-<ul class="list-group list-group-flush">
-{% endif %}
-
+    {% for post in year.items %}
     <li class="list-group-item"><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
 
-{% if forloop.last %}
 </ul>
-{% elsif curr_year != next_year %}
-</ul>
-
-<div class="card-header">{{next_year}}</div>
-<ul class="list-group list-group-flush">
-{% endif %}
-
 {% endfor %}
