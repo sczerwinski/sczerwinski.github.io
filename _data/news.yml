@@ -1,3 +1,12 @@
+- date: 2020-01-14
+  title: "Android Lifecycle Extensions: Release 1.1.0-ALPHA1"
+  content: |
+    Extensions for Jetpack Lifecycle.<br />
+    <code>LiveData</code> transformations, JUnit extensions.
+    <b>NEW:</b> <code>TestObserver</code>.
+  url: /projects/android-lifecycle/
+  tags: android
+
 - date: 2021-01-03
   title: "Android Room Extensions: Release 1.0.0"
   content: |
@@ -13,14 +22,6 @@
     Annotations for <code>@Primary</code> implementation and <code>@FactoryMethod</code>,<br />
     <code>HiltFragmentScenario</code>.
   url: /projects/android-hilt/
-  tags: android
-
-- date: 2020-12-27
-  title: "Android Lifecycle Extensions: Release 1.0.0"
-  content: |
-    Extensions for Jetpack Lifecycle.<br />
-    <code>LiveData</code> transformations, JUnit extensions.
-  url: /projects/android-lifecycle/
   tags: android
 
 - date: 2020-12-08
