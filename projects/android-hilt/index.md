@@ -22,7 +22,7 @@ project: android-hilt
 #### Kotlin
 ```kotlin
 dependencies {
-    implementation("com.google.dagger:hilt-android:2.30.1-alpha")
+    implementation("com.google.dagger:hilt-android:2.31-alpha")
     implementation("it.czerwinski.android.hilt:hilt-extensions:[VERSION]")
     kapt("it.czerwinski.android.hilt:hilt-processor:[VERSION]")
 }
@@ -31,7 +31,7 @@ dependencies {
 #### Groovy
 ```groovy
 dependencies {
-    implementation 'com.google.dagger:hilt-android:2.30.1-alpha'
+    implementation 'com.google.dagger:hilt-android:2.31-alpha'
     implementation 'it.czerwinski.android.hilt:hilt-extensions:[VERSION]'
     kapt 'it.czerwinski.android.hilt:hilt-processor:[VERSION]'
 }
@@ -59,14 +59,18 @@ val property: Int by intProvider
 
 ### Generating Hilt Modules
 
-#### `@BoundTo`
-Marks primary implementation of the given supertype.
+#### `@Bound` and `@BoundTo`
+Marks implementation bound to the given supertype in the given component.
+
+`@Bound` annotation (added in v1.1.0) works exactly like `@BoundTo` annotation,
+but it implicitly uses the direct supertype of the annotated class. It may only
+annotate classes having exactly one direct supertype, excluding `java.lang.Object`.
 
 For example:
 ```kotlin
 interface Repository
 
-@BoundTo(supertype = Repository::class, component = SingletonComponent::class)
+@BoundTo(supertype = Repository::class)
 class RepositoryA @Inject constructor() : Repository
 
 @BoundTo(supertype = Repository::class, component = SingletonComponent::class)
@@ -74,7 +78,7 @@ class RepositoryA @Inject constructor() : Repository
 @Named("online")
 class RepositoryB @Inject constructor() : Repository
 
-@BoundTo(supertype = Repository::class, component = SingletonComponent::class)
+@Bound(component = SingletonComponent::class)
 @Named("offline")
 class RepositoryC @Inject constructor() : Repository
 ```
@@ -82,7 +86,7 @@ will generate module:
 ```java
 @Module
 @InstallIn(SingletonComponent.class)
-public interface SingletonComponent_BindingsModule {
+public interface Repository_SingletonComponent_BindingsModule {
 
     @Binds
     Repository bindRepositoryA(RepositoryA implementation);
@@ -97,6 +101,9 @@ public interface SingletonComponent_BindingsModule {
     Repository bindRepositoryC(RepositoryC implementation);
 }
 ```
+
+Since release 1.1.0, `component` property is optional, and set to
+`SingletonComponent` by default.
 
 #### `@FactoryMethod`
 Marks factory method for the class returned by the annotated function.
@@ -137,31 +144,55 @@ object DatabaseFactoryProvider {
         else ProductionDatabaseFactory(context)
 }
 ```
-annotation processor will generate module:
+annotation processor will generate modules:
 ```java
 @Module
 @InstallIn(SingletonComponent.class)
-public class SingletonComponent_FactoryMethodsModule {
-
-    @Provides
-    public DatabaseFactory databaseFactoryProviderCreateDatabaseFactory(
-            @ApplicationContext Context context) {
-        return DatabaseFactoryProvider.INSTANCE.createDatabaseFactory(context);
-    }
-
+public class UsersDao_SingletonComponent_FactoryMethodsModule {
     @Provides
     @Singleton
-    public AppDatabase databaseFactoryCreateDatabase(DatabaseFactory $receiver) {
-        return $receiver.createDatabase();
-    }
-
-    @Provides
-    @Singleton
-    public UsersDao appDatabaseUsersDao(AppDatabase $receiver) {
+    public UsersDao appDatabase_usersDao(AppDatabase $receiver) {
         return $receiver.usersDao();
     }
 }
 ```
+```java
+@Module
+@InstallIn(SingletonComponent.class)
+public class AppDatabase_SingletonComponent_FactoryMethodsModule {
+    @Provides
+    @Singleton
+    public AppDatabase databaseFactory_createDatabase(DatabaseFactory $receiver) {
+        return $receiver.createDatabase();
+    }
+}
+```
+```java
+@Module
+@InstallIn(SingletonComponent.class)
+public class DatabaseFactory_SingletonComponent_FactoryMethodsModule {
+    @Provides
+    public DatabaseFactory databaseFactoryProvider_createDatabaseFactory(
+            @ApplicationContext Context context) {
+        return DatabaseFactoryProvider.INSTANCE.createDatabaseFactory(context);
+    }
+}
+```
+
+Since release 1.1.0, component property is optional, and set to `SingletonComponent` by default.
+
+#### `@TestBound`, `@TestBoundTo` and `@TestFactoryMethod`
+
+Version 1.1.0 introduces additional test annotations that can be used to generate modules
+annotated with [`@TestInstallIn`][TestInstallIn], instead of `@InstallIn`:
+- `@TestBound` (instead of `@Bound`)
+- `@TestBoundTo` (instead of `@BoundTo`)
+- `@TestFactoryMethod` (instead of `@FactoryMethod`)
+
+Test module generated using `@TestBound` and/or `@TestBoundTo` will replace the module generated using
+`@Bound` and/or `@BoundTo`.
+
+Test module generated using `@TestFactoryMethod` will replace the module generated with `@FactoryMethod`.
 
 ## Hilt Testing Extensions
 
@@ -175,7 +206,7 @@ in manifest.
 #### Kotlin
 ```kotlin
 dependencies {
-    implementation("com.google.dagger:hilt-android:2.30.1-alpha")
+    implementation("com.google.dagger:hilt-android:2.31-alpha")
 
     androidTestImplementation("androidx.test:runner:1.3.0")
     debugImplementation("it.czerwinski.android.hilt:hilt-fragment-testing:[VERSION]")
@@ -185,7 +216,7 @@ dependencies {
 #### Groovy
 ```groovy
 dependencies {
-    implementation 'com.google.dagger:hilt-android:2.30.1-alpha'
+    implementation 'com.google.dagger:hilt-android:2.31-alpha'
 
     androidTestImplementation 'androidx.test:runner:1.3.0'
     debugImplementation 'it.czerwinski.android.hilt:hilt-fragment-testing:[VERSION]'
@@ -216,3 +247,4 @@ even when the fragment has already been removed.
 [hilt-fragment-testing-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/hilt/hilt-fragment-testing/
 
 [FragmentScenario]: https://developer.android.com/guide/fragments/test
+[TestInstallIn]: https://dagger.dev/hilt/testing#testinstallin
