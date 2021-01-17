@@ -15,11 +15,6 @@ exclude: 'yes'
     "url": "https://github.com/{{ site.github }}"
   },
   {
-    "name": "Twitter",
-    "type": "twitter",
-    "url": "https://twitter.com/{{ site.twitter }}"
-  },
-  {
     "name": "LinkedIn",
     "type": "linkedin",
     "url": "https://www.linkedin.com/in/{{ site.linkedin }}"
