@@ -1,8 +1,18 @@
+- date: 2021-01-17
+  title: "Android Hilt Extensions: Release 1.1.0-ALPHA2"
+  content: |
+    Extensions for Dagger Hilt.<br />
+    Annotations for <code>@Bound</code> implementation and <code>@FactoryMethod</code>,<br />
+    <code>HiltFragmentScenario</code>.<br />
+    <b>NEW:</b> Annotations for generating test modules.
+  url: /projects/android-hilt/
+  tags: android
+
 - date: 2020-01-14
   title: "Android Lifecycle Extensions: Release 1.1.0-ALPHA1"
   content: |
     Extensions for Jetpack Lifecycle.<br />
-    <code>LiveData</code> transformations, JUnit extensions.
+    <code>LiveData</code> transformations, JUnit extensions.<br />
     <b>NEW:</b> <code>TestObserver</code>.
   url: /projects/android-lifecycle/
   tags: android
@@ -13,15 +23,6 @@
     Extensions for Jetpack Room.<br />
     <code>RoomDatabase.Builder</code> extensions, <code>TypeConverter</code> generator.
   url: /projects/android-room/
-  tags: android
-
-- date: 2021-01-03
-  title: "Android Hilt Extensions: Release 1.0.0"
-  content: |
-    Extensions for Dagger Hilt.<br />
-    Annotations for <code>@Primary</code> implementation and <code>@FactoryMethod</code>,<br />
-    <code>HiltFragmentScenario</code>.
-  url: /projects/android-hilt/
   tags: android
 
 - date: 2020-12-08
