@@ -1,5 +1,5 @@
-- date: 2021-01-17
-  title: "Android Hilt Extensions: Release 1.1.0-ALPHA2"
+- date: 2021-01-18
+  title: "Android Hilt Extensions: Release 1.1.0-BETA1"
   content: |
     Extensions for Dagger Hilt.<br />
     Annotations for <code>@Bound</code> implementation and <code>@FactoryMethod</code>,<br />
@@ -8,8 +8,8 @@
   url: /projects/android-hilt/
   tags: android
 
-- date: 2020-01-14
-  title: "Android Lifecycle Extensions: Release 1.1.0-ALPHA1"
+- date: 2020-01-18
+  title: "Android Lifecycle Extensions: Release 1.1.0-BETA1"
   content: |
     Extensions for Jetpack Lifecycle.<br />
     <code>LiveData</code> transformations, JUnit extensions.<br />
