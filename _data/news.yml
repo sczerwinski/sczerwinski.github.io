@@ -1,5 +1,13 @@
-- date: 2021-01-18
-  title: "Android Hilt Extensions: Release 1.1.0-BETA1"
+- date: 2021-02-03
+  title: "Kotlin Utilities: Release 1.4.30"
+  content: |
+    Kotlin utility types based on Scala open source project.<br />
+    <b>Multiplatform project</b>
+  url: /projects/kotlin-util/
+  tags: kotlin
+
+- date: 2021-02-03
+  title: "Android Hilt Extensions: Release 1.1.0-RC1"
   content: |
     Extensions for Dagger Hilt.<br />
     Annotations for <code>@Bound</code> implementation and <code>@FactoryMethod</code>,<br />
@@ -8,8 +16,8 @@
   url: /projects/android-hilt/
   tags: android
 
-- date: 2020-01-18
-  title: "Android Lifecycle Extensions: Release 1.1.0-BETA1"
+- date: 2021-02-03
+  title: "Android Lifecycle Extensions: Release 1.1.0-RC1"
   content: |
     Extensions for Jetpack Lifecycle.<br />
     <code>LiveData</code> transformations, JUnit extensions.<br />
@@ -17,21 +25,13 @@
   url: /projects/android-lifecycle/
   tags: android
 
-- date: 2021-01-03
-  title: "Android Room Extensions: Release 1.0.0"
+- date: 2021-02-03
+  title: "Android Room Extensions: Release 1.0.1"
   content: |
     Extensions for Jetpack Room.<br />
     <code>RoomDatabase.Builder</code> extensions, <code>TypeConverter</code> generator.
   url: /projects/android-room/
   tags: android
-
-- date: 2020-12-08
-  title: "Kotlin Utilities: Release 1.4.21"
-  content: |
-    Kotlin utility types based on Scala open source project.<br />
-    <b>NEW:</b> Published artifacts for all native targets.
-  url: /projects/kotlin-util/
-  tags: kotlin
 
 - date: 2020-11-28
   title: "Xpresso: Release 1.0"
