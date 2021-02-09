@@ -18,18 +18,9 @@ project: wavefront-obj-intellij-plugin
 
 ### Supported features
 
-- OBJ file format:
-  - `v` – vertices,
-  - `vt` – texture coordinates,
-  - `vn` – normals,
-  - `f` – faces,
-  - `l` – lines,
-  - `p` – points,
-  - `s` – smooth shading flagg (`1`/`off`),
-  - `o` – objects,
-  - `g` – groups,
-  - `mtllib` – references to MTL file (without navigation or validation),
-  - `usemtl` – references to materials (without navigation or validation).
+- OBJ file format,
+- MTL file format,
+- navigation between OBJ and MTL files,
 - 3D preview of OBJ file:
   - text only, preview only, or split,
   - selection of up axis,
@@ -40,13 +31,24 @@ project: wavefront-obj-intellij-plugin
 The following features are already under consideration, so please refrain from requesting them in
 issue tracker.
 
-- MTL file format,
-- navigation between OBJ and MTL files,
 - 3D preview improvements:
   - additional shading models: flat and Phong,
   - textures,
   - highlighting selected element,
   - applying materials from MTL files.
+
+## Supported operating systems
+
+3D preview is supported for:
+- Windows:
+  - i586
+  - AMD64
+- macOS
+- Linux:
+  - i586
+  - AMD64
+  - ARMv6hf
+  - AArch64
 
 ## Installation
 
@@ -60,7 +62,7 @@ issue tracker.
   Download the
   [latest release][latest_release]
   and install it manually using:
-   
+
   <kbd>Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> >
   <kbd>Install plugin from disk...</kbd>
 
@@ -68,8 +70,8 @@ issue tracker.
 
 ### OBJ File Type And Editor
 
-After installation, `.obj` file extension will be automatically associated with Wavefront OBJ
-file format and editor.
+After installation, `.obj` and `.mtl` file extension will be automatically
+associated with Wavefront OBJ/MTL file format and editor.
 
 #### 3D Preview Controls
 
@@ -81,6 +83,10 @@ file format and editor.
 - To change Wavefront OBJ editor color scheme, use:
 
   <kbd>Preferences</kbd> > <kbd>Editor</kbd> > <kbd>Color Scheme</kbd> > <kbd>Wavefront OBJ</kbd>
+
+- To change Wavefront MTL editor color scheme, use:
+
+  <kbd>Preferences</kbd> > <kbd>Editor</kbd> > <kbd>Color Scheme</kbd> > <kbd>Wavefront MTL</kbd>
 
 - To change plugin configuration, use
 

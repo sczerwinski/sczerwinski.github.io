@@ -1,3 +1,11 @@
+- date: 2021-02-08
+  title: "Wavefront OBJ: Release 0.2.1"
+  content: |
+    IntelliJ IDE plugin. Adds support for Wavefront OBJ files.
+    <b>NEW:</b> MTL files support.
+  url: /projects/wavefront-obj-intellij-plugin/
+  tags: plugins
+
 - date: 2021-02-03
   title: "Kotlin Utilities: Release 1.4.30"
   content: |
@@ -40,12 +48,6 @@
     <b>NEW:</b> <code>RecyclerView</code> support.
   url: /projects/android-xpresso/
   tags: android, testing
-
-- date: 2020-11-06
-  title: "Wavefront OBJ: Release 0.1.3"
-  content: IntelliJ IDE plugin. Adds support for Wavefront OBJ files.
-  url: /projects/wavefront-obj-intellij-plugin/
-  tags: plugins
 
 - date: 2020-05-17
   title: "Android Charts: Release 0.1"
