@@ -1,0 +1,8 @@
+$dokka.format:jekyll-v1
+$dokka.linkExtension:md
+
+it.czerwinski.android.lifecycle.livedata
+it.czerwinski.android.lifecycle.livedata.test
+it.czerwinski.android.lifecycle.livedata.test.junit4
+it.czerwinski.android.lifecycle.livedata.test.junit5
+

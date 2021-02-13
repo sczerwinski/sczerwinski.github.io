@@ -10,6 +10,7 @@ project: android-lifecycle
 
 [![Build](https://github.com/sczerwinski/android-lifecycle/workflows/Build/badge.svg)][ci-build]
 [![Source](https://img.shields.io/badge/source-GitHub-blue.svg)](https://github.com/sczerwinski/android-lifecycle)
+[![API Documentation](https://img.shields.io/badge/api-docs-blue.svg)](1.1.0/docs)
 ![License](https://img.shields.io/badge/license-Apache%202-blue)
 
 ## LiveData Extensions
