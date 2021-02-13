@@ -1,0 +1,7 @@
+$dokka.format:jekyll-v1
+$dokka.linkExtension:md
+
+it.czerwinski.android.hilt
+it.czerwinski.android.hilt.annotations
+it.czerwinski.android.hilt.fragment.testing
+
