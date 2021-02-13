@@ -1,3 +1,22 @@
+- date: 2021-02-13
+  title: "Android Hilt Extensions: Release 1.1.0"
+  content: |
+    Extensions for Dagger Hilt.<br />
+    Annotations for <code>@Bound</code> implementation and <code>@FactoryMethod</code>,<br />
+    <code>HiltFragmentScenario</code>.<br />
+    <b>NEW:</b> Annotations for generating test modules.
+  url: /projects/android-hilt/
+  tags: android
+
+- date: 2021-02-13
+  title: "Android Lifecycle Extensions: Release 1.1.0"
+  content: |
+    Extensions for Jetpack Lifecycle.<br />
+    <code>LiveData</code> transformations, JUnit extensions.<br />
+    <b>NEW:</b> <code>TestObserver</code>.
+  url: /projects/android-lifecycle/
+  tags: android
+
 - date: 2021-02-08
   title: "Wavefront OBJ: Release 0.2.1"
   content: |
@@ -13,25 +32,6 @@
     <b>Multiplatform project</b>
   url: /projects/kotlin-util/
   tags: kotlin
-
-- date: 2021-02-03
-  title: "Android Hilt Extensions: Release 1.1.0-RC1"
-  content: |
-    Extensions for Dagger Hilt.<br />
-    Annotations for <code>@Bound</code> implementation and <code>@FactoryMethod</code>,<br />
-    <code>HiltFragmentScenario</code>.<br />
-    <b>NEW:</b> Annotations for generating test modules.
-  url: /projects/android-hilt/
-  tags: android
-
-- date: 2021-02-03
-  title: "Android Lifecycle Extensions: Release 1.1.0-RC1"
-  content: |
-    Extensions for Jetpack Lifecycle.<br />
-    <code>LiveData</code> transformations, JUnit extensions.<br />
-    <b>NEW:</b> <code>TestObserver</code>.
-  url: /projects/android-lifecycle/
-  tags: android
 
 - date: 2021-02-03
   title: "Android Room Extensions: Release 1.0.1"
