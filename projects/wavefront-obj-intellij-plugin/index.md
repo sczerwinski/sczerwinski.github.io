@@ -2,7 +2,7 @@
 title: Wavefront OBJ IntelliJ Plugin
 layout: toc-page
 abstract: Wavefront OBJ file type and 3D preview plugin for IntelliJ platform
-keywords: 3d,wavefront,obj,intellij,plugin
+keywords: 3d,wavefront,obj,mtl,intellij,plugin
 project: wavefront-obj-intellij-plugin
 ---
 
@@ -11,6 +11,7 @@ project: wavefront-obj-intellij-plugin
 ![Build][build_badge]
 [![Version][jb_version_badge]][jb_plugin_page]
 [![Downloads][jb_download_badge]][jb_plugin_page]
+[![Rating][jb_rating_badge]][jb_plugin_page]
 [![Source][gh_badge]][gh_project]
 ![License][gh_license_badge]
 
@@ -21,21 +22,7 @@ project: wavefront-obj-intellij-plugin
 - OBJ file format,
 - MTL file format,
 - navigation between OBJ and MTL files,
-- 3D preview of OBJ file:
-  - text only, preview only, or split,
-  - selection of up axis,
-  - Gouraud shading model.
-
-### Planned features
-
-The following features are already under consideration, so please refrain from requesting them in
-issue tracker.
-
-- 3D preview improvements:
-  - additional shading models: flat and Phong,
-  - textures,
-  - highlighting selected element,
-  - applying materials from MTL files.
+- 3D preview of OBJ file.
 
 ## Supported operating systems
 
@@ -70,13 +57,18 @@ issue tracker.
 
 ### OBJ File Type And Editor
 
-After installation, `.obj` and `.mtl` file extension will be automatically
-associated with Wavefront OBJ/MTL file format and editor.
+After installation, `.obj` file extension will be automatically associated with Wavefront OBJ
+file format and editor.
 
 #### 3D Preview Controls
 
 - Hold mouse left button on the 3D preview and move to pan the camera.
 - Use mouse wheel to zoom in/out.
+
+### MTL File Type And Editor
+
+After installation, `.mtl` file extension will be automatically associated with Wavefront MTL
+file format and editor.
 
 ### Settings
 
@@ -95,6 +87,7 @@ associated with Wavefront OBJ/MTL file format and editor.
 [build_badge]: https://github.com/sczerwinski/wavefront-obj-intellij-plugin/workflows/Build/badge.svg
 [jb_version_badge]: https://img.shields.io/jetbrains/plugin/v/14843-wavefront-obj
 [jb_download_badge]: https://img.shields.io/jetbrains/plugin/d/14843-wavefront-obj
+[jb_rating_badge]: https://img.shields.io/jetbrains/plugin/r/rating/14843-wavefront-obj
 [jb_plugin_page]: https://plugins.jetbrains.com/plugin/14843-wavefront-obj
 [gh_badge]: https://img.shields.io/badge/source-GitHub-blue.svg
 [gh_project]: https://github.com/sczerwinski/wavefront-obj-intellij-plugin

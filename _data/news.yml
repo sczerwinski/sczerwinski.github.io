@@ -1,3 +1,11 @@
+- date: 2021-04-12
+  title: "Wavefront OBJ: Release 0.3.2"
+  content: |
+    IntelliJ IDE plugin. Adds support for Wavefront OBJ files.
+    <b>NEW:</b> 3D preview shading method selection.
+  url: /projects/wavefront-obj-intellij-plugin/
+  tags: plugins
+
 - date: 2021-02-13
   title: "Android Hilt Extensions: Release 1.1.0"
   content: |
@@ -16,14 +24,6 @@
     <b>NEW:</b> <code>TestObserver</code>.
   url: /projects/android-lifecycle/
   tags: android
-
-- date: 2021-02-08
-  title: "Wavefront OBJ: Release 0.2.1"
-  content: |
-    IntelliJ IDE plugin. Adds support for Wavefront OBJ files.
-    <b>NEW:</b> MTL files support.
-  url: /projects/wavefront-obj-intellij-plugin/
-  tags: plugins
 
 - date: 2021-02-03
   title: "Kotlin Utilities: Release 1.4.30"
