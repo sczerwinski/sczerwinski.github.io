@@ -1,3 +1,10 @@
+- date: 2021-04-14
+  title: "Simplifying Room – Part I: Hilt Setup"
+  content: |
+    How to use Android Hilt Extensions library to simplify Room database setup in an Android project.
+  url: /2021/04/14/simplifying-room-1.html
+  tags: android
+
 - date: 2021-04-12
   title: "Wavefront OBJ: Release 0.3.2"
   content: |
@@ -5,16 +12,6 @@
     <b>NEW:</b> 3D preview shading method selection.
   url: /projects/wavefront-obj-intellij-plugin/
   tags: plugins
-
-- date: 2021-02-13
-  title: "Android Hilt Extensions: Release 1.1.0"
-  content: |
-    Extensions for Dagger Hilt.<br />
-    Annotations for <code>@Bound</code> implementation and <code>@FactoryMethod</code>,<br />
-    <code>HiltFragmentScenario</code>.<br />
-    <b>NEW:</b> Annotations for generating test modules.
-  url: /projects/android-hilt/
-  tags: android
 
 - date: 2021-02-13
   title: "Android Lifecycle Extensions: Release 1.1.0"
