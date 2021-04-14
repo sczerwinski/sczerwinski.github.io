@@ -21,6 +21,10 @@ $theme-colors: (
 @import "bootstrap";
 @import 'tocbot';
 
+body {
+    margin-bottom: 96px;
+}
+
 table {
     @extend .shadow-sm;
     @extend .card;
