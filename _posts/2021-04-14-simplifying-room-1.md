@@ -11,7 +11,7 @@ image: 2021-04-14-simplifying-room-1.png
 
 This article is first of a three-part “Simplifying Room” series:
 - Part I: Hilt Setup
-- Part II: Pre-Populated Data And Migrations (in preparation)
+- [Part II: Prepopulated Data And Migrations][simplifying-room-2]
 - Part III: Enum Type Converters (in preparation)
 
 {% include blockquote.html
@@ -207,12 +207,17 @@ If you’ve found a bug in the library or if you think it’s missing an
 important feature, you’re welcome to create a
 [new issue][github:android-hilt:issues].
 
+**Next:** [Part II: Prepopulated Data And Migrations][simplifying-room-2]
+
 ---
 
 ## Credits
 
 - Social media image by [rihaij][Pixabay:rihaij] from [Pixabay][Pixabay:dagger]
 - “The Mark of Athena” quote comes from [Quotes.Pub][quote:riordan]
+
+
+[simplifying-room-2]: /2021/06/20/simplifying-room-2.html
 
 [dagger]: https://dagger.dev/
 [dagger:hilt]: https://dagger.dev/hilt/
