@@ -1,9 +1,32 @@
+- date: 2021-06-20
+  title: "Simplifying Room – Part II: Prepopulated Data And Migrations"
+  content: |
+    How to use Android Room Extensions library to simplify database prepopulation and migrations.
+  url: /2021/06/20/simplifying-room-2.html
+  tags: android
+
+- date: 2021-06-13
+  title: "Android Lifecycle Extensions: Release 1.2.0"
+  content: |
+    Extensions for Jetpack Lifecycle.<br />
+    <code>LiveData</code> transformations, JUnit extensions.<br />
+  url: /projects/android-lifecycle/
+  tags: android
+
 - date: 2021-04-14
   title: "Simplifying Room – Part I: Hilt Setup"
   content: |
     How to use Android Hilt Extensions library to simplify Room database setup in an Android project.
   url: /2021/04/14/simplifying-room-1.html
   tags: android
+
+- date: 2021-05-28
+  title: "Kotlin Utilities: Release 1.5.10"
+  content: |
+    Kotlin utility types based on Scala open source project.<br />
+    <b>Multiplatform project</b>
+  url: /projects/kotlin-util/
+  tags: kotlin
 
 - date: 2021-04-12
   title: "Wavefront OBJ: Release 0.3.2"
@@ -12,31 +35,6 @@
     <b>NEW:</b> 3D preview shading method selection.
   url: /projects/wavefront-obj-intellij-plugin/
   tags: plugins
-
-- date: 2021-02-13
-  title: "Android Lifecycle Extensions: Release 1.1.0"
-  content: |
-    Extensions for Jetpack Lifecycle.<br />
-    <code>LiveData</code> transformations, JUnit extensions.<br />
-    <b>NEW:</b> <code>TestObserver</code>.
-  url: /projects/android-lifecycle/
-  tags: android
-
-- date: 2021-02-03
-  title: "Kotlin Utilities: Release 1.4.30"
-  content: |
-    Kotlin utility types based on Scala open source project.<br />
-    <b>Multiplatform project</b>
-  url: /projects/kotlin-util/
-  tags: kotlin
-
-- date: 2021-02-03
-  title: "Android Room Extensions: Release 1.0.1"
-  content: |
-    Extensions for Jetpack Room.<br />
-    <code>RoomDatabase.Builder</code> extensions, <code>TypeConverter</code> generator.
-  url: /projects/android-room/
-  tags: android
 
 - date: 2020-11-28
   title: "Xpresso: Release 1.0"
