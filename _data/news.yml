@@ -5,49 +5,11 @@
   url: /2021/06/20/simplifying-room-2.html
   tags: android
 
-- date: 2021-06-13
-  title: "Android Lifecycle Extensions: Release 1.2.0"
-  content: |
-    Extensions for Jetpack Lifecycle.<br />
-    <code>LiveData</code> transformations, JUnit extensions.<br />
-  url: /projects/android-lifecycle/
-  tags: android
-
 - date: 2021-04-14
   title: "Simplifying Room – Part I: Hilt Setup"
   content: |
     How to use Android Hilt Extensions library to simplify Room database setup in an Android project.
   url: /2021/04/14/simplifying-room-1.html
-  tags: android
-
-- date: 2021-05-28
-  title: "Kotlin Utilities: Release 1.5.10"
-  content: |
-    Kotlin utility types based on Scala open source project.<br />
-    <b>Multiplatform project</b>
-  url: /projects/kotlin-util/
-  tags: kotlin
-
-- date: 2021-04-12
-  title: "Wavefront OBJ: Release 0.3.2"
-  content: |
-    IntelliJ IDE plugin. Adds support for Wavefront OBJ files.
-    <b>NEW:</b> 3D preview shading method selection.
-  url: /projects/wavefront-obj-intellij-plugin/
-  tags: plugins
-
-- date: 2020-11-28
-  title: "Xpresso: Release 1.0"
-  content: |
-    Kotlin Android Espresso Extensions.<br />
-    <b>NEW:</b> <code>RecyclerView</code> support.
-  url: /projects/android-xpresso/
-  tags: android, testing
-
-- date: 2020-05-17
-  title: "Android Charts: Release 0.1"
-  content: First milestone release for Android Charts projects. Introduces pie charts.
-  url: /projects/android-charts/
   tags: android
 
 - date: 2018-11-30
