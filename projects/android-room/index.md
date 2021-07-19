@@ -20,7 +20,7 @@ project: android-room
 Artifact `it.czerwinski.android.room:room-extensions` aggregates artifacts:
 - `room-database`,
 - `room-database-sql`,
-- `room-converters`.
+- `room-converters` (until `v1.1.0`, now deprecated).
 
 You can either use `room-extensions` or any combination of the other artifacts, whichever suites your project.
 
@@ -29,7 +29,7 @@ You can either use `room-extensions` or any combination of the other artifacts, 
 #### Kotlin
 ```kotlin
 dependencies {
-    implementation("androidx.room:room-runtime:2.2.6")
+    implementation("androidx.room:room-runtime:2.3.0")
     implementation("it.czerwinski.android.room:room-extensions:[VERSION]")
 }
 ```
@@ -37,7 +37,7 @@ dependencies {
 #### Groovy
 ```groovy
 dependencies {
-    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.room:room-runtime:2.3.0'
     implementation 'it.czerwinski.android.room:room-extensions:[VERSION]'
 }
 ```
@@ -52,7 +52,7 @@ dependencies {
 #### Kotlin
 ```kotlin
 dependencies {
-    implementation("androidx.room:room-runtime:2.2.6")
+    implementation("androidx.room:room-runtime:2.3.0")
     implementation("it.czerwinski.android.room:room-database:[VERSION]")
 }
 ```
@@ -60,7 +60,7 @@ dependencies {
 #### Groovy
 ```groovy
 dependencies {
-    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.room:room-runtime:2.3.0'
     implementation 'it.czerwinski.android.room:room-database:[VERSION]'
 }
 ```
@@ -95,7 +95,7 @@ val database = context.roomInMemoryDatabaseBuilder<MyDatabase>().build()
 #### Kotlin
 ```kotlin
 dependencies {
-    implementation("androidx.room:room-runtime:2.2.6")
+    implementation("androidx.room:room-runtime:2.3.0")
     implementation("it.czerwinski.android.room:room-database-sql:[VERSION]")
 }
 ```
@@ -103,7 +103,7 @@ dependencies {
 #### Groovy
 ```groovy
 dependencies {
-    implementation 'androidx.room:room-runtime:2.2.6'
+    implementation 'androidx.room:room-runtime:2.3.0'
     implementation 'it.czerwinski.android.room:room-database-sql:[VERSION]'
 }
 ```
@@ -182,55 +182,23 @@ val database = context.roomDatabaseBuilder<MyDatabase>()
     .build()
 ```
 
-## Room `TypeConverter`s Generator
+## Deprecated Room `TypeConverter`s Generator
+
+**Deprecated:** [Room 2.3.0][room:2.3.0] offers built-in `enum` support.
+
+Future releases (after `v1.1.0`) of the library will no longer include these artifacts:
+- `it.czerwinski.android.room:room-converters`
+- `it.czerwinski.android.room:room-converters-processor`
 
 [![Maven Central](https://img.shields.io/maven-central/v/it.czerwinski.android.room/room-converters)][room-converters-release]
-[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/it.czerwinski.android.room/room-converters?server=https%3A%2F%2Foss.sonatype.org)][room-converters-snapshot]
-
-### Build Configuration
-
-#### Kotlin
-```kotlin
-dependencies {
-    implementation("androidx.room:room-runtime:2.2.6")
-    implementation("it.czerwinski.android.room:room-converters:[VERSION]")
-    kapt("it.czerwinski.android.room:room-converters-processor:[VERSION]")
-}
-```
-
-#### Groovy
-```groovy
-dependencies {
-    implementation 'androidx.room:room-runtime:2.2.6'
-    implementation 'it.czerwinski.android.room:room-converters:[VERSION]'
-    kapt 'it.czerwinski.android.room:room-converters-processor:[VERSION]'
-}
-```
 
 ### Generating Room `TypeConverter`s
 
-#### `@GenerateEnumTypeConverter`
-Marks an enum class to have automatically generated `@TypeConverter`s to and from the given type.
+#### Deprecated `@GenerateEnumTypeConverter` Annotation
 
-Enum can be stored in the database as name (`String` – default) or as ordinal (`Int`).
+**Deprecated:** [Room 2.3.0][room:2.3.0] offers built-in `enum` support.
 
-To store enum in a text field (as name):
-```kotlin
-@GenerateEnumTypeConverter(type = EnumType.STRING)
-enum class MyEnum {
-    FOO,
-    BAR
-}
-```
-
-To store enum in an integer field (as ordinal):
-```kotlin
-@GenerateEnumTypeConverter(type = EnumType.ORDINAL)
-enum class MyEnum {
-    FOO,
-    BAR
-}
-```
+An implicit `TypeConverter` will be used for all enum classes. 
 
 
 [ci-build]: https://github.com/sczerwinski/android-room/actions?query=workflow%3ABuild
@@ -241,4 +209,5 @@ enum class MyEnum {
 [room-database-sql-release]: https://repo1.maven.org/maven2/it/czerwinski/android/room/room-database-sql/
 [room-database-sql-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/room/room-database-sql/
 [room-converters-release]: https://repo1.maven.org/maven2/it/czerwinski/android/room/room-converters/
-[room-converters-snapshot]: https://oss.sonatype.org/content/repositories/snapshots/it/czerwinski/android/room/room-converters/
+
+[room:2.3.0]: https://developer.android.com/jetpack/androidx/releases/room#2.3.0
