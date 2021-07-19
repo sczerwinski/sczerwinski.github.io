@@ -9,15 +9,12 @@ tags: android
 image: 2021-06-20-simplifying-room-2.png
 ---
 
-This article is second of a three-part “Simplifying Room” series:
-- [Part I: Hilt Setup][simplifying-room-1]
-- Part II: Prepopulated Data And Migrations
-- Part III: Enum Type Converters (in preparation)
-
 {% include blockquote.html
 quote="One thing is undeniable. If we are going to continue to have support for migration, we need to be able to control the numbers."
 author="Michael Gove"
 url="https://www.brainyquote.com/quotes/michael_gove_760072" %}
+
+**Previous:** [Part I: Hilt Setup][simplifying-room-1]
 
 SQLite databases were always a part of Android. However, without an
 object–relational mapping framework like [Hibernate][hibernate], they

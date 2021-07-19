@@ -9,11 +9,6 @@ tags: android
 image: 2021-04-14-simplifying-room-1.png
 ---
 
-This article is first of a three-part “Simplifying Room” series:
-- Part I: Hilt Setup
-- [Part II: Prepopulated Data And Migrations][simplifying-room-2]
-- Part III: Enum Type Converters (in preparation)
-
 {% include blockquote.html
 quote="Annabeth gripped the hilt of her dagger. “A bounty on our heads… as if we didn’t attract enough monsters already.”"
 author="Rick Riordan, “The Mark of Athena”"
