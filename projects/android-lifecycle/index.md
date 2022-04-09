@@ -176,6 +176,7 @@ recently emitted LiveData.
 val sourcesLiveData: LiveData<LiveData<String>> = // ...
 val resultLiveData: LiveData<String?> = sourcesLiveData.switch()
 ```
+
 #### `groupBy`
 Returns a `GroupedLiveData` providing a set of [LiveData], each emitting a different subset of values from this
 LiveData, based on the result of the given `keySelector` function.
@@ -293,7 +294,9 @@ dependencies {
 ### JUnit4 Rules
 
 #### `TestCoroutineDispatcherRule`
-JUnit4 test rule that swaps main coroutine dispatcher with [TestCoroutineDispatcher].
+
+JUnit4 test rule that swaps main coroutine dispatcher with [UnconfinedTestDispatcher].
+_Note that [TestCoroutineDispatcher] is now deprecated._
 
 ```kotlin
 class MyTestClass {
@@ -301,6 +304,8 @@ class MyTestClass {
     @Rule
     @JvmField
     val testCoroutineDispatcherRule = TestCoroutineDispatcherRule()
+
+    val testCoroutineScheduler get() = testCoroutineDispatcherRule.scheduler
 
     // ...
 }
@@ -334,6 +339,7 @@ dependencies {
 ### JUnit5 Extensions
 
 #### `InstantTaskExecutorExtension`
+
 JUnit5 extension that swaps the background executor used by the Architecture Components with a different one which
 executes each task synchronously.
 
@@ -347,12 +353,44 @@ class MyTestClass {
 ```
 
 #### `TestCoroutineDispatcherExtension`
-JUnit5 extension that swaps main coroutine dispatcher with [TestCoroutineDispatcher].
+
+JUnit5 extension that swaps main coroutine dispatcher with [UnconfinedTestDispatcher].
+_Note that [TestCoroutineDispatcher] is now deprecated._
+
+Any test method parameter of type [TestCoroutineScheduler] will be resolved as the scheduler of the [TestCoroutineDispatcher]:
 
 ```kotlin
 @ExtendWith(TestCoroutineDispatcherExtension::class)
 class MyTestClass {
-    // ...
+
+    @Test
+    fun someTest(scheduler: TestCoroutineScheduler) {
+        // ...
+        scheduler.advanceTimeBy(delayTimeMillis = 1000L)
+        scheduler.runCurrent()
+        // ...
+    }
+}
+```
+
+In case of parameterized tests, the scheduler can be passed as a parameter of a before method:
+
+```kotlin
+@ExtendWith(TestCoroutineDispatcherExtension::class)
+class MyTestClass {
+
+    private lateinit var testCoroutineScheduler: TestCoroutineScheduler
+
+    @BeforeEach
+    fun setScheduler(scheduler: TestCoroutineScheduler) {
+        testCoroutineScheduler = scheduler
+    }
+
+    @ParameterizedTest
+    @MethodSource("testData")
+    fun someParameterizedTest(input: Int) {
+        // ...
+    }
 }
 ```
 
@@ -371,3 +409,5 @@ class MyTestClass {
 [MediatorLiveData]: https://developer.android.com/reference/androidx/lifecycle/MediatorLiveData
 [InstantTaskExecutorRule]: https://developer.android.com/reference/androidx/arch/core/executor/testing/InstantTaskExecutorRule
 [TestCoroutineDispatcher]: https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-test/kotlinx.coroutines.test/-test-coroutine-dispatcher/
+[UnconfinedTestDispatcher]: https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-test/kotlinx.coroutines.test/-unconfined-test-dispatcher.html
+[TestCoroutineScheduler]: https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-test/kotlinx.coroutines.test/-test-coroutine-scheduler/index.html
