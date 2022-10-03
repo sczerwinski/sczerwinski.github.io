@@ -25,13 +25,13 @@ project: kotlin-util
 #### Kotlin
 
 ```kotlin
-implementation("it.czerwinski:kotlin-util:1.5.10")
+implementation("it.czerwinski:kotlin-util:1.7.1")
 ```
 
 #### Groovy
 
 ```groovy
-implementation 'it.czerwinski:kotlin-util:1.5.10'
+implementation 'it.czerwinski:kotlin-util:1.7.1'
 ```
 
 ### Maven
@@ -40,7 +40,7 @@ implementation 'it.czerwinski:kotlin-util:1.5.10'
 <dependency>
   <groupId>it.czerwinski</groupId>
   <artifactId>kotlin-util</artifactId>
-  <version>1.5.10</version>
+  <version>1.7.1</version>
 </dependency>
 ```
 
@@ -69,7 +69,7 @@ Implementation differences:
 * implemented additional functions: `filterNotNull`, `filterIsInstance` – Kotlin convention
 
 Kotlin introduces its own null-safety mechanisms.
-Most of the times, `Option`s can be replaced by nullable types in Kotlin, e.g.:
+Most of the time, `Option`s can be replaced by nullable types in Kotlin, e.g.:
 
 ```kotlin
 var number: Option<Int> = // …
@@ -82,7 +82,7 @@ gives the same result as:
 ```kotlin
 var number: Int? = // …
 
-number?.let { it.toString() }.orEmpty()
+number?.toString().orEmpty()
 ```
 
 However, `Option`s might be useful whenever `null` values are not allowed,
