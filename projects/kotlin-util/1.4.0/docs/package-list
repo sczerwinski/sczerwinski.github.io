@@ -1,7 +1,0 @@
-$dokka.format:jekyll
-$dokka.linkExtension:md
-
-it.czerwinski.kotlin
-it.czerwinski.kotlin.collections
-it.czerwinski.kotlin.util
-
