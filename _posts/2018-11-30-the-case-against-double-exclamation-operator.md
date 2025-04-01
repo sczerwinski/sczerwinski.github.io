@@ -7,6 +7,7 @@ abstract: Why Kotlin not-null assertion operator (a.k.a. double exclamation oper
 keywords: kotlin,double,exclamation,operator
 tags: kotlin
 image: 2018-11-30-the-case-against-double-exclamation-operator.png
+redirect_to: https://slav.dev/#/posts/the-case-against-double-exclamation-operator
 ---
 
 {% include blockquote.html

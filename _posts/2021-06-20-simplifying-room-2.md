@@ -7,6 +7,7 @@ abstract: How to use Android Room Extensions library to simplify database prepop
 keywords: android,kotlin,room,extensions,database,migrations
 tags: android
 image: 2021-06-20-simplifying-room-2.png
+redirect_to: https://slav.dev/#/posts/simplifying-room-2
 ---
 
 {% include blockquote.html

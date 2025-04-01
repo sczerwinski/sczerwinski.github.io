@@ -7,6 +7,7 @@ abstract: All tests are green, spelling is double-checked, and you believe, ther
 keywords: typography
 tags: typography
 image: 2017-01-17-most-common-typographical-errors.png
+redirect_to: https://slav.dev/#/posts/most-common-typographical-errors
 ---
 
 {% include warn.html

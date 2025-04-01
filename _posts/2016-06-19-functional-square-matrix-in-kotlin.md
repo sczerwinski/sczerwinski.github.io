@@ -7,6 +7,7 @@ abstract: How to create a simple functional square matrix in Kotlin programming 
 keywords: kotlin,functional,programming,matrix,affine,transformations,inverse,inversion,adjugate,cofactor,comatrix,determinant,traspose,transposition,3d,opengl
 tags: kotlin,maths,opengl
 image: 2016-06-19-functional-square-matrix-in-kotlin.png
+redirect_to: https://slav.dev/#/posts/functional-square-matrix-in-kotlin
 ---
 
 Working with OpenGL and 3D graphics would be impossible without
@@ -49,7 +50,7 @@ While matrix multiplication is a relatively simple operation, computing a so cal
 When a 3D model is transformed using an augmented matrix $$\boldsymbol{A}$$,
 the [normals](https://en.wikipedia.org/wiki/Normal_(geometry)) should be transformed using a normal matrix $$\boldsymbol{N}$$ defined as follows:
 
-$$\boldsymbol{N} = \big(\boldsymbol{A}^{-1}\big)^\mathrm{T} = \big(\boldsymbol{A}^\mathrm{T}\big)^{-1}$$
+$$\boldsymbol{N} = {\big(\boldsymbol{A}^{-1}\big)}^\mathrm{T} = {\big(\boldsymbol{A}^\mathrm{T}\big)}^{-1}$$
 
 This calculation could be done in a single line of a vertex shader:
 

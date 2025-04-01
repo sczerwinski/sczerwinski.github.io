@@ -7,6 +7,7 @@ abstract: How to solve the problem of boilerplate code related to SharedPreferen
 keywords: kotlin,delegation,android,sharedpreferences
 tags: kotlin,android
 image: 2017-05-17-delegating-android-shared-preferences-in-kotlin.png
+redirect_to: https://slav.dev/#/posts/delegating-android-shared-preferences-in-kotlin
 ---
 
 {% include blockquote.html

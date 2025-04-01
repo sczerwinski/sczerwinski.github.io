@@ -7,6 +7,7 @@ abstract: How to use Android Hilt Extensions library to simplify Room database s
 keywords: android,kotlin,room,extensions,database
 tags: android
 image: 2021-04-14-simplifying-room-1.png
+redirect_to: https://slav.dev/#/posts/simplifying-room-1
 ---
 
 {% include blockquote.html

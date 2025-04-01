@@ -2,6 +2,7 @@
 plugins:
   - jekyll-paginate
   - jekyll-coffeescript
+  - jekyll-redirect-from
 
 # Basic information:
 title: Sławomir Czerwiński
